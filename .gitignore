@@ -1,4 +1,6 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+data/
+
+*.RDS
+*.RDA
+*.RData
+*.h5ad

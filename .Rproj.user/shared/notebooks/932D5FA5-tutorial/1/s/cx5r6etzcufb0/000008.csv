@@ -1,0 +1,12 @@
+"0",""
+"0","# Diversity rank plots"
+"0","rank_plot <- rank_diversity("
+"0","                            which_pathway = pathway_name, "
+"0","                            k_motifs = optimal_k_pathway, "
+"0","                            min_expression = min_expr_threshold, "
+"0","                            min_genes_pathway = min_genes_pathway,"
+"0","                            embedding_matrix = pca_proj"
+"0","                            )"
+"1","`summarise()` has grouped output by 'class_label'. You can override using the `.groups` argument.
+"
+"0","rank_plot"
