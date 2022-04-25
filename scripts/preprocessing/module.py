@@ -21,38 +21,13 @@ from scipy.spatial.distance import cosine, squareform, euclidean
 import math
 
 # Here are the lists of genes for our main pathways of interest.
+datadir = '../../data/raw_data/'
+all_pathways = pd.read_csv(datadir + "allPathways_listGenes_dec2021.tsv", delimiter="\t")
 
-wnts = ['Wnt1', 'Wnt2', 'Wnt2b', 'Wnt3', 'Wnt3a', 'Wnt4', 'Wnt5a',
-       'Wnt5b', 'Wnt6', 'Wnt7a', 'Wnt7b', 'Wnt8a', 'Wnt8b', 'Wnt9a', 'Wnt9b',
-       'Wnt10a', 'Wnt10b', 'Wnt11', 'Wnt16']
-
-wntr = ['Lrp5', 'Lrp6', 'Fzd1', 'Fzd2', 'Fzd3',
-       'Fzd4', 'Fzd5', 'Fzd6', 'Fzd7', 'Fzd8', 'Fzd9', 'Fzd10']
-
-bmps = ['Bmp2', 'Bmp3', 'Bmp4', 'Bmp5', 'Bmp6', 'Bmp7', 'Bmp8a',
-            'Bmp10', 'Bmp11', 'Bmp15', 'Gdf6', 'Gdf7', 'Gdf5', 'Gdf10',
-            'Gdf11']
-
-bmpr = ["Bmpr1a","Bmpr1b", "Acvr1", "Acvrl1", "Acvr1b", "Tgfbr1","Acvr1c",
-            "Acvr2a", "Acvr2b", "Bmpr2", "Tgfbr2"]
-
-notch = ["Dll1", "Dll3","Dll4", "Jag1", "Jag2", "Notch1", "Notch2", 
-             "Notch3", "Notch4", "Mfng", "Rfng", "Lfng"]
-
-ephr = ['Epha1', 'Epha2', 'Epha3', 'Epha4', 'Epha5', 'Epha7', 'Ephb1', 
-                 'Ephb2', 'Ephb3', 'Ephb4', 'Ephb6']
-
-ephl = ['Efna1', 'Efna2', 'Efna3', 'Efna4', 'Efna5', 'Efnb1', 
-               'Efnb2', 'Efnb3']
-
-fgfr = ['Fgf1', 'Fgf10', 'Fgf11', 'Fgf12', 'Fgf13', 'Fgf14', 'Fgf16', 'Fgf18', 
-        'Fgf2', 'Fgf7', 'Fgf9', 'Fgfbp1', 'Fgfbp3', 'Fgfr1', 'Fgfr1op', 'Fgfr1op2', 
-        'Fgfr2', 'Fgfr3', 'Fgfr4', 'Fgfrl1']
-
-splice_srsf = ['Srsf1', 'Srsf10', 'Srsf11', 'Srsf12', 'Srsf2', 'Srsf3', 'Srsf4', 
-               'Srsf5', 'Srsf6', 'Srsf7', 'Srsf9']
-
-lpa = ['Lpar1', 'Lpar2', 'Lpar3', 'Lpar4', 'Lpar5', 'Lpar6']
+bmpr = all_pathways[all_pathways['pathway']=='Bmp_Tgfb']['gene'].values
+notch = all_pathways[all_pathways['pathway']=='Notch']['gene'].values
+eph_ephrin = np.concatenate((all_pathways[all_pathways['pathway']=='Eph_r']['gene'].values, all_pathways[all_pathways['pathway']=='Eph_l']['gene'].values))
+wntr = all_pathways[all_pathways['pathway']=='Wnt']['gene'].values
 
 def get_genes(adata, genes):
     '''This function gets genes of interest that have not been filtered out.

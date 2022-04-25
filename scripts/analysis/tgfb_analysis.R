@@ -14,30 +14,6 @@ min_expr_threshold = 0.2 # Tgfb minimum expression threshold for gene to be on
 
 optimal_k_pathway = 30 # optimal pathway components, computed from z-score
 
-## Stats plots
-df <- normalizedDevel(master_seurat = master_seurat, genesPathway(pathway_name))
-bmpr_count_df <- data.frame(counts = (df[genesPathway(pathway_name)] > min_expr_threshold) %>% colSums())
-
-p <- ggplot(data = bmpr_count_df, aes(x = reorder(rownames(bmpr_count_df), counts), y = counts)) + 
-  geom_hline(yintercept = 0, colour = "grey", linetype = "dashed") + 
-  geom_hline(yintercept = 200, colour = "grey", linetype = "dashed") + 
-  geom_hline(yintercept = 400, colour = "grey", linetype = "dashed") +
-  geom_hline(yintercept = 600, colour = "grey", linetype = "dashed") + 
-  geom_bar(stat="identity", fill = "#DB784D") +
-  labs(x = "gene", y = "Number of cell types") + 
-  theme(axis.title.x = element_text(size = 20, margin = margin(t = 25)),
-        axis.text.x = element_text(angle = 90, size = 18, vjust = 0.5, margin = margin(t = -10)), 
-        axis.ticks.x = element_blank(),
-        axis.title.y = element_text(size = 20, margin = margin(r = 25)),
-        axis.text.y = element_text(size = 18),
-        axis.ticks.y = element_blank(),
-        panel.border = element_blank(), 
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(), 
-        panel.background = element_blank())
-
-ggsave(paste0(fig_dir, "Figure_3_figure_supplement_1A.pdf", sep=""))
-
 ## Make a plot of k_opt profiles for cell types with pathway "ON
 pipe_run <- quickPipeline(master_seurat = master_seurat, 
                           k_final = optimal_k_pathway, 

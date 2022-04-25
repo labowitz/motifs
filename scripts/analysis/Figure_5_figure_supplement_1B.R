@@ -3,7 +3,7 @@ library(ggplot2)
 library(gridExtra)
 
 # Load Pathbank analysis results
-load("~/Documents/Elowitz Lab/pathway_motifs/data/processed_data/pathbank_silhouetteControl2022.rda")
+load("data/processed_data/pathbank_silhouetteControl2022.rda")
 
 # Pathway genes list
 all_pathways <- read.table("./data/raw_data/allPathways_listGenes_dec2021.tsv", header = T, sep = "\t")
@@ -58,23 +58,20 @@ clusterScoreDist <- function(which_pathway = 'Bmp_Tgfb'){
   
   p1 <- p1 + geom_vline(xintercept = path_stats$max_peak/path_stats$n_genes, col = 'blue') + xlab('N clusters / n genes')+ 
     theme(text = element_text(size = 10)) + 
-    ggtitle(paste(which_pathway , '\nvs ', dim(null_dist)[1],' random sets' , sep =""))
+    ggtitle(paste(which_pathway , ' vs ', dim(null_dist)[1],' random sets' , sep =""))
   return(p1) 
 }
 
 pathway_order <- c(
-  "CXCR4 Signaling Pathway",
   "Lysophosphatidic Acid LPA6 Signalling",
   "Rac 1 Cell Motility Signaling Pathway",
   "Cadmium Induces DNA Synthesis and Proliferation in Macrophages ",
   "Apoptotic DNA Fragmentation and Tissue Homeostasis",
   "GnRH Signaling Pathway",
   "Growth Hormone Signaling Pathway ",
-  "SRSF Splice Regulators",
   "Notch receptors, Dll ligands and Fringe proteins",
   'Frizzled and Lrp5/6 receptors for Wnt B/Catenin Signaling',
   "Ubiquitin–Proteasome Pathway",
-  'Tgf-beta family receptors',
   'Eph-Ephrin'
 )
 
@@ -135,25 +132,6 @@ p10 <- clusterScoreDist(pathway_order[[10]]) + scale_y_continuous(limits = c(0, 
                                                                                                                          axis.line = element_line(size = 0.3),
                                                                                                                          panel.grid.minor.x = element_blank(),
                                                                                                                          panel.grid.minor.y = element_blank())
-p11 <- clusterScoreDist(pathway_order[[11]]) + scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.2))+ theme(axis.text.y = element_blank(),
-                                                                                                                         axis.ticks.y = element_blank(),
-                                                                                                                         axis.title.y = element_blank(),
-                                                                                                                         axis.line = element_line(size = 0.3),
-                                                                                                                         panel.grid.minor.x = element_blank(),
-                                                                                                                         panel.grid.minor.y = element_blank())
-p12 <- clusterScoreDist(pathway_order[[12]]) + scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.2))+ theme(axis.text.y = element_blank(),
-                                                                                                                         axis.ticks.y = element_blank(),
-                                                                                                                         axis.title.y = element_blank(),
-                                                                                                                         axis.line = element_line(size = 0.3),
-                                                                                                                         panel.grid.minor.x = element_blank(),
-                                                                                                                         panel.grid.minor.y = element_blank())
-p13 <- clusterScoreDist(pathway_order[[13]]) + scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.2))+ theme(axis.text.y = element_blank(),
-                                                                                                                         axis.ticks.y = element_blank(),
-                                                                                                                         axis.title.y = element_blank(),
-                                                                                                                         axis.line = element_line(size = 0.3),
-                                                                                                                         panel.grid.minor.x = element_blank(),
-                                                                                                                         panel.grid.minor.y = element_blank())
-
-grid.arrange(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, nrow = 1) -> g
+grid.arrange(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, nrow = 1) -> g
 
 ggsave("./scripts/figures/Figure_5_figure_supplement_1B.pdf", g, width = 50, height = 5, limitsize = F)

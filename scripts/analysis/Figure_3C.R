@@ -78,7 +78,6 @@ df[df$cell_types == "Endothelial",]$cell_types <- rep(3, 31)
 
 names(df) = c("source", "target", "value")
 nodes <- data.frame("name" = c(c("Epithelium", "Macrophage", "Fibroblast", "Endothelial"), as.character(label_order)))
-#nodes <- data.frame(name = unique(c(df$source,df$target)),stringsAsFactors=FALSE)
 
 df <- df %>% filter(value != 0)
 df$source <- as.numeric(df$source)

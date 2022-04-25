@@ -17,6 +17,8 @@ library(DIZutils)
 library(stringr)
 library(RColorBrewer)
 
+options(dplyr.summarise.inform = FALSE)
+
 ## Creates a black color palette with n distinct colors
 black_pal <- function(n){
   colfunc <- colorRampPalette(c("white", "black"))
@@ -1188,6 +1190,22 @@ globalDendrogramPlot2 <- function(control_res = list(),                         
              fontsize = 10,
              color = magma(100),
              filename = paste(save_dir, '_global_dendrogram.pdf', sep = ""),
+             height = 20,
+             width = 4)
+  }
+  
+  else{
+    pheatmap(x_scaled,
+             annotation_row = pathway_df %>% select(Cell_class, age, class_label, dataset),
+             annotation_colors = colors_1206,
+             show_colnames = F,
+             show_rownames = F,
+             clustering_method = clust_method,
+             clustering_distance_rows = clust_dist_metric,
+             treeheight_col = 0,
+             cutree_rows = 12,
+             fontsize = 10,
+             color = magma(100),
              height = 20,
              width = 4)
   }
