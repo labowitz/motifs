@@ -4,4 +4,4 @@ data/
 *.RDA
 *.RData
 *.h5ad
-*.DS_store
+**/.DS_store
