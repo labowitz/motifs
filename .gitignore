@@ -1,5 +1,7 @@
 data/
 
+miscellaneous/
+
 *.RDS
 *.RDA
 *.RData
@@ -7,3 +9,5 @@ data/
 **/.DS_Store
 .DS_Store.DS_Store
 .Rproj.user
+*.csv
+*.pdf
