@@ -1,7 +1,0 @@
-"0","## Computing the optimal silhouette score"
-"0","silh_plt = silhouettePlot(which_pathway = pathway_name, "
-"0","                          min_ON = min_genes_pathway, "
-"0","                          min_expr = min_expr_threshold, "
-"0","                          n_bootstraps = 100)"
-"1","`summarise()` has grouped output by 'class_label'. You can override using the `.groups` argument.
-"

@@ -1,2 +1,0 @@
-"0","min_genes_pathway = 2 # Tgfb min. number of genes expressed"
-"0","min_expr_threshold = 0.2 # Tgfb minimum expression threshold for gene to be on"

@@ -6,3 +6,4 @@ data/
 *.h5ad
 **/.DS_Store
 .DS_Store.DS_Store
+.Rproj.user

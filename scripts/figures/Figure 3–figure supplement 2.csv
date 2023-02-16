@@ -1,0 +1,1207 @@
+"","cell_id","cell_ontology_class","Cell_class","dataset","age","tgfb","bmpr","notch","eph_ephr","wnt","rna","ubi"
+"1","1_E6.5_8.5_Chan","epiblast","Epiblast","E6.5_8.5_Chan","E6.5",1,1,0,1,1,1,1
+"2","2_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E6.5",0,0,0,0,0,2,1
+"3","3_E6.5_8.5_Chan","epiblast","Epiblast","E6.5_8.5_Chan","E6.5",1,1,0,0,1,1,1
+"4","4_E6.5_8.5_Chan","epiblast","Epiblast","E6.5_8.5_Chan","E6.5",1,1,0,0,1,1,1
+"5","5_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E6.5",2,2,0,2,0,1,1
+"6","6_E6.5_8.5_Chan","epiblast","Epiblast","E6.5_8.5_Chan","E6.5",1,1,0,3,1,1,1
+"7","7_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E6.5",2,1,0,0,0,1,1
+"8","8_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E6.5",2,1,0,2,0,1,1
+"9","9_E6.5_8.5_Chan","primitive and definitive endoderm","Endoderm","E6.5_8.5_Chan","E6.5",3,3,0,4,2,1,2
+"10","10_E6.5_8.5_Chan","primitive and definitive endoderm","Endoderm","E6.5_8.5_Chan","E6.5",3,3,0,5,3,1,2
+"11","11_E6.5_8.5_Chan","extraembryonic ectoderm 2","Ex_ectoderm","E6.5_8.5_Chan","E6.5",2,2,0,0,0,1,1
+"12","12_E6.5_8.5_Chan","extraembryonic ectoderm 2","Ex_ectoderm","E6.5_8.5_Chan","E6.5",0,0,0,0,0,2,1
+"13","13_E6.5_8.5_Chan","visceral endoderm early","Endoderm","E6.5_8.5_Chan","E6.5",3,4,0,4,2,3,2
+"14","14_E6.5_8.5_Chan","primitive and definitive endoderm","Endoderm","E6.5_8.5_Chan","E6.5",4,4,0,5,4,1,2
+"15","15_E6.5_8.5_Chan","parietal endoderm","Endoderm","E6.5_8.5_Chan","E6.5",4,5,0,0,0,2,2
+"16","16_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E7.0",2,2,0,2,0,1,1
+"17","17_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",5,1,0,1,0,1,1
+"18","18_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.0",0,1,0,0,0,4,1
+"19","19_E6.5_8.5_Chan","primitive streak early","Primitive_streak","E6.5_8.5_Chan","E7.0",1,2,1,6,1,1,1
+"20","20_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",5,1,0,0,1,1,1
+"21","21_E6.5_8.5_Chan","primitive streak early","Primitive_streak","E6.5_8.5_Chan","E7.0",1,2,1,6,1,1,1
+"22","22_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",1,1,0,0,1,1,1
+"23","23_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",5,1,0,0,1,1,1
+"24","24_E6.5_8.5_Chan","streak pre-specified/anterior","Primitive_streak","E6.5_8.5_Chan","E7.0",5,1,1,1,1,1,1
+"25","25_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",5,1,0,0,1,1,1
+"26","26_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",1,1,0,0,1,1,1
+"27","27_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",1,1,0,0,1,1,1
+"28","28_E6.5_8.5_Chan","primitive streak early","Primitive_streak","E6.5_8.5_Chan","E7.0",1,2,1,6,0,1,1
+"29","29_E6.5_8.5_Chan","visceral endoderm early","Endoderm","E6.5_8.5_Chan","E7.0",3,3,0,0,0,1,2
+"30","30_E6.5_8.5_Chan","allantois","Endoderm","E6.5_8.5_Chan","E7.0",1,2,0,0,0,1,1
+"31","31_E6.5_8.5_Chan","primitive and definitive endoderm","Endoderm","E6.5_8.5_Chan","E7.0",3,3,0,5,3,1,2
+"32","32_E6.5_8.5_Chan","primitive streak early","Primitive_streak","E6.5_8.5_Chan","E7.0",0,0,0,7,0,4,1
+"33","33_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E7.0",2,2,0,0,0,1,1
+"34","34_E6.5_8.5_Chan","streak pre-specified/anterior","Primitive_streak","E6.5_8.5_Chan","E7.0",2,1,0,8,5,1,1
+"35","35_E6.5_8.5_Chan","streak pre-specified/anterior","Primitive_streak","E6.5_8.5_Chan","E7.0",5,1,0,1,5,1,1
+"36","36_E6.5_8.5_Chan","streak pre-specified/anterior","Primitive_streak","E6.5_8.5_Chan","E7.0",2,1,0,1,6,1,1
+"37","37_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E7.0",2,1,0,2,0,1,1
+"38","38_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",5,1,0,0,1,1,1
+"39","39_E6.5_8.5_Chan","primitive and definitive endoderm","Endoderm","E6.5_8.5_Chan","E7.0",3,3,0,4,2,1,2
+"40","40_E6.5_8.5_Chan","ectoderm early 1","Ectoderm","E6.5_8.5_Chan","E7.0",2,1,0,0,1,1,3
+"41","41_E6.5_8.5_Chan","primordial germ cells (PGCs)","Epiblast","E6.5_8.5_Chan","E7.0",2,1,0,9,0,1,1
+"42","42_E6.5_8.5_Chan","parietal endoderm","Endoderm","E6.5_8.5_Chan","E7.0",4,5,0,0,0,1,2
+"43","43_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E7.0",0,0,0,0,0,4,1
+"44","44_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",1,1,0,5,1,1,1
+"45","45_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E7.5",2,1,0,2,0,1,1
+"46","46_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E7.5",2,1,0,0,0,1,1
+"47","47_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",0,0,0,0,0,4,1
+"48","48_E6.5_8.5_Chan","primitive streak late","Primitive_streak","E6.5_8.5_Chan","E7.5",1,2,1,9,0,1,1
+"49","49_E6.5_8.5_Chan","visceral endoderm early","Endoderm","E6.5_8.5_Chan","E7.5",3,3,0,0,2,1,2
+"50","50_E6.5_8.5_Chan","allantois","Endoderm","E6.5_8.5_Chan","E7.5",2,2,0,10,7,1,1
+"51","51_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",5,1,0,0,0,1,1
+"52","52_E6.5_8.5_Chan","NMPs early","Spinal_cord","E6.5_8.5_Chan","E7.5",2,1,1,1,8,1,1
+"53","53_E6.5_8.5_Chan","primitive streak late","Primitive_streak","E6.5_8.5_Chan","E7.5",0,0,1,0,0,4,1
+"54","54_E6.5_8.5_Chan","primitive streak late","Primitive_streak","E6.5_8.5_Chan","E7.5",1,1,1,6,9,1,1
+"55","55_E6.5_8.5_Chan","primitive blood progenitor","Blood","E6.5_8.5_Chan","E7.5",2,1,0,0,0,4,1
+"56","56_E6.5_8.5_Chan","allantois","Endoderm","E6.5_8.5_Chan","E7.5",5,1,0,11,1,1,1
+"57","57_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",2,1,0,0,0,1,1
+"58","58_E6.5_8.5_Chan","primitive streak early","Primitive_streak","E6.5_8.5_Chan","E7.5",1,1,1,0,1,1,1
+"59","59_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",5,1,0,0,0,1,1
+"60","60_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",5,1,0,0,0,1,1
+"61","61_E6.5_8.5_Chan","gut","Gut","E6.5_8.5_Chan","E7.5",1,1,0,11,5,1,1
+"62","62_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E7.5",2,2,0,0,0,1,1
+"63","63_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",1,1,0,0,1,1,1
+"64","64_E6.5_8.5_Chan","ectoderm early 2","Ectoderm","E6.5_8.5_Chan","E7.5",1,1,0,0,9,1,1
+"65","65_E6.5_8.5_Chan","primitive streak late","Primitive_streak","E6.5_8.5_Chan","E7.5",1,1,1,7,0,1,1
+"66","66_E6.5_8.5_Chan","splanchnic-lateral/anterior-paraxial mesoderm","Mesoderm","E6.5_8.5_Chan","E7.5",1,1,0,11,1,1,1
+"67","67_E6.5_8.5_Chan","parietal endoderm","Endoderm","E6.5_8.5_Chan","E7.5",4,5,0,12,0,1,2
+"68","68_E6.5_8.5_Chan","primitive and definitive endoderm","Endoderm","E6.5_8.5_Chan","E7.5",2,2,0,5,3,1,2
+"69","69_E6.5_8.5_Chan","allantois","Endoderm","E6.5_8.5_Chan","E7.5",2,2,0,10,0,1,1
+"70","70_E6.5_8.5_Chan","node","Mesoderm","E6.5_8.5_Chan","E7.5",2,1,1,3,0,1,2
+"71","71_E6.5_8.5_Chan","differentiated trophoblasts","Ex_ectoderm","E6.5_8.5_Chan","E7.5",1,2,0,0,0,4,1
+"72","72_E6.5_8.5_Chan","allantois","Mesoderm","E6.5_8.5_Chan","E7.5",0,0,0,0,0,4,1
+"73","73_E6.5_8.5_Chan","extraembryonic ectoderm 2","Ex_ectoderm","E6.5_8.5_Chan","E7.5",0,0,0,0,0,4,1
+"74","74_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E7.5",0,0,0,0,0,4,1
+"75","75_E6.5_8.5_Chan","streak pre-specified/anterior","Primitive_streak","E6.5_8.5_Chan","E7.5",1,1,0,12,5,1,1
+"76","76_E6.5_8.5_Chan","visceral endoderm early","Endoderm","E6.5_8.5_Chan","E7.5",0,2,0,0,0,4,1
+"77","77_E6.5_8.5_Chan","primordial germ cells (PGCs)","Epiblast","E6.5_8.5_Chan","E7.5",1,1,0,9,0,1,2
+"78","78_E6.5_8.5_Chan","future spinal cord","Spinal_cord","E6.5_8.5_Chan","E8.0",5,1,0,0,10,1,1
+"79","79_E6.5_8.5_Chan","preplacodal ectoderm","Ectoderm","E6.5_8.5_Chan","E8.0",5,1,0,5,1,1,1
+"80","80_E6.5_8.5_Chan","primitive blood early","Blood","E6.5_8.5_Chan","E8.0",0,0,0,0,0,4,1
+"81","81_E6.5_8.5_Chan","neural ectoderm anterior","Ectoderm","E6.5_8.5_Chan","E8.0",5,1,0,13,5,1,1
+"82","82_E6.5_8.5_Chan","extraembryonic ectoderm 1","Ex_ectoderm","E6.5_8.5_Chan","E8.0",2,1,0,0,0,1,1
+"83","83_E6.5_8.5_Chan","posterior lateral plate mesoderm","Mesoderm","E6.5_8.5_Chan","E8.0",5,2,0,9,0,1,1
+"84","84_E6.5_8.5_Chan","NMPs early","Spinal_cord","E6.5_8.5_Chan","E8.0",0,1,0,14,8,1,1
+"85","85_E6.5_8.5_Chan","secondary heart field/splanchnic lateral plate","Heart","E6.5_8.5_Chan","E8.0",5,1,0,15,1,1,1
+"86","86_E6.5_8.5_Chan","presomitic mesoderm","Mesoderm","E6.5_8.5_Chan","E8.0",5,1,1,6,8,1,1
+"87","87_E6.5_8.5_Chan","fore/midbrain","Brain/Neurons","E6.5_8.5_Chan","E8.0",5,1,0,5,10,1,1
+"88","88_E6.5_8.5_Chan","splanchnic-lateral/anterior-paraxial mesoderm","Mesoderm","E6.5_8.5_Chan","E8.0",5,1,0,11,1,1,1
+"89","89_E6.5_8.5_Chan","splanchnic-lateral/anterior-paraxial mesoderm","Mesoderm","E6.5_8.5_Chan","E8.0",5,1,0,11,1,1,1
+"90","90_E6.5_8.5_Chan","visceral endoderm early","Endoderm","E6.5_8.5_Chan","E8.0",3,6,0,0,2,1,2
+"91","91_E6.5_8.5_Chan","allantois","Mesoderm","E6.5_8.5_Chan","E8.0",3,7,0,10,1,1,1
+"92","92_E6.5_8.5_Chan","neural ectoderm anterior","Ectoderm","E6.5_8.5_Chan","E8.0",5,1,0,16,10,1,1
+"93","93_E6.5_8.5_Chan","primitive heart tube","Heart","E6.5_8.5_Chan","E8.0",1,2,0,15,0,4,1
+"94","94_E6.5_8.5_Chan","amnion mesoderm early","Mesoderm","E6.5_8.5_Chan","E8.0",3,2,0,17,7,1,1
+"95","95_E6.5_8.5_Chan","surface ectoderm","Ectoderm","E6.5_8.5_Chan","E8.0",5,1,0,9,8,1,1
+"96","96_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E8.0",2,2,2,0,0,1,1
+"97","97_E6.5_8.5_Chan","neural crest","Neural_crest","E6.5_8.5_Chan","E8.0",5,1,0,5,10,1,1
+"98","98_E6.5_8.5_Chan","posterior lateral plate mesoderm","Mesoderm","E6.5_8.5_Chan","E8.0",5,2,0,11,9,1,1
+"99","99_E6.5_8.5_Chan","primitive blood early","Blood","E6.5_8.5_Chan","E8.0",0,0,0,0,0,4,1
+"100","100_E6.5_8.5_Chan","somites","Mesoderm","E6.5_8.5_Chan","E8.0",5,1,0,8,1,1,1
+"101","101_E6.5_8.5_Chan","primitive blood early","Blood","E6.5_8.5_Chan","E8.0",0,0,0,0,0,4,1
+"102","102_E6.5_8.5_Chan","NMPs early","Spinal_cord","E6.5_8.5_Chan","E8.0",0,1,0,14,0,4,1
+"103","103_E6.5_8.5_Chan","amnion mesoderm early","Mesoderm","E6.5_8.5_Chan","E8.0",3,3,0,10,7,1,1
+"104","104_E6.5_8.5_Chan","allantois","Mesoderm","E6.5_8.5_Chan","E8.0",1,2,0,10,9,1,1
+"105","105_E6.5_8.5_Chan","angioblasts","Blood","E6.5_8.5_Chan","E8.0",4,5,3,0,0,1,1
+"106","106_E6.5_8.5_Chan","preplacodal ectoderm","Ectoderm","E6.5_8.5_Chan","E8.0",5,2,0,11,1,1,1
+"107","107_E6.5_8.5_Chan","posterior lateral plate mesoderm","Mesoderm","E6.5_8.5_Chan","E8.0",0,0,0,0,0,4,1
+"108","108_E6.5_8.5_Chan","visceral endoderm late","Endoderm","E6.5_8.5_Chan","E8.0",3,6,0,0,0,1,2
+"109","109_E6.5_8.5_Chan","primitive blood early","Blood","E6.5_8.5_Chan","E8.0",0,0,0,0,0,4,1
+"110","110_E6.5_8.5_Chan","NMPs late","Spinal_cord","E6.5_8.5_Chan","E8.0",5,1,1,14,8,1,1
+"111","111_E6.5_8.5_Chan","somites","Mesoderm","E6.5_8.5_Chan","E8.0",5,1,1,5,9,1,1
+"112","112_E6.5_8.5_Chan","neural ectoderm anterior","Ectoderm","E6.5_8.5_Chan","E8.0",5,1,0,13,10,1,1
+"113","113_E6.5_8.5_Chan","neural ectoderm anterior","Ectoderm","E6.5_8.5_Chan","E8.0",5,1,0,16,10,1,1
+"114","114_E6.5_8.5_Chan","gut","Gut","E6.5_8.5_Chan","E8.0",5,2,0,9,8,1,2
+"115","115_E6.5_8.5_Chan","primitive blood progenitor","Blood","E6.5_8.5_Chan","E8.0",0,0,0,0,0,1,1
+"116","116_E6.5_8.5_Chan","differentiated trophoblasts","Ex_ectoderm","E6.5_8.5_Chan","E8.0",1,2,0,0,0,4,1
+"117","117_E6.5_8.5_Chan","preplacodal ectoderm","Ectoderm","E6.5_8.5_Chan","E8.0",0,1,0,0,0,4,1
+"118","118_E6.5_8.5_Chan","surface ectoderm","Ectoderm","E6.5_8.5_Chan","E8.0",1,2,0,18,0,1,1
+"119","119_E6.5_8.5_Chan","allantois","Mesoderm","E6.5_8.5_Chan","E8.0",0,0,0,0,0,4,1
+"120","120_E6.5_8.5_Chan","parietal endoderm","Endoderm","E6.5_8.5_Chan","E8.0",3,3,0,0,0,1,2
+"121","121_E6.5_8.5_Chan","neural ectoderm anterior","Ectoderm","E6.5_8.5_Chan","E8.0",0,1,0,11,1,1,1
+"122","122_E6.5_8.5_Chan","presomitic mesoderm","Mesoderm","E6.5_8.5_Chan","E8.0",5,1,1,6,0,4,1
+"123","123_E6.5_8.5_Chan","notochord","Mesoderm","E6.5_8.5_Chan","E8.0",5,1,4,5,1,2,2
+"124","124_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E8.0",0,0,0,0,0,4,1
+"125","125_E6.5_8.5_Chan","fore/midbrain","Brain/Neurons","E6.5_8.5_Chan","E8.5",5,1,0,13,10,1,1
+"126","126_E6.5_8.5_Chan","future spinal cord","Spinal_cord","E6.5_8.5_Chan","E8.5",5,1,0,16,11,1,1
+"127","127_E6.5_8.5_Chan","primitive blood late","Blood","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"128","128_E6.5_8.5_Chan","somites","Mesoderm","E6.5_8.5_Chan","E8.5",5,1,0,8,1,1,1
+"129","129_E6.5_8.5_Chan","primitive blood late","Blood","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"130","130_E6.5_8.5_Chan","visceral endoderm late","Endoderm","E6.5_8.5_Chan","E8.5",3,6,0,0,2,4,2
+"131","131_E6.5_8.5_Chan","preplacodal ectoderm","Ectoderm","E6.5_8.5_Chan","E8.5",5,2,0,11,1,1,1
+"132","132_E6.5_8.5_Chan","fore/midbrain","Brain/Neurons","E6.5_8.5_Chan","E8.5",5,1,0,13,11,1,1
+"133","133_E6.5_8.5_Chan","neural crest","Neural_crest","E6.5_8.5_Chan","E8.5",5,1,0,0,1,1,1
+"134","134_E6.5_8.5_Chan","similar to neural crest","Neural_crest","E6.5_8.5_Chan","E8.5",5,2,0,8,1,1,1
+"135","135_E6.5_8.5_Chan","posterior lateral plate mesoderm","Mesoderm","E6.5_8.5_Chan","E8.5",5,2,0,14,8,1,1
+"136","136_E6.5_8.5_Chan","fore/midbrain","Brain/Neurons","E6.5_8.5_Chan","E8.5",5,1,0,16,11,1,1
+"137","137_E6.5_8.5_Chan","NMPs late","Spinal_cord","E6.5_8.5_Chan","E8.5",5,1,0,14,8,1,1
+"138","138_E6.5_8.5_Chan","angioblasts","Blood","E6.5_8.5_Chan","E8.5",4,5,3,0,12,1,1
+"139","139_E6.5_8.5_Chan","presomitic mesoderm","Mesoderm","E6.5_8.5_Chan","E8.5",5,2,1,14,8,1,1
+"140","140_E6.5_8.5_Chan","surface ectoderm","Ectoderm","E6.5_8.5_Chan","E8.5",5,2,0,9,9,1,1
+"141","141_E6.5_8.5_Chan","pharyngeal arch mesoderm","Mesoderm","E6.5_8.5_Chan","E8.5",5,2,0,19,1,1,1
+"142","142_E6.5_8.5_Chan","secondary heart field/splanchnic lateral plate","Heart","E6.5_8.5_Chan","E8.5",5,2,0,13,1,1,1
+"143","143_E6.5_8.5_Chan","gut","Gut","E6.5_8.5_Chan","E8.5",5,2,0,11,1,1,1
+"144","144_E6.5_8.5_Chan","primitive blood late","Blood","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"145","145_E6.5_8.5_Chan","pharyngeal arch mesoderm","Mesoderm","E6.5_8.5_Chan","E8.5",5,2,0,11,1,1,1
+"146","146_E6.5_8.5_Chan","secondary heart field/splanchnic lateral plate","Heart","E6.5_8.5_Chan","E8.5",5,2,0,11,1,1,1
+"147","147_E6.5_8.5_Chan","future spinal cord","Spinal_cord","E6.5_8.5_Chan","E8.5",5,1,0,16,8,1,1
+"148","148_E6.5_8.5_Chan","amnion mesoderm early","Mesoderm","E6.5_8.5_Chan","E8.5",3,7,0,17,7,1,1
+"149","149_E6.5_8.5_Chan","preplacodal ectoderm","Ectoderm","E6.5_8.5_Chan","E8.5",5,2,0,5,10,1,1
+"150","150_E6.5_8.5_Chan","secondary heart field/splanchnic lateral plate","Heart","E6.5_8.5_Chan","E8.5",5,2,0,15,1,1,1
+"151","151_E6.5_8.5_Chan","allantois","Mesoderm","E6.5_8.5_Chan","E8.5",3,7,0,10,9,1,1
+"152","152_E6.5_8.5_Chan","similar to neural crest","Neural_crest","E6.5_8.5_Chan","E8.5",0,0,0,16,0,4,1
+"153","153_E6.5_8.5_Chan","primitive heart tube","Heart","E6.5_8.5_Chan","E8.5",3,3,0,13,0,4,1
+"154","154_E6.5_8.5_Chan","primitive blood late","Blood","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"155","155_E6.5_8.5_Chan","posterior lateral plate mesoderm","Mesoderm","E6.5_8.5_Chan","E8.5",0,0,1,0,0,4,1
+"156","156_E6.5_8.5_Chan","fore/midbrain","Brain/Neurons","E6.5_8.5_Chan","E8.5",5,1,5,16,10,1,1
+"157","157_E6.5_8.5_Chan","fore/midbrain","Brain/Neurons","E6.5_8.5_Chan","E8.5",5,1,0,16,11,1,1
+"158","158_E6.5_8.5_Chan","similar to neural crest","Neural_crest","E6.5_8.5_Chan","E8.5",0,1,0,0,0,4,1
+"159","159_E6.5_8.5_Chan","amnion mesoderm late","Mesoderm","E6.5_8.5_Chan","E8.5",3,7,0,17,7,1,1
+"160","160_E6.5_8.5_Chan","preplacodal ectoderm","Ectoderm","E6.5_8.5_Chan","E8.5",5,2,0,11,10,1,1
+"161","161_E6.5_8.5_Chan","NMPs late","Spinal_cord","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"162","162_E6.5_8.5_Chan","future spinal cord","Spinal_cord","E6.5_8.5_Chan","E8.5",5,1,6,13,11,1,1
+"163","163_E6.5_8.5_Chan","somites","Mesoderm","E6.5_8.5_Chan","E8.5",5,1,1,5,9,1,1
+"164","164_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E8.5",5,2,0,0,8,1,1
+"165","165_E6.5_8.5_Chan","similar to neural crest","Neural_crest","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"166","166_E6.5_8.5_Chan","NMPs late","Spinal_cord","E6.5_8.5_Chan","E8.5",5,2,0,9,8,5,2
+"167","167_E6.5_8.5_Chan","parietal endoderm","Endoderm","E6.5_8.5_Chan","E8.5",4,5,0,12,0,1,2
+"168","168_E6.5_8.5_Chan","primitive blood progenitor","Blood","E6.5_8.5_Chan","E8.5",0,0,0,0,0,1,1
+"169","169_E6.5_8.5_Chan","presomitic mesoderm","Mesoderm","E6.5_8.5_Chan","E8.5",5,2,1,14,8,1,1
+"170","170_E6.5_8.5_Chan","surface ectoderm","Ectoderm","E6.5_8.5_Chan","E8.5",6,2,0,18,0,1,1
+"171","171_E6.5_8.5_Chan","secondary heart field/splanchnic lateral plate","Heart","E6.5_8.5_Chan","E8.5",5,2,0,13,1,1,1
+"172","172_E6.5_8.5_Chan","fore/midbrain","Brain/Neurons","E6.5_8.5_Chan","E8.5",5,1,6,13,10,1,1
+"173","173_E6.5_8.5_Chan","primitive blood late","Blood","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"174","174_E6.5_8.5_Chan","neural crest","Blood","E6.5_8.5_Chan","E8.5",5,1,0,0,1,1,1
+"175","175_E6.5_8.5_Chan","preplacodal ectoderm","Ectoderm","E6.5_8.5_Chan","E8.5",5,2,6,11,1,1,1
+"176","176_E6.5_8.5_Chan","similar to neural crest","Neural_crest","E6.5_8.5_Chan","E8.5",5,1,4,11,1,1,1
+"177","177_E6.5_8.5_Chan","somites","Mesoderm","E6.5_8.5_Chan","E8.5",5,1,0,8,1,1,1
+"178","178_E6.5_8.5_Chan","notochord","Mesoderm","E6.5_8.5_Chan","E8.5",5,2,4,5,1,2,2
+"179","179_E6.5_8.5_Chan","differentiated trophoblasts","Ex_ectoderm","E6.5_8.5_Chan","E8.5",2,2,0,0,0,1,1
+"180","180_E6.5_8.5_Chan","haematopoeitic/endothelial progenitor","Blood","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"181","181_E6.5_8.5_Chan","visceral endoderm late","Endoderm","E6.5_8.5_Chan","E8.5",0,0,0,0,0,4,1
+"182","182_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"183","183_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"184","184_E6.5_8.5_Marioni","Parietal endoderm","Endoderm","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"185","185_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"186","186_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"187","187_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"188","188_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"189","189_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E6.5",0,1,0,0,0,2,1
+"190","190_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E6.5",0,0,0,0,0,2,1
+"191","191_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.5",0,1,0,0,0,2,1
+"192","192_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.5",0,1,0,0,0,1,1
+"193","193_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.75",0,0,0,0,0,2,1
+"194","194_E6.5_8.5_Marioni","Nascent mesoderm","Mesoderm","E6.5_8.5_Marioni","E6.75",0,0,0,7,0,2,1
+"195","195_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E6.75",0,0,0,0,0,2,1
+"196","196_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E6.75",0,0,0,0,0,2,1
+"197","197_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.75",0,1,0,0,0,2,1
+"198","198_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E6.75",0,0,0,2,0,2,1
+"199","199_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.75",5,1,0,0,0,2,1
+"200","200_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E6.75",0,0,0,0,0,2,1
+"201","201_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E6.75",0,0,0,1,0,2,1
+"202","202_E6.5_8.5_Marioni","Visceral endoderm","Endoderm","E6.5_8.5_Marioni","E6.75",3,7,0,0,0,2,1
+"203","203_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E6.75",0,0,0,0,0,2,1
+"204","204_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E6.75",0,0,0,0,0,2,1
+"205","205_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.0",0,0,0,0,0,2,1
+"206","206_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.0",0,0,0,1,0,2,1
+"207","207_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.0",5,1,0,0,0,2,1
+"208","208_E6.5_8.5_Marioni","Haematoendothelial progenitors","Blood","E6.5_8.5_Marioni","E7.0",0,0,0,0,0,2,1
+"209","209_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.0",5,1,0,1,0,2,1
+"210","210_E6.5_8.5_Marioni","Parietal endoderm","Endoderm","E6.5_8.5_Marioni","E7.0",0,8,0,0,0,2,1
+"211","211_E6.5_8.5_Marioni","Nascent mesoderm","Mesoderm","E6.5_8.5_Marioni","E7.0",5,1,0,7,0,2,1
+"212","212_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.0",0,1,0,0,0,2,1
+"213","213_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.0",0,0,0,0,0,2,1
+"214","214_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.0",0,1,0,1,0,2,1
+"215","215_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E7.0",0,0,0,0,0,2,1
+"216","216_E6.5_8.5_Marioni","Anterior Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.0",0,0,0,1,0,2,1
+"217","217_E6.5_8.5_Marioni","Visceral endoderm","Endoderm","E6.5_8.5_Marioni","E7.0",0,0,0,0,4,2,1
+"218","218_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.0",0,0,0,2,0,2,1
+"219","219_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"220","220_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"221","221_E6.5_8.5_Marioni","Anterior Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.25",0,0,0,1,0,2,1
+"222","222_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"223","223_E6.5_8.5_Marioni","Nascent mesoderm","Mesoderm","E6.5_8.5_Marioni","E7.25",5,1,1,7,0,2,1
+"224","224_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"225","225_E6.5_8.5_Marioni","Haematoendothelial progenitors","Blood","E6.5_8.5_Marioni","E7.25",1,1,0,0,0,2,1
+"226","226_E6.5_8.5_Marioni","Visceral endoderm","Endoderm","E6.5_8.5_Marioni","E7.25",2,2,0,0,0,2,1
+"227","227_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.25",0,0,0,1,0,2,1
+"228","228_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.25",0,0,0,7,0,2,1
+"229","229_E6.5_8.5_Marioni","Parietal endoderm","Endoderm","E6.5_8.5_Marioni","E7.25",7,8,0,0,0,2,1
+"230","230_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.25",0,6,0,0,0,2,1
+"231","231_E6.5_8.5_Marioni","Nascent mesoderm","Mesoderm","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"232","232_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"233","233_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.25",5,1,0,0,0,2,1
+"234","234_E6.5_8.5_Marioni","Primitive Streak","Primitive_streak","E6.5_8.5_Marioni","E7.25",0,0,0,1,0,2,1
+"235","235_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"236","236_E6.5_8.5_Marioni","Nascent mesoderm","Mesoderm","E6.5_8.5_Marioni","E7.25",0,0,1,7,0,2,1
+"237","237_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.25",2,1,0,0,0,2,1
+"238","238_E6.5_8.5_Marioni","Epiblast","Epiblast","E6.5_8.5_Marioni","E7.25",0,0,0,0,0,2,1
+"239","239_E6.5_8.5_Marioni","Rostral neurectoderm","Ectoderm","E6.5_8.5_Marioni","E7.75",0,1,0,0,0,1,1
+"240","240_E6.5_8.5_Marioni","Mesenchyme","Mesoderm","E6.5_8.5_Marioni","E7.75",1,2,0,10,0,1,1
+"241","241_E6.5_8.5_Marioni","Erythroid1","Blood","E6.5_8.5_Marioni","E7.75",0,0,0,0,0,4,1
+"242","242_E6.5_8.5_Marioni","Blood progenitors 2","Blood","E6.5_8.5_Marioni","E7.75",0,0,0,0,0,2,1
+"243","243_E6.5_8.5_Marioni","Gut","Gut","E6.5_8.5_Marioni","E7.75",5,1,0,0,0,2,1
+"244","244_E6.5_8.5_Marioni","Haematoendothelial progenitors","Blood","E6.5_8.5_Marioni","E7.75",2,1,0,0,0,1,1
+"245","245_E6.5_8.5_Marioni","Intermediate mesoderm","Mesoderm","E6.5_8.5_Marioni","E7.75",5,1,0,0,0,1,1
+"246","246_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.75",2,1,0,0,0,2,1
+"247","247_E6.5_8.5_Marioni","Cardiomyocytes","Heart","E6.5_8.5_Marioni","E7.75",0,1,0,15,0,4,1
+"248","248_E6.5_8.5_Marioni","Notochord","Mesoderm","E6.5_8.5_Marioni","E7.75",5,1,0,3,0,2,1
+"249","249_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E7.75",0,0,0,0,0,2,1
+"250","250_E6.5_8.5_Marioni","Caudal epiblast","Epiblast","E6.5_8.5_Marioni","E7.75",5,1,0,14,0,2,1
+"251","251_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.75",2,1,0,0,0,2,1
+"252","252_E6.5_8.5_Marioni","Rostral neurectoderm","Ectoderm","E6.5_8.5_Marioni","E7.75",5,1,0,0,0,1,1
+"253","253_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E7.75",2,1,0,0,0,2,1
+"254","254_E6.5_8.5_Marioni","Intermediate mesoderm","Mesoderm","E6.5_8.5_Marioni","E7.75",0,1,0,6,0,1,1
+"255","255_E6.5_8.5_Marioni","Paraxial mesoderm","Mesoderm","E6.5_8.5_Marioni","E7.75",0,1,0,0,0,1,1
+"256","256_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E7.75",0,0,0,0,0,2,1
+"257","257_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E7.75",0,0,0,0,0,2,1
+"258","258_E6.5_8.5_Marioni","Paraxial mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.0",0,1,0,0,0,2,1
+"259","259_E6.5_8.5_Marioni","Blood progenitors 2","Blood","E6.5_8.5_Marioni","E8.0",0,0,0,0,0,4,1
+"260","260_E6.5_8.5_Marioni","Haematoendothelial progenitors","Blood","E6.5_8.5_Marioni","E8.0",1,2,0,0,0,2,1
+"261","261_E6.5_8.5_Marioni","Mesenchyme","Mesoderm","E6.5_8.5_Marioni","E8.0",1,2,0,0,0,2,1
+"262","262_E6.5_8.5_Marioni","Intermediate mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.0",5,1,1,9,0,2,1
+"263","263_E6.5_8.5_Marioni","Surface ectoderm","Ectoderm","E6.5_8.5_Marioni","E8.0",5,1,0,0,0,2,1
+"264","264_E6.5_8.5_Marioni","Pharyngeal mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.0",0,1,0,15,0,2,1
+"265","265_E6.5_8.5_Marioni","Gut","Gut","E6.5_8.5_Marioni","E8.0",5,1,0,0,0,2,1
+"266","266_E6.5_8.5_Marioni","Rostral neurectoderm","Ectoderm","E6.5_8.5_Marioni","E8.0",0,1,0,0,0,2,1
+"267","267_E6.5_8.5_Marioni","Notochord","Mesoderm","E6.5_8.5_Marioni","E8.0",5,1,1,3,0,2,1
+"268","268_E6.5_8.5_Marioni","Parietal endoderm","Endoderm","E6.5_8.5_Marioni","E8.0",4,5,0,0,0,2,1
+"269","269_E6.5_8.5_Marioni","Rostral neurectoderm","Ectoderm","E6.5_8.5_Marioni","E8.0",0,1,0,0,0,2,1
+"270","270_E6.5_8.5_Marioni","Intermediate mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.0",0,1,1,6,0,2,1
+"271","271_E6.5_8.5_Marioni","Caudal epiblast","Epiblast","E6.5_8.5_Marioni","E8.0",5,1,0,14,0,2,1
+"272","272_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E8.0",0,0,0,0,0,2,1
+"273","273_E6.5_8.5_Marioni","ExE mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.0",1,2,0,10,0,2,1
+"274","274_E6.5_8.5_Marioni","Erythroid1","Blood","E6.5_8.5_Marioni","E8.0",0,0,0,0,0,4,1
+"275","275_E6.5_8.5_Marioni","ExE ectoderm","Ex_ectoderm","E6.5_8.5_Marioni","E8.0",2,1,0,0,0,2,1
+"276","276_E6.5_8.5_Marioni","Caudal neurectoderm","Ectoderm","E6.5_8.5_Marioni","E8.0",5,1,0,0,0,2,1
+"277","277_E6.5_8.5_Marioni","Forebrain/Midbrain/Hindbrain","Brain/Neurons","E6.5_8.5_Marioni","E8.25",0,1,0,4,0,2,1
+"278","278_E6.5_8.5_Marioni","Forebrain/Midbrain/Hindbrain","Brain/Neurons","E6.5_8.5_Marioni","E8.25",0,1,0,0,0,1,1
+"279","279_E6.5_8.5_Marioni","Mesenchyme","Mesoderm","E6.5_8.5_Marioni","E8.25",5,2,0,17,0,2,1
+"280","280_E6.5_8.5_Marioni","Pharyngeal mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.25",0,1,0,15,0,2,1
+"281","281_E6.5_8.5_Marioni","Erythroid2","Blood","E6.5_8.5_Marioni","E8.25",0,0,0,0,0,4,1
+"282","282_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E8.25",0,0,0,0,0,2,1
+"283","283_E6.5_8.5_Marioni","Cardiomyocytes","Heart","E6.5_8.5_Marioni","E8.25",5,1,0,15,0,4,1
+"284","284_E6.5_8.5_Marioni","Surface ectoderm","Ectoderm","E6.5_8.5_Marioni","E8.25",0,1,0,9,0,2,1
+"285","285_E6.5_8.5_Marioni","Gut","Gut","E6.5_8.5_Marioni","E8.25",5,1,0,9,0,2,1
+"286","286_E6.5_8.5_Marioni","ExE ectoderm","Ectoderm","E6.5_8.5_Marioni","E8.25",2,1,0,0,0,2,1
+"287","287_E6.5_8.5_Marioni","NMP","Spinal_cord","E6.5_8.5_Marioni","E8.25",0,1,0,14,0,2,1
+"288","288_E6.5_8.5_Marioni","Paraxial mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.25",0,1,0,0,0,2,1
+"289","289_E6.5_8.5_Marioni","Intermediate mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.25",0,1,0,0,0,2,1
+"290","290_E6.5_8.5_Marioni","Erythroid1","Blood","E6.5_8.5_Marioni","E8.25",0,0,0,0,0,4,1
+"291","291_E6.5_8.5_Marioni","Somitic mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.25",0,1,1,6,0,2,1
+"292","292_E6.5_8.5_Marioni","Haematoendothelial progenitors","Blood","E6.5_8.5_Marioni","E8.25",1,2,3,0,0,2,1
+"293","293_E6.5_8.5_Marioni","Allantois","Mesoderm","E6.5_8.5_Marioni","E8.25",1,1,0,10,0,2,1
+"294","294_E6.5_8.5_Marioni","Surface ectoderm","Ectoderm","E6.5_8.5_Marioni","E8.25",0,1,0,0,0,2,1
+"295","295_E6.5_8.5_Marioni","Forebrain/Midbrain/Hindbrain","Brain/Neurons","E6.5_8.5_Marioni","E8.5",0,1,0,0,11,2,1
+"296","296_E6.5_8.5_Marioni","Erythroid3","Blood","E6.5_8.5_Marioni","E8.5",0,0,0,0,0,2,1
+"297","297_E6.5_8.5_Marioni","Forebrain/Midbrain/Hindbrain","Brain/Neurons","E6.5_8.5_Marioni","E8.5",0,1,0,15,11,2,1
+"298","298_E6.5_8.5_Marioni","Paraxial mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.5",0,1,0,8,0,2,1
+"299","299_E6.5_8.5_Marioni","Allantois","Mesoderm","E6.5_8.5_Marioni","E8.5",5,2,0,10,0,2,1
+"300","300_E6.5_8.5_Marioni","Neural crest","Neural_crest","E6.5_8.5_Marioni","E8.5",0,1,0,0,0,2,1
+"301","301_E6.5_8.5_Marioni","Cardiomyocytes","Heart","E6.5_8.5_Marioni","E8.5",5,1,0,15,0,4,1
+"302","302_E6.5_8.5_Marioni","Surface ectoderm","Ectoderm","E6.5_8.5_Marioni","E8.5",5,1,0,9,0,2,1
+"303","303_E6.5_8.5_Marioni","Somitic mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.5",0,1,1,14,0,2,1
+"304","304_E6.5_8.5_Marioni","ExE endoderm","Endoderm","E6.5_8.5_Marioni","E8.5",0,0,0,0,0,2,1
+"305","305_E6.5_8.5_Marioni","Erythroid3","Blood","E6.5_8.5_Marioni","E8.5",0,0,0,0,0,4,1
+"306","306_E6.5_8.5_Marioni","Blood progenitors 2","Blood","E6.5_8.5_Marioni","E8.5",0,0,0,0,0,2,1
+"307","307_E6.5_8.5_Marioni","ExE mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.5",0,1,0,0,0,2,1
+"308","308_E6.5_8.5_Marioni","Surface ectoderm","Ectoderm","E6.5_8.5_Marioni","E8.5",5,2,0,17,0,2,1
+"309","309_E6.5_8.5_Marioni","Erythroid3","Blood","E6.5_8.5_Marioni","E8.5",0,0,0,0,0,2,1
+"310","310_E6.5_8.5_Marioni","Forebrain/Midbrain/Hindbrain","Brain/Neurons","E6.5_8.5_Marioni","E8.5",0,1,0,15,11,2,1
+"311","311_E6.5_8.5_Marioni","Paraxial mesoderm","Mesoderm","E6.5_8.5_Marioni","E8.5",0,1,0,0,0,2,1
+"312","312_E6.5_8.5_Marioni","Surface ectoderm","Ectoderm","E6.5_8.5_Marioni","E8.5",5,1,0,0,0,2,1
+"313","313_E6.5_8.5_Marioni","NMP","Spinal_cord","E6.5_8.5_Marioni","E8.5",0,1,0,14,0,2,1
+"314","314_E6.5_8.5_Marioni","Mesenchyme","Mesoderm","E6.5_8.5_Marioni","E8.5",5,2,0,17,0,2,1
+"315","315_E6.5_8.5_Marioni","Endothelial","Endothelial","E6.5_8.5_Marioni","E8.5",1,2,0,0,0,2,1
+"316","316_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"317","317_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"318","318_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"319","319_E5.5_Nowotschin","ExE","Ex_ectoderm","E5.5_Nowotschin","E5.5",2,2,0,2,14,3,4
+"320","320_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,0,1,2
+"321","321_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"322","322_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"323","323_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"324","324_E5.5_Nowotschin","ExE","Ex_ectoderm","E5.5_Nowotschin","E5.5",2,2,0,2,0,1,2
+"325","325_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"326","326_E5.5_Nowotschin","exVE","Endoderm","E5.5_Nowotschin","E5.5",3,4,0,4,2,3,4
+"327","327_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"328","328_E5.5_Nowotschin","emVE","Endoderm","E5.5_Nowotschin","E5.5",3,4,0,5,3,3,4
+"329","329_E5.5_Nowotschin","ExE","Ex_ectoderm","E5.5_Nowotschin","E5.5",2,2,0,2,0,1,2
+"330","330_E5.5_Nowotschin","exVE","Endoderm","E5.5_Nowotschin","E5.5",3,4,0,4,13,3,4
+"331","331_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,0,13,3,4
+"332","332_E5.5_Nowotschin","ExE","Ex_ectoderm","E5.5_Nowotschin","E5.5",2,2,0,2,0,1,2
+"333","333_E5.5_Nowotschin","EPI","Epiblast","E5.5_Nowotschin","E5.5",1,2,0,3,13,3,4
+"334","334_E5.5_Nowotschin","ExE","Ex_ectoderm","E5.5_Nowotschin","E5.5",2,2,0,2,0,1,2
+"335","335_E5.5_Nowotschin","ExE","Ex_ectoderm","E5.5_Nowotschin","E5.5",1,2,0,0,0,4,2
+"336","336_18m 10x","bladder cell","Organ_specific","18m 10x","18m",8,9,0,0,15,6,5
+"337","337_18m 10x","bladder urothelial cell","Epithelium","18m 10x","18m",9,9,7,20,0,7,6
+"338","338_18m 10x","endothelial cell","Endothelial","18m 10x","18m",8,10,8,21,3,8,5
+"339","339_18m 10x","leukocyte","Blood","18m 10x","18m",0,0,0,0,0,6,7
+"340","340_1m 10x","bladder cell","Organ_specific","1m 10x","1m",8,9,0,22,15,6,8
+"341","341_1m 10x","bladder urothelial cell","Epithelium","1m 10x","1m",8,9,7,20,16,9,6
+"342","342_1m 10x","endothelial cell","Endothelial","1m 10x","1m",8,10,8,23,17,10,9
+"343","343_1m 10x","leukocyte","Blood","1m 10x","1m",10,0,5,0,0,6,7
+"344","344_24m 10x","bladder cell","Organ_specific","24m 10x","24m",8,9,0,22,15,11,5
+"345","345_24m 10x","bladder urothelial cell","Epithelium","24m 10x","24m",8,9,7,20,0,9,6
+"346","346_24m 10x","endothelial cell","Endothelial","24m 10x","24m",8,9,8,21,18,8,5
+"347","347_24m 10x","leukocyte","Blood","24m 10x","24m",0,0,9,0,0,11,7
+"348","348_3m 10x","bladder cell","Organ_specific","3m 10x","3m",8,9,0,22,15,6,5
+"349","349_3m 10x","bladder urothelial cell","Epithelium","3m 10x","3m",8,9,7,20,0,9,6
+"350","350_3m 10x","endothelial cell","Endothelial","3m 10x","3m",8,11,8,21,19,11,5
+"351","351_3m 10x","leukocyte","Blood","3m 10x","3m",11,0,9,0,0,7,7
+"352","352_18m 10x","B cell","Blood","18m 10x","18m",0,0,9,0,0,11,10
+"353","353_18m 10x","endothelial cell","Endothelial","18m 10x","18m",12,11,10,24,12,10,5
+"354","354_18m 10x","epithelial cell","Epithelium","18m 10x","18m",13,12,0,0,20,12,6
+"355","355_18m 10x","erythroblast","Blood","18m 10x","18m",0,0,0,0,0,10,11
+"356","356_18m 10x","mesenchymal stem cell of adipose","Mesenchymal","18m 10x","18m",14,13,0,0,21,9,8
+"357","357_18m 10x","myeloid cell","Blood","18m 10x","18m",0,0,9,0,0,7,9
+"358","358_18m 10x","T cell","Blood","18m 10x","18m",0,0,0,0,0,11,10
+"359","359_21m 10x","B cell","Blood","21m 10x","21m",0,0,0,0,0,6,10
+"360","360_21m 10x","endothelial cell","Endothelial","21m 10x","21m",12,11,10,24,12,8,5
+"361","361_21m 10x","epithelial cell","Epithelium","21m 10x","21m",8,9,0,25,14,12,6
+"362","362_21m 10x","mesenchymal stem cell of adipose","Mesenchymal","21m 10x","21m",14,13,0,0,21,9,8
+"363","363_21m 10x","myeloid cell","Blood","21m 10x","21m",10,11,9,0,0,7,7
+"364","364_21m 10x","T cell","Blood","21m 10x","21m",0,0,11,0,0,11,10
+"365","365_30m 10x","B cell","Blood","30m 10x","30m",0,0,0,0,0,11,10
+"366","366_30m 10x","endothelial cell","Endothelial","30m 10x","30m",12,11,10,24,12,8,5
+"367","367_30m 10x","lymphocyte","Blood","30m 10x","30m",0,0,0,0,0,6,12
+"368","368_30m 10x","mesenchymal stem cell of adipose","Mesenchymal","30m 10x","30m",8,9,0,26,21,6,8
+"369","369_30m 10x","myeloid cell","Blood","30m 10x","30m",0,0,9,0,0,7,7
+"370","370_30m 10x","T cell","Blood","30m 10x","30m",0,0,11,0,0,11,10
+"371","371_18m 10x","cardiomyocyte","Muscle","18m 10x","18m",0,9,0,0,0,13,13
+"372","372_18m 10x","endocardial cell","Endothelial","18m 10x","18m",8,9,12,27,20,10,9
+"373","373_18m 10x","endothelial cell of coronary artery","Endothelial","18m 10x","18m",12,11,10,24,17,10,9
+"374","374_18m 10x","fibroblast of cardiac tissue","Connective","18m 10x","18m",8,9,0,0,22,14,8
+"375","375_18m 10x","leukocyte","Blood","18m 10x","18m",10,10,9,0,0,7,9
+"376","376_18m 10x","smooth muscle cell","Muscle","18m 10x","18m",15,14,13,0,23,10,9
+"377","377_1m 10x","cardiomyocyte","Muscle","1m 10x","1m",0,9,0,0,0,9,13
+"378","378_1m 10x","endocardial cell","Endothelial","1m 10x","1m",8,9,12,27,17,15,9
+"379","379_1m 10x","endothelial cell of coronary artery","Endothelial","1m 10x","1m",12,11,10,24,17,10,9
+"380","380_1m 10x","fibroblast of cardiac tissue","Connective","1m 10x","1m",8,9,0,0,22,9,9
+"381","381_1m 10x","leukocyte","Blood","1m 10x","1m",10,0,5,0,0,7,9
+"382","382_1m 10x","smooth muscle cell","Muscle","1m 10x","1m",8,9,13,24,23,10,9
+"383","383_21m 10x","cardiomyocyte","Muscle","21m 10x","21m",8,9,0,28,0,13,13
+"384","384_21m 10x","endocardial cell","Endothelial","21m 10x","21m",8,9,12,27,20,10,9
+"385","385_21m 10x","endothelial cell of coronary artery","Endothelial","21m 10x","21m",12,11,10,24,17,10,9
+"386","386_21m 10x","fibroblast of cardiac tissue","Connective","21m 10x","21m",8,9,0,0,22,14,8
+"387","387_21m 10x","leukocyte","Blood","21m 10x","21m",0,0,5,0,0,7,9
+"388","388_24m 10x","endocardial cell","Endothelial","24m 10x","24m",8,9,12,27,20,10,9
+"389","389_24m 10x","endothelial cell of coronary artery","Endothelial","24m 10x","24m",12,11,10,24,17,10,9
+"390","390_24m 10x","fibroblast of cardiac tissue","Connective","24m 10x","24m",8,6,0,0,22,16,8
+"391","391_24m 10x","leukocyte","Blood","24m 10x","24m",10,10,9,0,0,7,9
+"392","392_24m 10x","smooth muscle cell","Muscle","24m 10x","24m",8,9,13,24,23,10,9
+"393","393_30m 10x","cardiomyocyte","Muscle","30m 10x","30m",0,0,0,0,0,0,14
+"394","394_30m 10x","endocardial cell","Endothelial","30m 10x","30m",8,9,12,27,20,15,9
+"395","395_30m 10x","endothelial cell of coronary artery","Endothelial","30m 10x","30m",12,11,10,24,17,17,9
+"396","396_30m 10x","erythrocyte","Blood","30m 10x","30m",12,11,10,24,12,17,11
+"397","397_30m 10x","fibroblast of cardiac tissue","Connective","30m 10x","30m",8,9,0,0,22,9,9
+"398","398_30m 10x","leukocyte","Blood","30m 10x","30m",10,11,9,0,0,12,9
+"399","399_30m 10x","mast cell","Blood","30m 10x","30m",13,6,14,0,0,18,15
+"400","400_30m 10x","smooth muscle cell","Muscle","30m 10x","30m",13,6,13,24,23,17,9
+"401","401_3m 10x","cardiomyocyte","Muscle","3m 10x","3m",16,4,0,28,0,13,13
+"402","402_3m 10x","endocardial cell","Endothelial","3m 10x","3m",17,4,12,27,20,10,9
+"403","403_3m 10x","endothelial cell of coronary artery","Endothelial","3m 10x","3m",12,11,10,24,17,10,9
+"404","404_3m 10x","fibroblast of cardiac tissue","Connective","3m 10x","3m",8,9,0,29,22,14,8
+"405","405_3m 10x","leukocyte","Blood","3m 10x","3m",10,11,9,0,0,16,9
+"406","406_18m 10x","B cell","Blood","18m 10x","18m",0,0,15,0,0,7,12
+"407","407_18m 10x","brush cell","Epithelium","18m 10x","18m",7,8,0,0,14,9,16
+"408","408_18m 10x","epithelial cell of proximal tubule","Epithelium","18m 10x","18m",16,12,0,0,24,15,16
+"409","409_18m 10x","fenestrated cell","Endothelial","18m 10x","18m",18,11,10,24,12,10,9
+"410","410_18m 10x","fibroblast","Connective","18m 10x","18m",14,12,0,26,21,15,9
+"411","411_18m 10x","kidney collecting duct principal cell","Epithelium","18m 10x","18m",15,15,16,18,14,15,17
+"412","412_18m 10x","kidney cortex artery cell","Endothelial","18m 10x","18m",19,16,10,24,17,10,9
+"413","413_18m 10x","kidney distal convoluted tubule epithelial cell","Epithelium","18m 10x","18m",7,13,0,0,19,9,17
+"414","414_18m 10x","kidney loop of Henle ascending limb epithelial cell","Epithelium","18m 10x","18m",20,12,0,0,19,19,17
+"415","415_18m 10x","kidney loop of Henle thick ascending limb epithelial cell","Epithelium","18m 10x","18m",20,13,0,30,19,15,17
+"416","416_18m 10x","kidney mesangial cell","Connective","18m 10x","18m",13,6,8,31,14,10,9
+"417","417_18m 10x","kidney proximal convoluted tubule epithelial cell","Epithelium","18m 10x","18m",16,12,0,0,24,9,16
+"418","418_18m 10x","lymphocyte","Blood","18m 10x","18m",0,0,9,0,0,7,18
+"419","419_18m 10x","macrophage","Blood","18m 10x","18m",21,11,15,0,0,7,9
+"420","420_18m 10x","podocyte","Epithelium","18m 10x","18m",13,6,6,32,14,12,9
+"421","421_18m 10x","T cell","Blood","18m 10x","18m",0,0,0,0,0,14,12
+"422","422_1m 10x","brush cell","Epithelium","1m 10x","1m",0,17,0,0,24,15,16
+"423","423_1m 10x","epithelial cell of proximal tubule","Epithelium","1m 10x","1m",20,13,0,0,24,19,16
+"424","424_1m 10x","fenestrated cell","Endothelial","1m 10x","1m",18,11,10,24,12,10,9
+"425","425_1m 10x","kidney capillary endothelial cell","Endothelial","1m 10x","1m",10,10,10,31,12,8,9
+"426","426_1m 10x","kidney collecting duct principal cell","Epithelium","1m 10x","1m",15,15,0,18,14,15,17
+"427","427_1m 10x","kidney cortex artery cell","Endothelial","1m 10x","1m",19,18,10,24,17,6,9
+"428","428_1m 10x","kidney distal convoluted tubule epithelial cell","Epithelium","1m 10x","1m",16,12,0,33,19,15,17
+"429","429_1m 10x","kidney loop of Henle ascending limb epithelial cell","Epithelium","1m 10x","1m",20,13,0,30,19,20,17
+"430","430_1m 10x","kidney loop of Henle thick ascending limb epithelial cell","Epithelium","1m 10x","1m",16,12,16,30,19,14,17
+"431","431_1m 10x","kidney mesangial cell","Connective","1m 10x","1m",13,6,13,31,23,10,9
+"432","432_1m 10x","kidney proximal convoluted tubule epithelial cell","Epithelium","1m 10x","1m",0,12,0,0,24,15,16
+"433","433_1m 10x","macrophage","Blood","1m 10x","1m",0,0,11,0,0,7,9
+"434","434_1m 10x","podocyte","Epithelium","1m 10x","1m",16,6,6,32,14,12,9
+"435","435_21m 10x","B cell","Blood","21m 10x","21m",0,0,0,0,0,6,12
+"436","436_21m 10x","brush cell","Epithelium","21m 10x","21m",16,9,0,0,24,9,16
+"437","437_21m 10x","epithelial cell of proximal tubule","Epithelium","21m 10x","21m",0,0,0,0,0,9,16
+"438","438_21m 10x","fenestrated cell","Endothelial","21m 10x","21m",18,11,10,24,12,10,9
+"439","439_21m 10x","kidney collecting duct principal cell","Epithelium","21m 10x","21m",15,15,16,18,14,15,17
+"440","440_21m 10x","kidney cortex artery cell","Endothelial","21m 10x","21m",19,18,10,24,17,10,9
+"441","441_21m 10x","kidney distal convoluted tubule epithelial cell","Epithelium","21m 10x","21m",16,12,0,33,19,9,17
+"442","442_21m 10x","kidney loop of Henle thick ascending limb epithelial cell","Epithelium","21m 10x","21m",16,12,0,30,19,12,17
+"443","443_21m 10x","kidney mesangial cell","Connective","21m 10x","21m",13,12,13,31,23,10,9
+"444","444_21m 10x","kidney proximal convoluted tubule epithelial cell","Epithelium","21m 10x","21m",16,12,0,0,24,9,16
+"445","445_21m 10x","lymphocyte","Blood","21m 10x","21m",0,0,15,0,0,7,18
+"446","446_21m 10x","macrophage","Blood","21m 10x","21m",21,10,11,0,0,7,9
+"447","447_21m 10x","podocyte","Epithelium","21m 10x","21m",16,12,16,32,14,12,17
+"448","448_21m 10x","T cell","Blood","21m 10x","21m",0,0,11,0,0,16,10
+"449","449_24m 10x","B cell","Blood","24m 10x","24m",0,0,0,0,0,16,12
+"450","450_24m 10x","lymphocyte","Blood","24m 10x","24m",0,0,5,0,0,10,19
+"451","451_24m 10x","macrophage","Blood","24m 10x","24m",0,0,15,0,0,7,18
+"452","452_24m 10x","NK cell","Blood","24m 10x","24m",0,0,11,0,0,21,12
+"453","453_24m 10x","plasma cell","Blood","24m 10x","24m",0,0,0,0,0,22,18
+"454","454_24m 10x","T cell","Blood","24m 10x","24m",0,0,0,0,0,16,12
+"455","455_30m 10x","B cell","Blood","30m 10x","30m",0,0,0,0,0,16,12
+"456","456_30m 10x","brush cell","Epithelium","30m 10x","30m",0,0,0,0,14,9,16
+"457","457_30m 10x","epithelial cell of proximal tubule","Epithelium","30m 10x","30m",0,12,0,0,24,9,16
+"458","458_30m 10x","fenestrated cell","Endothelial","30m 10x","30m",18,11,10,24,12,10,9
+"459","459_30m 10x","fibroblast","Connective","30m 10x","30m",8,9,0,0,21,7,8
+"460","460_30m 10x","kidney collecting duct principal cell","Epithelium","30m 10x","30m",15,15,16,18,14,15,17
+"461","461_30m 10x","kidney cortex artery cell","Endothelial","30m 10x","30m",19,18,10,24,17,10,9
+"462","462_30m 10x","kidney distal convoluted tubule epithelial cell","Epithelium","30m 10x","30m",16,12,0,33,19,12,17
+"463","463_30m 10x","kidney loop of Henle ascending limb epithelial cell","Epithelium","30m 10x","30m",15,14,0,30,19,3,17
+"464","464_30m 10x","kidney loop of Henle thick ascending limb epithelial cell","Epithelium","30m 10x","30m",16,12,0,30,19,12,17
+"465","465_30m 10x","kidney proximal convoluted tubule epithelial cell","Epithelium","30m 10x","30m",16,12,0,0,24,9,16
+"466","466_30m 10x","lymphocyte","Blood","30m 10x","30m",0,0,15,0,0,12,18
+"467","467_30m 10x","macrophage","Blood","30m 10x","30m",21,10,15,0,0,7,9
+"468","468_30m 10x","plasma cell","Blood","30m 10x","30m",0,0,0,0,0,22,18
+"469","469_30m 10x","podocyte","Epithelium","30m 10x","30m",16,12,16,0,14,12,16
+"470","470_30m 10x","T cell","Blood","30m 10x","30m",0,0,11,0,0,8,12
+"471","471_3m 10x","epithelial cell of proximal tubule","Epithelium","3m 10x","3m",14,12,0,0,0,15,16
+"472","472_3m 10x","fenestrated cell","Endothelial","3m 10x","3m",18,11,10,24,12,10,9
+"473","473_3m 10x","kidney capillary endothelial cell","Endothelial","3m 10x","3m",18,11,10,24,12,11,9
+"474","474_3m 10x","kidney collecting duct principal cell","Epithelium","3m 10x","3m",15,15,16,18,14,15,17
+"475","475_3m 10x","kidney cortex artery cell","Endothelial","3m 10x","3m",19,18,10,24,17,10,9
+"476","476_3m 10x","kidney distal convoluted tubule epithelial cell","Epithelium","3m 10x","3m",7,13,0,33,19,12,17
+"477","477_3m 10x","kidney loop of Henle ascending limb epithelial cell","Epithelium","3m 10x","3m",16,6,0,30,19,14,17
+"478","478_3m 10x","kidney loop of Henle thick ascending limb epithelial cell","Epithelium","3m 10x","3m",7,13,0,30,19,15,17
+"479","479_3m 10x","kidney mesangial cell","Connective","3m 10x","3m",16,12,13,31,23,10,9
+"480","480_3m 10x","kidney proximal convoluted tubule epithelial cell","Epithelium","3m 10x","3m",0,12,0,0,24,9,16
+"481","481_3m 10x","kidney proximal straight tubule epithelial cell","Epithelium","3m 10x","3m",0,0,0,0,24,15,16
+"482","482_3m 10x","lymphocyte","Blood","3m 10x","3m",0,0,15,0,0,22,18
+"483","483_3m 10x","macrophage","Blood","3m 10x","3m",21,10,11,0,0,7,9
+"484","484_3m 10x","podocyte","Epithelium","3m 10x","3m",13,6,16,32,14,12,9
+"485","485_30m 10x","enterocyte of epithelium of large intestine","Epithelium","30m 10x","30m",22,13,0,34,4,16,20
+"486","486_30m 10x","epithelial cell of large intestine","Epithelium","30m 10x","30m",23,12,0,35,4,17,6
+"487","487_30m 10x","hematopoietic stem cell","Blood","30m 10x","30m",20,0,9,0,0,6,10
+"488","488_30m 10x","intestinal crypt stem cell","Epithelium","30m 10x","30m",22,13,0,35,4,17,6
+"489","489_30m 10x","large intestine goblet cell","Epithelium","30m 10x","30m",23,12,17,35,4,9,6
+"490","490_18m 10x","endothelial cell","Endothelial","18m 10x","18m",12,10,10,21,18,8,5
+"491","491_18m 10x","macrophage","Blood","18m 10x","18m",10,10,9,0,0,7,6
+"492","492_18m 10x","mesenchymal stem cell","Mesenchymal","18m 10x","18m",8,9,0,0,3,6,5
+"493","493_18m 10x","Schwann cell","Brain/Neurons","18m 10x","18m",8,9,16,36,15,6,5
+"494","494_18m 10x","skeletal muscle satellite cell","Muscle","18m 10x","18m",0,9,18,0,0,11,5
+"495","495_18m 10x","smooth muscle cell","Muscle","18m 10x","18m",16,12,13,0,13,8,5
+"496","496_18m 10x","T cell","Blood","18m 10x","18m",0,0,15,0,0,6,10
+"497","497_1m 10x","B cell","Blood","1m 10x","1m",0,0,19,0,0,8,10
+"498","498_1m 10x","endothelial cell","Endothelial","1m 10x","1m",12,10,10,21,18,8,5
+"499","499_1m 10x","macrophage","Blood","1m 10x","1m",10,10,9,0,0,6,7
+"500","500_1m 10x","mesenchymal stem cell","Mesenchymal","1m 10x","1m",8,9,0,0,3,6,5
+"501","501_1m 10x","Schwann cell","Brain/Neurons","1m 10x","1m",8,9,0,0,15,8,5
+"502","502_1m 10x","skeletal muscle satellite cell","Muscle","1m 10x","1m",15,14,18,0,0,6,5
+"503","503_1m 10x","smooth muscle cell","Muscle","1m 10x","1m",13,6,13,0,23,8,5
+"504","504_1m 10x","T cell","Blood","1m 10x","1m",0,0,11,0,0,11,12
+"505","505_21m 10x","B cell","Blood","21m 10x","21m",0,0,0,0,0,6,10
+"506","506_21m 10x","endothelial cell","Endothelial","21m 10x","21m",12,11,10,21,18,8,5
+"507","507_21m 10x","macrophage","Blood","21m 10x","21m",10,11,9,0,0,6,7
+"508","508_21m 10x","mesenchymal stem cell","Mesenchymal","21m 10x","21m",8,9,0,0,0,6,5
+"509","509_21m 10x","skeletal muscle satellite cell","Muscle","21m 10x","21m",15,14,18,0,0,11,5
+"510","510_21m 10x","smooth muscle cell","Muscle","21m 10x","21m",8,9,13,0,13,8,5
+"511","511_21m 10x","T cell","Blood","21m 10x","21m",0,0,0,0,0,8,10
+"512","512_24m 10x","B cell","Blood","24m 10x","24m",0,0,0,0,0,6,10
+"513","513_24m 10x","endothelial cell","Endothelial","24m 10x","24m",12,11,10,21,18,8,5
+"514","514_24m 10x","macrophage","Blood","24m 10x","24m",10,11,9,0,0,6,7
+"515","515_24m 10x","mesenchymal stem cell","Mesenchymal","24m 10x","24m",8,9,0,0,0,8,5
+"516","516_24m 10x","Schwann cell","Brain/Neurons","24m 10x","24m",9,9,16,36,15,6,5
+"517","517_24m 10x","skeletal muscle cell","Muscle","24m 10x","24m",0,0,0,0,0,0,16
+"518","518_24m 10x","skeletal muscle satellite cell","Muscle","24m 10x","24m",8,9,0,0,0,11,5
+"519","519_24m 10x","smooth muscle cell","Muscle","24m 10x","24m",16,12,13,0,23,8,5
+"520","520_24m 10x","T cell","Blood","24m 10x","24m",0,0,0,0,0,11,10
+"521","521_30m 10x","B cell","Blood","30m 10x","30m",0,0,0,0,0,11,10
+"522","522_30m 10x","endothelial cell","Endothelial","30m 10x","30m",12,11,10,21,18,8,5
+"523","523_30m 10x","macrophage","Blood","30m 10x","30m",11,0,9,0,0,6,7
+"524","524_30m 10x","mesenchymal stem cell","Mesenchymal","30m 10x","30m",8,4,0,0,3,8,5
+"525","525_30m 10x","Schwann cell","Brain/Neurons","30m 10x","30m",8,9,0,37,25,16,5
+"526","526_30m 10x","skeletal muscle cell","Muscle","30m 10x","30m",0,0,0,0,0,0,16
+"527","527_30m 10x","skeletal muscle satellite cell","Muscle","30m 10x","30m",17,19,0,0,0,11,5
+"528","528_30m 10x","smooth muscle cell","Muscle","30m 10x","30m",17,4,13,0,23,11,5
+"529","529_30m 10x","T cell","Blood","30m 10x","30m",0,0,0,0,0,11,10
+"530","530_3m 10x","B cell","Blood","3m 10x","3m",0,0,0,0,0,6,10
+"531","531_3m 10x","endothelial cell","Endothelial","3m 10x","3m",12,10,10,21,18,8,5
+"532","532_3m 10x","macrophage","Blood","3m 10x","3m",0,0,9,0,0,6,7
+"533","533_3m 10x","mesenchymal stem cell","Mesenchymal","3m 10x","3m",8,9,0,0,0,6,5
+"534","534_3m 10x","skeletal muscle satellite cell","Muscle","3m 10x","3m",8,3,18,0,0,11,5
+"535","535_3m 10x","smooth muscle cell","Muscle","3m 10x","3m",16,9,13,0,3,8,5
+"536","536_3m 10x","T cell","Blood","3m 10x","3m",0,0,0,0,0,11,10
+"537","537_18m 10x","hepatocyte","Epithelium","18m 10x","18m",7,13,0,0,3,14,13
+"538","538_18m 10x","Kupffer cell","Blood","18m 10x","18m",21,10,9,0,2,22,9
+"539","539_18m 10x","myeloid leukocyte","Blood","18m 10x","18m",11,0,5,0,0,22,18
+"540","540_18m 10x","NK cell","Blood","18m 10x","18m",0,0,11,0,0,10,12
+"541","541_1m 10x","endothelial cell of hepatic sinusoid","Endothelial","1m 10x","1m",10,10,12,38,12,7,9
+"542","542_1m 10x","hepatocyte","Epithelium","1m 10x","1m",7,13,0,0,0,14,13
+"543","543_1m 10x","Kupffer cell","Blood","1m 10x","1m",21,0,9,0,0,12,9
+"544","544_1m 10x","myeloid leukocyte","Blood","1m 10x","1m",11,0,15,0,0,12,18
+"545","545_1m 10x","NK cell","Blood","1m 10x","1m",0,0,11,0,0,21,12
+"546","546_21m 10x","B cell","Blood","21m 10x","21m",8,9,0,0,0,7,6
+"547","547_21m 10x","hepatocyte","Epithelium","21m 10x","21m",7,13,0,0,3,14,13
+"548","548_21m 10x","NK cell","Blood","21m 10x","21m",0,0,11,0,0,16,12
+"549","549_24m 10x","hepatocyte","Epithelium","24m 10x","24m",0,13,0,0,3,0,13
+"550","550_30m 10x","B cell","Blood","30m 10x","30m",24,0,5,0,0,15,9
+"551","551_30m 10x","endothelial cell of hepatic sinusoid","Endothelial","30m 10x","30m",25,5,12,38,12,12,9
+"552","552_30m 10x","Kupffer cell","Blood","30m 10x","30m",0,0,0,0,0,22,9
+"553","553_30m 10x","myeloid leukocyte","Blood","30m 10x","30m",0,0,0,0,0,7,18
+"554","554_30m 10x","NK cell","Blood","30m 10x","30m",0,0,11,0,0,6,12
+"555","555_3m 10x","hepatocyte","Epithelium","3m 10x","3m",7,13,0,0,3,0,13
+"556","556_18m 10x","adventitial cell","Connective","18m 10x","18m",14,13,0,26,21,14,9
+"557","557_18m 10x","alveolar macrophage","Blood","18m 10x","18m",21,0,9,0,0,12,13
+"558","558_18m 10x","B cell","Blood","18m 10x","18m",0,0,19,0,0,16,12
+"559","559_18m 10x","bronchial smooth muscle cell","Muscle","18m 10x","18m",26,16,10,24,17,16,9
+"560","560_18m 10x","CD4-positive  alpha-beta T cell","Blood","18m 10x","18m",0,0,0,0,0,23,12
+"561","561_18m 10x","CD8-positive  alpha-beta T cell","Blood","18m 10x","18m",0,0,0,0,0,16,12
+"562","562_18m 10x","classical monocyte","Blood","18m 10x","18m",0,0,9,0,0,7,18
+"563","563_18m 10x","fibroblast of lung","Connective","18m 10x","18m",14,13,0,39,22,16,9
+"564","564_18m 10x","intermediate monocyte","Blood","18m 10x","18m",11,0,9,0,0,24,18
+"565","565_18m 10x","mature NK T cell","Blood","18m 10x","18m",0,0,11,0,0,23,12
+"566","566_18m 10x","myeloid dendritic cell","Blood","18m 10x","18m",0,0,9,0,0,7,18
+"567","567_18m 10x","neutrophil","Blood","18m 10x","18m",0,0,14,0,0,0,15
+"568","568_18m 10x","NK cell","Blood","18m 10x","18m",0,0,11,0,0,21,12
+"569","569_18m 10x","non-classical monocyte","Blood","18m 10x","18m",0,0,15,0,0,24,18
+"570","570_18m 10x","smooth muscle cell of the pulmonary artery","Muscle","18m 10x","18m",26,18,10,24,17,10,18
+"571","571_18m 10x","T cell","Blood","18m 10x","18m",0,0,11,0,0,9,12
+"572","572_18m 10x","type II pneumocyte","Epithelium","18m 10x","18m",13,6,0,40,3,14,6
+"573","573_18m 10x","vein endothelial cell","Endothelial","18m 10x","18m",26,16,17,38,17,16,9
+"574","574_1m 10x","alveolar macrophage","Blood","1m 10x","1m",21,0,9,0,0,12,13
+"575","575_1m 10x","B cell","Blood","1m 10x","1m",0,0,19,0,0,16,12
+"576","576_1m 10x","bronchial smooth muscle cell","Muscle","1m 10x","1m",26,16,10,24,17,16,9
+"577","577_1m 10x","CD4-positive  alpha-beta T cell","Blood","1m 10x","1m",0,0,0,0,0,23,12
+"578","578_1m 10x","CD8-positive  alpha-beta T cell","Blood","1m 10x","1m",0,0,0,0,0,23,12
+"579","579_1m 10x","classical monocyte","Blood","1m 10x","1m",0,0,9,0,0,24,18
+"580","580_1m 10x","fibroblast of lung","Connective","1m 10x","1m",14,13,0,39,22,16,8
+"581","581_1m 10x","intermediate monocyte","Blood","1m 10x","1m",0,0,9,0,0,24,18
+"582","582_1m 10x","myeloid dendritic cell","Blood","1m 10x","1m",0,0,15,0,0,22,18
+"583","583_1m 10x","neutrophil","Blood","1m 10x","1m",0,0,14,0,0,0,15
+"584","584_1m 10x","NK cell","Blood","1m 10x","1m",0,0,11,0,0,16,12
+"585","585_1m 10x","non-classical monocyte","Blood","1m 10x","1m",21,0,0,0,0,24,18
+"586","586_21m 10x","adventitial cell","Connective","21m 10x","21m",14,12,0,26,21,16,9
+"587","587_21m 10x","alveolar macrophage","Blood","21m 10x","21m",21,0,9,0,0,7,13
+"588","588_21m 10x","B cell","Blood","21m 10x","21m",0,0,19,0,0,16,12
+"589","589_21m 10x","basophil","Blood","21m 10x","21m",0,0,15,0,0,23,10
+"590","590_21m 10x","bronchial smooth muscle cell","Muscle","21m 10x","21m",26,16,10,24,17,16,9
+"591","591_21m 10x","CD4-positive  alpha-beta T cell","Blood","21m 10x","21m",0,0,11,0,0,23,12
+"592","592_21m 10x","CD8-positive  alpha-beta T cell","Blood","21m 10x","21m",0,0,11,0,0,23,12
+"593","593_21m 10x","classical monocyte","Blood","21m 10x","21m",0,0,9,0,0,24,18
+"594","594_21m 10x","fibroblast of lung","Connective","21m 10x","21m",14,13,0,39,15,16,8
+"595","595_21m 10x","mature NK T cell","Blood","21m 10x","21m",0,0,11,0,0,21,12
+"596","596_21m 10x","myeloid dendritic cell","Blood","21m 10x","21m",0,0,15,0,0,7,18
+"597","597_21m 10x","NK cell","Blood","21m 10x","21m",0,0,11,0,0,23,12
+"598","598_21m 10x","non-classical monocyte","Blood","21m 10x","21m",0,0,15,0,0,24,18
+"599","599_21m 10x","T cell","Blood","21m 10x","21m",0,0,11,0,0,23,12
+"600","600_21m 10x","vein endothelial cell","Endothelial","21m 10x","21m",26,16,17,38,17,16,9
+"601","601_30m 10x","alveolar macrophage","Blood","30m 10x","30m",21,0,9,0,0,12,21
+"602","602_30m 10x","B cell","Blood","30m 10x","30m",0,0,0,0,0,16,12
+"603","603_30m 10x","basophil","Blood","30m 10x","30m",0,0,0,0,0,24,21
+"604","604_30m 10x","bronchial smooth muscle cell","Muscle","30m 10x","30m",26,16,10,24,17,10,9
+"605","605_30m 10x","CD4-positive  alpha-beta T cell","Blood","30m 10x","30m",0,0,11,0,0,16,12
+"606","606_30m 10x","CD8-positive  alpha-beta T cell","Blood","30m 10x","30m",0,0,0,0,0,16,12
+"607","607_30m 10x","classical monocyte","Blood","30m 10x","30m",0,0,9,0,0,22,21
+"608","608_30m 10x","intermediate monocyte","Blood","30m 10x","30m",0,0,9,0,0,24,21
+"609","609_30m 10x","lung macrophage","Blood","30m 10x","30m",0,0,0,0,0,22,21
+"610","610_30m 10x","mature NK T cell","Blood","30m 10x","30m",0,0,11,0,0,16,12
+"611","611_30m 10x","myeloid dendritic cell","Blood","30m 10x","30m",0,0,15,0,0,12,18
+"612","612_30m 10x","NK cell","Blood","30m 10x","30m",0,0,11,0,0,16,12
+"613","613_30m 10x","non-classical monocyte","Blood","30m 10x","30m",11,0,0,0,0,24,18
+"614","614_30m 10x","regulatory T cell","Blood","30m 10x","30m",0,0,11,0,0,14,12
+"615","615_30m 10x","T cell","Blood","30m 10x","30m",0,0,11,0,0,10,12
+"616","616_30m 10x","vein endothelial cell","Endothelial","30m 10x","30m",26,16,17,38,17,16,9
+"617","617_3m 10x","adventitial cell","Connective","3m 10x","3m",8,9,0,26,21,9,8
+"618","618_3m 10x","alveolar macrophage","Blood","3m 10x","3m",21,0,9,0,0,12,6
+"619","619_3m 10x","B cell","Blood","3m 10x","3m",0,0,9,0,0,16,12
+"620","620_3m 10x","bronchial smooth muscle cell","Muscle","3m 10x","3m",26,16,10,24,17,14,9
+"621","621_3m 10x","CD4-positive  alpha-beta T cell","Blood","3m 10x","3m",0,0,11,0,0,23,12
+"622","622_3m 10x","CD8-positive  alpha-beta T cell","Blood","3m 10x","3m",0,0,0,0,0,14,12
+"623","623_3m 10x","ciliated columnar cell of tracheobronchial tree","Epithelium","3m 10x","3m",8,13,20,0,16,25,9
+"624","624_3m 10x","classical monocyte","Blood","3m 10x","3m",0,0,9,0,0,7,18
+"625","625_3m 10x","fibroblast of lung","Connective","3m 10x","3m",14,13,0,39,15,16,8
+"626","626_3m 10x","myeloid dendritic cell","Blood","3m 10x","3m",0,0,9,0,0,7,18
+"627","627_3m 10x","NK cell","Blood","3m 10x","3m",0,0,11,0,0,16,12
+"628","628_3m 10x","non-classical monocyte","Blood","3m 10x","3m",0,0,9,0,0,24,18
+"629","629_3m 10x","pericyte cell","Endothelial","3m 10x","3m",14,2,18,0,15,16,9
+"630","630_3m 10x","pulmonary interstitial fibroblast","Connective","3m 10x","3m",16,9,0,41,22,16,8
+"631","631_3m 10x","type II pneumocyte","Blood","3m 10x","3m",8,9,6,40,3,10,6
+"632","632_18m 10x","B cell","Blood","18m 10x","18m",0,0,0,0,0,9,10
+"633","633_18m 10x","basal cell","Blood","18m 10x","18m",9,9,21,42,0,11,7
+"634","634_18m 10x","endothelial cell","Endothelial","18m 10x","18m",18,11,10,21,18,16,5
+"635","635_18m 10x","luminal epithelial cell of mammary gland","Epithelium","18m 10x","18m",8,9,0,20,0,9,6
+"636","636_18m 10x","macrophage","Blood","18m 10x","18m",10,0,9,0,0,16,7
+"637","637_18m 10x","stromal cell","Mesenchymal","18m 10x","18m",14,13,0,0,21,9,5
+"638","638_18m 10x","T cell","Blood","18m 10x","18m",0,0,0,0,0,11,12
+"639","639_21m 10x","B cell","Blood","21m 10x","21m",0,0,0,0,0,11,10
+"640","640_21m 10x","basal cell","Blood","21m 10x","21m",9,9,21,42,14,11,7
+"641","641_21m 10x","endothelial cell","Endothelial","21m 10x","21m",12,11,10,21,18,8,5
+"642","642_21m 10x","luminal epithelial cell of mammary gland","Epithelium","21m 10x","21m",8,9,22,20,0,9,6
+"643","643_21m 10x","macrophage","Blood","21m 10x","21m",0,0,9,0,0,7,7
+"644","644_21m 10x","stromal cell","Mesenchymal","21m 10x","21m",14,13,0,0,0,6,5
+"645","645_21m 10x","T cell","Blood","21m 10x","21m",0,0,0,0,0,11,12
+"646","646_3m 10x","B cell","Blood","3m 10x","3m",0,0,0,0,0,11,10
+"647","647_3m 10x","basal cell","Blood","3m 10x","3m",9,9,21,42,14,6,7
+"648","648_3m 10x","endothelial cell","Endothelial","3m 10x","3m",9,10,10,0,18,8,5
+"649","649_3m 10x","luminal epithelial cell of mammary gland","Epithelium","3m 10x","3m",8,9,22,20,26,9,6
+"650","650_3m 10x","macrophage","Blood","3m 10x","3m",0,0,9,0,0,6,7
+"651","651_3m 10x","stromal cell","Mesenchymal","3m 10x","3m",8,9,0,0,0,6,5
+"652","652_3m 10x","T cell","Blood","3m 10x","3m",0,0,0,0,0,11,12
+"653","653_18m 10x","erythroblast","Blood","18m 10x","18m",0,0,0,0,0,19,22
+"654","654_18m 10x","granulocyte","Blood","18m 10x","18m",0,20,14,0,0,23,23
+"655","655_18m 10x","granulocytopoietic cell","Blood","18m 10x","18m",0,0,0,0,0,19,19
+"656","656_18m 10x","hematopoietic precursor cell","Blood","18m 10x","18m",0,0,5,0,0,17,18
+"657","657_18m 10x","immature B cell","Blood","18m 10x","18m",0,0,16,0,0,14,22
+"658","658_18m 10x","late pro-B cell","Blood","18m 10x","18m",0,0,0,0,0,22,18
+"659","659_18m 10x","macrophage","Blood","18m 10x","18m",0,0,0,0,0,19,19
+"660","660_18m 10x","megakaryocyte-erythroid progenitor cell","Blood","18m 10x","18m",0,0,0,0,0,19,19
+"661","661_18m 10x","monocyte","Blood","18m 10x","18m",0,0,9,0,0,22,19
+"662","662_18m 10x","naive B cell","Blood","18m 10x","18m",0,0,19,0,0,19,19
+"663","663_18m 10x","naive T cell","Blood","18m 10x","18m",0,0,0,0,0,19,19
+"664","664_18m 10x","precursor B cell","Blood","18m 10x","18m",0,0,23,0,0,10,18
+"665","665_18m 10x","proerythroblast","Blood","18m 10x","18m",0,0,14,0,0,0,23
+"666","666_18m 10x","promonocyte","Blood","18m 10x","18m",0,0,0,0,0,15,19
+"667","667_1m 10x","erythroblast","Blood","1m 10x","1m",0,0,0,0,0,19,22
+"668","668_1m 10x","granulocyte","Blood","1m 10x","1m",0,0,14,0,0,23,23
+"669","669_1m 10x","granulocytopoietic cell","Blood","1m 10x","1m",0,0,0,0,0,19,19
+"670","670_1m 10x","hematopoietic precursor cell","Blood","1m 10x","1m",0,0,11,0,0,17,18
+"671","671_1m 10x","immature B cell","Blood","1m 10x","1m",0,0,0,0,0,16,11
+"672","672_1m 10x","macrophage","Blood","1m 10x","1m",0,0,0,0,0,19,19
+"673","673_1m 10x","megakaryocyte-erythroid progenitor cell","Blood","1m 10x","1m",0,0,0,0,0,19,19
+"674","674_1m 10x","monocyte","Blood","1m 10x","1m",0,0,9,0,0,7,19
+"675","675_1m 10x","naive B cell","Blood","1m 10x","1m",0,0,5,0,0,14,19
+"676","676_1m 10x","naive T cell","Blood","1m 10x","1m",0,0,0,0,0,19,19
+"677","677_1m 10x","precursor B cell","Blood","1m 10x","1m",0,0,0,0,0,10,18
+"678","678_1m 10x","proerythroblast","Blood","1m 10x","1m",0,0,14,0,0,23,23
+"679","679_1m 10x","promonocyte","Blood","1m 10x","1m",0,0,0,0,0,15,19
+"680","680_21m 10x","erythroblast","Blood","21m 10x","21m",0,0,0,0,0,19,22
+"681","681_21m 10x","granulocyte","Blood","21m 10x","21m",0,20,14,0,0,23,23
+"682","682_21m 10x","granulocytopoietic cell","Blood","21m 10x","21m",0,0,5,0,0,19,19
+"683","683_21m 10x","hematopoietic precursor cell","Blood","21m 10x","21m",0,0,11,0,0,10,18
+"684","684_21m 10x","late pro-B cell","Blood","21m 10x","21m",0,0,0,0,0,22,18
+"685","685_21m 10x","macrophage","Blood","21m 10x","21m",0,0,0,0,0,19,19
+"686","686_21m 10x","megakaryocyte-erythroid progenitor cell","Blood","21m 10x","21m",0,0,0,0,0,19,19
+"687","687_21m 10x","monocyte","Blood","21m 10x","21m",0,0,9,0,0,7,19
+"688","688_21m 10x","naive B cell","Blood","21m 10x","21m",0,0,0,0,0,14,19
+"689","689_21m 10x","naive T cell","Blood","21m 10x","21m",0,0,0,0,0,19,19
+"690","690_21m 10x","NK cell","Blood","21m 10x","21m",0,0,9,0,0,10,19
+"691","691_21m 10x","precursor B cell","Blood","21m 10x","21m",0,0,23,0,0,10,18
+"692","692_21m 10x","proerythroblast","Blood","21m 10x","21m",0,20,14,0,0,0,23
+"693","693_21m 10x","promonocyte","Blood","21m 10x","21m",0,0,0,0,0,15,19
+"694","694_24m 10x","erythroblast","Blood","24m 10x","24m",0,0,0,0,0,19,22
+"695","695_24m 10x","erythroid progenitor","Blood","24m 10x","24m",0,0,0,0,0,12,19
+"696","696_24m 10x","granulocyte","Blood","24m 10x","24m",0,20,14,0,0,23,23
+"697","697_24m 10x","granulocytopoietic cell","Blood","24m 10x","24m",0,0,0,0,0,19,22
+"698","698_24m 10x","hematopoietic precursor cell","Blood","24m 10x","24m",0,0,11,0,0,10,18
+"699","699_24m 10x","immature B cell","Blood","24m 10x","24m",0,0,0,0,0,10,22
+"700","700_24m 10x","late pro-B cell","Blood","24m 10x","24m",0,0,0,0,0,22,18
+"701","701_24m 10x","macrophage","Blood","24m 10x","24m",0,0,0,0,0,19,19
+"702","702_24m 10x","megakaryocyte-erythroid progenitor cell","Blood","24m 10x","24m",0,0,0,0,0,19,19
+"703","703_24m 10x","monocyte","Blood","24m 10x","24m",0,0,9,0,0,7,19
+"704","704_24m 10x","naive B cell","Blood","24m 10x","24m",0,0,0,0,0,14,19
+"705","705_24m 10x","naive T cell","Blood","24m 10x","24m",0,0,0,0,0,19,19
+"706","706_24m 10x","plasma cell","Blood","24m 10x","24m",21,0,15,0,0,22,18
+"707","707_24m 10x","precursor B cell","Blood","24m 10x","24m",0,0,0,0,0,9,18
+"708","708_24m 10x","proerythroblast","Blood","24m 10x","24m",0,20,14,0,0,23,23
+"709","709_24m 10x","promonocyte","Blood","24m 10x","24m",0,0,0,0,0,15,19
+"710","710_30m 10x","basophil","Blood","30m 10x","30m",0,0,0,0,0,15,19
+"711","711_30m 10x","erythroblast","Blood","30m 10x","30m",0,0,0,0,0,19,22
+"712","712_30m 10x","granulocyte","Blood","30m 10x","30m",0,20,14,0,0,23,23
+"713","713_30m 10x","granulocytopoietic cell","Blood","30m 10x","30m",0,0,0,0,0,19,22
+"714","714_30m 10x","hematopoietic precursor cell","Blood","30m 10x","30m",0,0,11,0,0,17,18
+"715","715_30m 10x","immature B cell","Blood","30m 10x","30m",0,0,0,0,0,17,22
+"716","716_30m 10x","late pro-B cell","Blood","30m 10x","30m",0,0,0,0,0,22,18
+"717","717_30m 10x","macrophage","Blood","30m 10x","30m",0,0,0,0,0,2,19
+"718","718_30m 10x","megakaryocyte-erythroid progenitor cell","Blood","30m 10x","30m",0,0,0,0,0,19,19
+"719","719_30m 10x","monocyte","Blood","30m 10x","30m",0,0,9,0,0,12,19
+"720","720_30m 10x","naive B cell","Blood","30m 10x","30m",0,0,23,0,0,10,19
+"721","721_30m 10x","naive T cell","Blood","30m 10x","30m",0,0,0,0,0,19,19
+"722","722_30m 10x","NK cell","Blood","30m 10x","30m",24,0,9,0,0,10,19
+"723","723_30m 10x","plasma cell","Blood","30m 10x","30m",11,0,9,0,0,12,18
+"724","724_30m 10x","precursor B cell","Blood","30m 10x","30m",0,0,23,0,0,15,18
+"725","725_30m 10x","proerythroblast","Blood","30m 10x","30m",0,20,14,0,0,23,23
+"726","726_30m 10x","promonocyte","Blood","30m 10x","30m",0,0,0,0,0,15,19
+"727","727_3m 10x","erythroblast","Blood","3m 10x","3m",0,0,0,0,0,19,22
+"728","728_3m 10x","granulocyte","Blood","3m 10x","3m",0,20,14,0,0,23,23
+"729","729_3m 10x","granulocytopoietic cell","Blood","3m 10x","3m",0,0,0,0,0,19,19
+"730","730_3m 10x","hematopoietic precursor cell","Blood","3m 10x","3m",0,0,0,0,0,17,18
+"731","731_3m 10x","late pro-B cell","Blood","3m 10x","3m",0,0,0,0,0,22,18
+"732","732_3m 10x","macrophage","Blood","3m 10x","3m",0,0,0,0,0,19,19
+"733","733_3m 10x","megakaryocyte-erythroid progenitor cell","Blood","3m 10x","3m",0,0,0,0,0,19,19
+"734","734_3m 10x","monocyte","Blood","3m 10x","3m",0,0,9,0,0,7,18
+"735","735_3m 10x","naive B cell","Blood","3m 10x","3m",0,0,5,0,0,14,18
+"736","736_3m 10x","naive T cell","Blood","3m 10x","3m",0,0,0,0,0,19,19
+"737","737_3m 10x","plasma cell","Blood","3m 10x","3m",11,0,15,0,0,12,11
+"738","738_3m 10x","precursor B cell","Blood","3m 10x","3m",0,0,0,0,0,10,18
+"739","739_3m 10x","proerythroblast","Blood","3m 10x","3m",0,20,14,0,0,23,23
+"740","740_3m 10x","promonocyte","Blood","3m 10x","3m",0,0,0,0,0,15,19
+"741","741_18m 10x","endothelial cell","Endothelial","18m 10x","18m",26,16,10,23,12,10,9
+"742","742_18m 10x","leukocyte","Blood","18m 10x","18m",0,0,5,0,0,7,7
+"743","743_18m 10x","pancreatic A cell","Epithelium","18m 10x","18m",23,12,0,0,0,26,24
+"744","744_18m 10x","pancreatic B cell","Epithelium","18m 10x","18m",27,15,0,0,27,26,24
+"745","745_18m 10x","pancreatic D cell","Epithelium","18m 10x","18m",28,12,0,43,27,26,8
+"746","746_18m 10x","pancreatic ductal cel","Epithelium","18m 10x","18m",16,12,6,44,28,9,9
+"747","747_18m 10x","pancreatic PP cell","Epithelium","18m 10x","18m",28,9,0,43,0,26,8
+"748","748_21m 10x","leukocyte","Blood","21m 10x","21m",21,0,5,0,0,16,12
+"749","749_21m 10x","pancreatic A cell","Epithelium","21m 10x","21m",23,8,0,0,0,26,24
+"750","750_21m 10x","pancreatic acinar cell","Epithelium","21m 10x","21m",0,0,0,0,0,0,8
+"751","751_21m 10x","pancreatic B cell","Epithelium","21m 10x","21m",27,15,0,0,27,26,24
+"752","752_21m 10x","pancreatic D cell","Epithelium","21m 10x","21m",7,8,0,43,27,26,8
+"753","753_30m 10x","leukocyte","Blood","30m 10x","30m",21,0,9,0,0,7,18
+"754","754_30m 10x","pancreatic A cell","Epithelium","30m 10x","30m",23,12,0,0,0,26,24
+"755","755_30m 10x","pancreatic acinar cell","Epithelium","30m 10x","30m",0,0,0,0,0,0,0
+"756","756_30m 10x","pancreatic B cell","Epithelium","30m 10x","30m",27,15,20,0,27,26,24
+"757","757_30m 10x","pancreatic D cell","Epithelium","30m 10x","30m",27,15,0,43,27,26,8
+"758","758_30m 10x","pancreatic ductal cel","Epithelium","30m 10x","30m",0,6,16,0,28,11,6
+"759","759_18m 10x","basal cell of epidermis","Epithelium","18m 10x","18m",16,12,20,25,26,12,16
+"760","760_21m 10x","basal cell of epidermis","Epithelium","21m 10x","21m",16,12,20,25,26,7,9
+"761","761_21m 10x","epidermal cell","Epithelium","21m 10x","21m",16,12,16,25,26,7,9
+"762","762_21m 10x","keratinocyte stem cell","Epithelium","21m 10x","21m",7,12,20,25,10,7,9
+"763","763_21m 10x","stem cell of epidermis","Epithelium","21m 10x","21m",16,12,20,25,26,12,9
+"764","764_21m 10x","T cell","Blood","21m 10x","21m",0,0,11,0,0,7,9
+"765","765_18m 10x","B cell","Blood","18m 10x","18m",0,0,0,0,0,9,12
+"766","766_18m 10x","macrophage","Blood","18m 10x","18m",0,0,15,0,0,12,18
+"767","767_18m 10x","mature NK T cell","Blood","18m 10x","18m",0,0,0,0,0,14,12
+"768","768_18m 10x","NK cell","Blood","18m 10x","18m",0,0,11,0,0,21,12
+"769","769_18m 10x","plasma cell","Blood","18m 10x","18m",0,0,0,0,0,22,18
+"770","770_18m 10x","proerythroblast","Blood","18m 10x","18m",11,0,15,0,0,7,18
+"771","771_18m 10x","T cell","Blood","18m 10x","18m",0,0,0,0,0,14,12
+"772","772_1m 10x","B cell","Blood","1m 10x","1m",0,0,19,0,0,9,12
+"773","773_1m 10x","macrophage","Blood","1m 10x","1m",0,0,15,0,0,12,18
+"774","774_1m 10x","mature NK T cell","Blood","1m 10x","1m",0,0,0,0,0,21,12
+"775","775_1m 10x","NK cell","Blood","1m 10x","1m",0,0,11,0,0,16,18
+"776","776_1m 10x","proerythroblast","Blood","1m 10x","1m",0,0,9,0,0,7,18
+"777","777_1m 10x","T cell","Blood","1m 10x","1m",0,0,11,0,0,14,12
+"778","778_21m 10x","B cell","Blood","21m 10x","21m",0,0,0,0,0,9,12
+"779","779_21m 10x","granulocyte","Blood","21m 10x","21m",0,20,14,0,0,16,23
+"780","780_21m 10x","macrophage","Blood","21m 10x","21m",0,0,15,0,0,12,18
+"781","781_21m 10x","mature NK T cell","Blood","21m 10x","21m",0,0,0,0,0,16,12
+"782","782_21m 10x","NK cell","Blood","21m 10x","21m",0,0,11,0,0,16,12
+"783","783_21m 10x","plasma cell","Blood","21m 10x","21m",0,0,0,0,0,22,18
+"784","784_21m 10x","proerythroblast","Blood","21m 10x","21m",0,0,9,0,0,7,18
+"785","785_21m 10x","T cell","Blood","21m 10x","21m",0,0,0,0,0,14,12
+"786","786_24m 10x","B cell","Blood","24m 10x","24m",0,0,0,0,0,16,12
+"787","787_24m 10x","erythroblast","Blood","24m 10x","24m",0,0,0,0,0,18,11
+"788","788_24m 10x","granulocyte","Blood","24m 10x","24m",0,0,14,0,0,16,23
+"789","789_24m 10x","macrophage","Blood","24m 10x","24m",0,0,15,0,0,12,18
+"790","790_24m 10x","mature NK T cell","Blood","24m 10x","24m",0,0,11,0,0,16,12
+"791","791_24m 10x","megakaryocyte-erythroid progenitor cell","Blood","24m 10x","24m",0,0,0,0,0,19,22
+"792","792_24m 10x","NK cell","Blood","24m 10x","24m",0,0,11,0,0,21,12
+"793","793_24m 10x","plasma cell","Blood","24m 10x","24m",0,0,0,0,0,22,18
+"794","794_24m 10x","proerythroblast","Blood","24m 10x","24m",0,0,9,0,0,12,19
+"795","795_24m 10x","T cell","Blood","24m 10x","24m",0,0,0,0,0,16,12
+"796","796_30m 10x","B cell","Blood","30m 10x","30m",0,0,0,0,0,17,12
+"797","797_30m 10x","erythroblast","Blood","30m 10x","30m",0,0,0,0,0,17,11
+"798","798_30m 10x","granulocyte","Blood","30m 10x","30m",0,20,14,0,0,10,23
+"799","799_30m 10x","macrophage","Blood","30m 10x","30m",0,0,15,0,0,12,18
+"800","800_30m 10x","macrophage dendritic cell progenitor","Blood","30m 10x","30m",0,0,0,0,0,12,18
+"801","801_30m 10x","mature NK T cell","Blood","30m 10x","30m",0,0,0,0,0,17,12
+"802","802_30m 10x","megakaryocyte-erythroid progenitor cell","Blood","30m 10x","30m",0,0,0,0,0,19,22
+"803","803_30m 10x","NK cell","Blood","30m 10x","30m",0,0,11,0,0,17,12
+"804","804_30m 10x","plasma cell","Blood","30m 10x","30m",0,0,0,0,0,22,18
+"805","805_30m 10x","proerythroblast","Blood","30m 10x","30m",0,0,9,0,0,15,19
+"806","806_30m 10x","T cell","Blood","30m 10x","30m",0,0,0,0,0,17,12
+"807","807_3m 10x","B cell","Blood","3m 10x","3m",0,0,0,0,0,17,12
+"808","808_3m 10x","macrophage","Blood","3m 10x","3m",0,0,15,0,0,12,18
+"809","809_3m 10x","macrophage dendritic cell progenitor","Blood","3m 10x","3m",11,0,0,0,0,15,18
+"810","810_3m 10x","mature NK T cell","Blood","3m 10x","3m",0,0,0,0,0,14,12
+"811","811_3m 10x","NK cell","Blood","3m 10x","3m",0,0,11,0,0,14,12
+"812","812_3m 10x","proerythroblast","Blood","3m 10x","3m",0,0,9,0,0,22,18
+"813","813_3m 10x","T cell","Blood","3m 10x","3m",0,0,0,0,0,14,12
+"814","814_18m 10x","DN3 thymocyte","Blood","18m 10x","18m",0,0,22,0,0,14,25
+"815","815_18m 10x","DN4 thymocyte","Blood","18m 10x","18m",0,0,11,0,0,17,12
+"816","816_18m 10x","double negative T cell","Blood","18m 10x","18m",0,0,5,0,0,17,25
+"817","817_18m 10x","immature T cell","Blood","18m 10x","18m",0,0,0,0,0,14,25
+"818","818_18m 10x","professional antigen presenting cell","Blood","18m 10x","18m",0,0,9,0,0,9,12
+"819","819_18m 10x","thymocyte","Blood","18m 10x","18m",0,0,24,0,0,19,25
+"820","820_21m 10x","DN3 thymocyte","Blood","21m 10x","21m",0,0,22,0,0,14,25
+"821","821_21m 10x","DN4 thymocyte","Blood","21m 10x","21m",0,0,11,0,0,17,12
+"822","822_21m 10x","double negative T cell","Blood","21m 10x","21m",0,0,5,0,0,17,25
+"823","823_21m 10x","immature T cell","Blood","21m 10x","21m",0,0,0,0,0,14,25
+"824","824_21m 10x","professional antigen presenting cell","Blood","21m 10x","21m",0,0,19,0,0,9,12
+"825","825_21m 10x","thymocyte","Blood","21m 10x","21m",0,0,24,0,0,19,25
+"826","826_24m 10x","DN4 thymocyte","Blood","24m 10x","24m",0,0,11,0,0,11,12
+"827","827_24m 10x","professional antigen presenting cell","Blood","24m 10x","24m",0,0,9,0,0,17,12
+"828","828_3m 10x","DN3 thymocyte","Blood","3m 10x","3m",0,0,22,0,0,14,25
+"829","829_3m 10x","DN4 thymocyte","Blood","3m 10x","3m",0,0,11,0,0,10,12
+"830","830_3m 10x","double negative T cell","Blood","3m 10x","3m",0,0,5,0,0,17,25
+"831","831_3m 10x","immature T cell","Blood","3m 10x","3m",0,0,0,0,0,14,25
+"832","832_3m 10x","thymocyte","Blood","3m 10x","3m",0,0,0,0,0,19,25
+"833","833_18m 10x","basal cell of epidermis","Epithelium","18m 10x","18m",0,0,20,25,0,9,16
+"834","834_18m 10x","keratinocyte","Epithelium","18m 10x","18m",0,9,0,25,0,9,16
+"835","835_1m 10x","basal cell of epidermis","Epithelium","1m 10x","1m",16,12,20,25,20,9,16
+"836","836_1m 10x","keratinocyte","Epithelium","1m 10x","1m",16,9,16,25,0,9,16
+"837","837_24m 10x","basal cell of epidermis","Epithelium","24m 10x","24m",16,12,20,25,0,9,16
+"838","838_24m 10x","keratinocyte","Epithelium","24m 10x","24m",16,9,16,25,0,9,16
+"839","839_24m 10x","Langerhans cell","Blood","24m 10x","24m",11,0,0,0,0,11,7
+"840","840_3m 10x","basal cell of epidermis","Epithelium","3m 10x","3m",16,9,20,25,0,9,16
+"841","841_3m 10x","keratinocyte","Epithelium","3m 10x","3m",16,9,0,25,0,9,16
+"842","842_3m 10x","Langerhans cell","Blood","3m 10x","3m",0,0,0,0,0,7,7
+"843","843_3m 10x","basal epithelial cell of tracheobronchial tree","Epithelium","3m 10x","3m",15,12,20,20,28,9,6
+"844","844_3m 10x","blood cell","Blood","3m 10x","3m",0,0,0,0,0,7,7
+"845","845_3m 10x","chondrocyte","Connective","3m 10x","3m",15,14,0,45,29,12,5
+"846","846_3m 10x","endothelial cell","Endothelial","3m 10x","3m",10,10,10,46,18,8,7
+"847","847_3m 10x","epithelial cell","Epithelium","3m 10x","3m",17,12,16,32,16,15,6
+"848","848_3m 10x","fibroblast","Connective","3m 10x","3m",8,9,0,45,29,12,5
+"849","849_3m 10x","granulocyte","Blood","3m 10x","3m",21,0,9,0,0,12,6
+"850","850_3m 10x","macrophage","Blood","3m 10x","3m",0,0,0,0,0,12,18
+"851","851_3m 10x","mesenchymal cell","Mesenchymal","3m 10x","3m",8,9,0,45,29,12,5
+"852","852_3m 10x","mesenchymal progenitor cell","Mesenchymal","3m 10x","3m",8,9,0,0,21,9,8
+"853","853_3m 10x","neuroendocrine cell","Brain/Neurons","3m 10x","3m",13,6,13,46,3,8,5
+"854","854_3m 10x","smooth muscle cell of trachea","Muscle","3m 10x","3m",13,6,13,46,28,6,5
+"855","855_Forelimb_E10.5_15.0","Early erythrocyte","Blood","Forelimb_E10.5_15.0","E10.5",0,0,0,0,0,2,2
+"856","856_Forelimb_E10.5_15.0","Endothelial","Endothelial","Forelimb_E10.5_15.0","E10.5",25,5,3,47,0,2,25
+"857","857_Forelimb_E10.5_15.0","Epithelial 1","Epithelium","Forelimb_E10.5_15.0","E10.5",1,2,20,11,30,3,3
+"858","858_Forelimb_E10.5_15.0","Mesenchymal 1","Mesenchymal","Forelimb_E10.5_15.0","E10.5",5,1,0,19,9,3,3
+"859","859_Forelimb_E10.5_15.0","Muscle 1","Muscle","Forelimb_E10.5_15.0","E10.5",5,1,0,48,9,3,3
+"860","860_Forelimb_E10.5_15.0","Stressed mesenchymal","Mesenchymal","Forelimb_E10.5_15.0","E10.5",29,17,18,19,9,3,3
+"861","861_Forelimb_E10.5_15.0","Early erythrocyte","Blood","Forelimb_E10.5_15.0","E11",0,0,0,0,0,2,2
+"862","862_Forelimb_E10.5_15.0","Endothelial","Endothelial","Forelimb_E10.5_15.0","E11",25,5,3,47,0,3,3
+"863","863_Forelimb_E10.5_15.0","Epithelial 1","Epithelium","Forelimb_E10.5_15.0","E11",1,2,20,11,30,3,3
+"864","864_Forelimb_E10.5_15.0","Macrophage","Blood","Forelimb_E10.5_15.0","E11",30,19,0,0,0,3,3
+"865","865_Forelimb_E10.5_15.0","Mesenchymal 1","Mesenchymal","Forelimb_E10.5_15.0","E11",6,2,0,19,0,3,3
+"866","866_Forelimb_E10.5_15.0","Mesenchymal 2","Mesenchymal","Forelimb_E10.5_15.0","E11",5,2,6,19,0,3,3
+"867","867_Forelimb_E10.5_15.0","Muscle 1","Muscle","Forelimb_E10.5_15.0","E11",6,7,0,48,0,3,3
+"868","868_Forelimb_E10.5_15.0","Chondrocyte","Connective","Forelimb_E10.5_15.0","E12",29,17,0,19,6,5,3
+"869","869_Forelimb_E10.5_15.0","Early erythrocyte","Blood","Forelimb_E10.5_15.0","E12",29,3,0,0,0,2,2
+"870","870_Forelimb_E10.5_15.0","Endothelial","Endothelial","Forelimb_E10.5_15.0","E12",25,5,3,47,0,3,3
+"871","871_Forelimb_E10.5_15.0","Epithelial 1","Epithelium","Forelimb_E10.5_15.0","E12",3,7,20,11,30,27,3
+"872","872_Forelimb_E10.5_15.0","Mesenchymal 1","Mesenchymal","Forelimb_E10.5_15.0","E12",6,3,0,48,9,5,3
+"873","873_Forelimb_E10.5_15.0","Mesenchymal 2","Mesenchymal","Forelimb_E10.5_15.0","E12",6,7,18,48,9,27,3
+"874","874_Forelimb_E10.5_15.0","Muscle 1","Muscle","Forelimb_E10.5_15.0","E12",29,17,18,48,0,27,3
+"875","875_Forelimb_E10.5_15.0","Muscle 2","Muscle","Forelimb_E10.5_15.0","E12",6,7,18,48,6,3,3
+"876","876_Forelimb_E10.5_15.0","Muscle 3","Muscle","Forelimb_E10.5_15.0","E12",6,7,25,0,0,3,26
+"877","877_Forelimb_E10.5_15.0","Perichondrial","Connective","Forelimb_E10.5_15.0","E12",17,3,0,19,9,5,3
+"878","878_Forelimb_E10.5_15.0","Chondrocyte","Connective","Forelimb_E10.5_15.0","E13",29,17,0,48,6,5,3
+"879","879_Forelimb_E10.5_15.0","Col1a1+ muscle 4","Muscle","Forelimb_E10.5_15.0","E13",6,7,0,48,6,3,3
+"880","880_Forelimb_E10.5_15.0","Early erythrocyte","Blood","Forelimb_E10.5_15.0","E13",17,14,0,48,0,3,26
+"881","881_Forelimb_E10.5_15.0","Endothelial","Endothelial","Forelimb_E10.5_15.0","E13",25,5,3,23,26,3,3
+"882","882_Forelimb_E10.5_15.0","Epithelial 1","Epithelium","Forelimb_E10.5_15.0","E13",3,7,20,11,26,27,3
+"883","883_Forelimb_E10.5_15.0","Epithelial 2","Epithelium","Forelimb_E10.5_15.0","E13",2,2,2,11,10,3,3
+"884","884_Forelimb_E10.5_15.0","fibroblast","Connective","Forelimb_E10.5_15.0","E13",17,3,0,48,8,5,3
+"885","885_Forelimb_E10.5_15.0","Ihh+ chondrocyte","Connective","Forelimb_E10.5_15.0","E13",29,17,0,19,29,27,3
+"886","886_Forelimb_E10.5_15.0","Macrophage","Blood","Forelimb_E10.5_15.0","E13",30,19,5,0,0,3,3
+"887","887_Forelimb_E10.5_15.0","Mesenchymal 1","Mesenchymal","Forelimb_E10.5_15.0","E13",17,3,0,48,9,5,3
+"888","888_Forelimb_E10.5_15.0","Mesenchymal 2","Mesenchymal","Forelimb_E10.5_15.0","E13",6,7,0,48,9,27,3
+"889","889_Forelimb_E10.5_15.0","Muscle 2","Muscle","Forelimb_E10.5_15.0","E13",6,7,18,48,6,3,3
+"890","890_Forelimb_E10.5_15.0","Muscle 3","Muscle","Forelimb_E10.5_15.0","E13",6,7,25,0,0,27,26
+"891","891_Forelimb_E10.5_15.0","Muscle 4","Muscle","Forelimb_E10.5_15.0","E13",6,7,0,0,0,27,26
+"892","892_Forelimb_E10.5_15.0","Neural crest","Neural_crest","Forelimb_E10.5_15.0","E13",6,4,16,29,10,27,3
+"893","893_Forelimb_E10.5_15.0","Perichondrial","Connective","Forelimb_E10.5_15.0","E13",17,3,0,48,6,5,3
+"894","894_Forelimb_E10.5_15.0","Chondrocyte","Connective","Forelimb_E10.5_15.0","E13.5",29,17,0,48,6,5,3
+"895","895_Forelimb_E10.5_15.0","Endothelial","Endothelial","Forelimb_E10.5_15.0","E13.5",25,5,3,23,26,3,3
+"896","896_Forelimb_E10.5_15.0","Epithelial 1","Epithelium","Forelimb_E10.5_15.0","E13.5",3,7,20,11,26,27,3
+"897","897_Forelimb_E10.5_15.0","Epithelial 2","Epithelium","Forelimb_E10.5_15.0","E13.5",3,7,2,11,26,3,3
+"898","898_Forelimb_E10.5_15.0","fibroblast","Connective","Forelimb_E10.5_15.0","E13.5",17,4,0,19,8,5,3
+"899","899_Forelimb_E10.5_15.0","Foxp1+ perichondrial","Connective","Forelimb_E10.5_15.0","E13.5",6,4,0,19,1,27,3
+"900","900_Forelimb_E10.5_15.0","Ihh+ chondrocyte","Connective","Forelimb_E10.5_15.0","E13.5",29,17,0,19,29,3,3
+"901","901_Forelimb_E10.5_15.0","Macrophage","Blood","Forelimb_E10.5_15.0","E13.5",30,19,5,0,0,3,3
+"902","902_Forelimb_E10.5_15.0","Mesenchymal 2","Mesenchymal","Forelimb_E10.5_15.0","E13.5",6,4,0,48,9,27,3
+"903","903_Forelimb_E10.5_15.0","Muscle 2","Muscle","Forelimb_E10.5_15.0","E13.5",6,7,18,48,6,3,3
+"904","904_Forelimb_E10.5_15.0","Muscle 3","Muscle","Forelimb_E10.5_15.0","E13.5",6,7,25,0,0,27,26
+"905","905_Forelimb_E10.5_15.0","Muscle 4","Muscle","Forelimb_E10.5_15.0","E13.5",6,7,0,0,0,27,26
+"906","906_Forelimb_E10.5_15.0","Neural crest","Neural_crest","Forelimb_E10.5_15.0","E13.5",6,4,16,29,10,3,3
+"907","907_Forelimb_E10.5_15.0","Perichondrial","Connective","Forelimb_E10.5_15.0","E13.5",17,3,0,48,6,5,3
+"908","908_Forelimb_E10.5_15.0","Chondrocyte","Connective","Forelimb_E10.5_15.0","E14",29,17,0,48,6,5,3
+"909","909_Forelimb_E10.5_15.0","Col1a1+ muscle 4","Muscle","Forelimb_E10.5_15.0","E14",17,3,0,48,6,5,3
+"910","910_Forelimb_E10.5_15.0","Endothelial","Endothelial","Forelimb_E10.5_15.0","E14",25,5,3,23,0,3,3
+"911","911_Forelimb_E10.5_15.0","Epithelial 1","Epithelium","Forelimb_E10.5_15.0","E14",3,7,20,11,26,27,3
+"912","912_Forelimb_E10.5_15.0","Epithelial 2","Epithelium","Forelimb_E10.5_15.0","E14",3,7,2,11,30,3,3
+"913","913_Forelimb_E10.5_15.0","fibroblast","Epithelium","Forelimb_E10.5_15.0","E14",17,3,0,19,8,5,3
+"914","914_Forelimb_E10.5_15.0","Foxp1+ perichondrial","Connective","Forelimb_E10.5_15.0","E14",6,4,0,19,0,5,3
+"915","915_Forelimb_E10.5_15.0","Ihh+ chondrocyte","Connective","Forelimb_E10.5_15.0","E14",29,3,0,19,29,5,3
+"916","916_Forelimb_E10.5_15.0","Late erythrocyte","Blood","Forelimb_E10.5_15.0","E14",17,19,0,48,6,27,3
+"917","917_Forelimb_E10.5_15.0","Macrophage","Blood","Forelimb_E10.5_15.0","E14",30,19,5,0,0,3,3
+"918","918_Forelimb_E10.5_15.0","Mesenchymal 2","Mesenchymal","Forelimb_E10.5_15.0","E14",6,4,0,19,9,5,3
+"919","919_Forelimb_E10.5_15.0","Muscle 2","Muscle","Forelimb_E10.5_15.0","E14",6,7,18,48,0,3,3
+"920","920_Forelimb_E10.5_15.0","Muscle 3","Muscle","Forelimb_E10.5_15.0","E14",6,7,0,0,0,27,26
+"921","921_Forelimb_E10.5_15.0","Muscle 4","Muscle","Forelimb_E10.5_15.0","E14",6,7,0,0,0,27,26
+"922","922_Forelimb_E10.5_15.0","Neural crest","Neural_crest","Forelimb_E10.5_15.0","E14",6,4,16,29,10,27,3
+"923","923_Forelimb_E10.5_15.0","Perichondrial","Connective","Forelimb_E10.5_15.0","E14",17,3,0,48,6,5,3
+"924","924_Forelimb_E10.5_15.0","Tenocyte","Connective","Forelimb_E10.5_15.0","E14",17,3,18,19,6,5,3
+"925","925_Forelimb_E10.5_15.0","Chondrocyte","Connective","Forelimb_E10.5_15.0","E15",29,17,0,48,6,5,3
+"926","926_Forelimb_E10.5_15.0","Col1a1+ muscle 4","Muscle","Forelimb_E10.5_15.0","E15",17,3,0,48,6,5,3
+"927","927_Forelimb_E10.5_15.0","EMP","Blood","Forelimb_E10.5_15.0","E15",4,19,19,0,0,3,3
+"928","928_Forelimb_E10.5_15.0","Endothelial","Endothelial","Forelimb_E10.5_15.0","E15",25,5,3,23,26,3,3
+"929","929_Forelimb_E10.5_15.0","Epithelial 1","Epithelium","Forelimb_E10.5_15.0","E15",3,7,20,11,26,27,3
+"930","930_Forelimb_E10.5_15.0","Epithelial 2","Epithelium","Forelimb_E10.5_15.0","E15",3,4,2,11,30,27,3
+"931","931_Forelimb_E10.5_15.0","fibroblast","Connective","Forelimb_E10.5_15.0","E15",17,3,0,19,9,5,3
+"932","932_Forelimb_E10.5_15.0","Foxp1+ perichondrial","Connective","Forelimb_E10.5_15.0","E15",6,7,0,19,6,5,3
+"933","933_Forelimb_E10.5_15.0","Ihh+ chondrocyte","Connective","Forelimb_E10.5_15.0","E15",29,17,0,19,29,5,3
+"934","934_Forelimb_E10.5_15.0","Late erythrocyte","Blood","Forelimb_E10.5_15.0","E15",17,3,0,48,6,5,3
+"935","935_Forelimb_E10.5_15.0","Macrophage","Blood","Forelimb_E10.5_15.0","E15",30,19,5,0,0,3,3
+"936","936_Forelimb_E10.5_15.0","Mesenchymal 2","Mesenchymal","Forelimb_E10.5_15.0","E15",6,4,0,19,9,5,3
+"937","937_Forelimb_E10.5_15.0","Muscle 2","Muscle","Forelimb_E10.5_15.0","E15",6,4,18,0,0,3,3
+"938","938_Forelimb_E10.5_15.0","Muscle 3","Muscle","Forelimb_E10.5_15.0","E15",6,7,25,0,0,27,26
+"939","939_Forelimb_E10.5_15.0","Muscle 4","Muscle","Forelimb_E10.5_15.0","E15",6,7,0,0,0,27,26
+"940","940_Forelimb_E10.5_15.0","Neural crest","Neural_crest","Forelimb_E10.5_15.0","E15",6,4,16,29,10,3,3
+"941","941_Forelimb_E10.5_15.0","Osteoblast","Connective","Forelimb_E10.5_15.0","E15",17,3,0,26,28,5,3
+"942","942_Forelimb_E10.5_15.0","Perichondrial","Connective","Forelimb_E10.5_15.0","E15",17,3,18,48,6,5,3
+"943","943_Forelimb_E10.5_15.0","Smooth muscle","Muscle","Forelimb_E10.5_15.0","E15",17,4,26,48,0,3,3
+"944","944_Forelimb_E10.5_15.0","Tenocyte","Connective","Forelimb_E10.5_15.0","E15",17,3,0,48,6,5,3
+"945","945_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",17,4,0,0,10,28,27
+"946","946_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",6,4,0,49,0,28,27
+"947","947_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",17,4,0,49,0,28,27
+"948","948_E9.5_11.5_Tang","NC","Brain/Neurons","E9.5_11.5_Tang","E9.5-11.5",6,7,24,16,0,28,27
+"949","949_E9.5_11.5_Tang","HC","Blood","E9.5_11.5_Tang","E9.5-11.5",0,0,0,0,0,28,27
+"950","950_E9.5_11.5_Tang","NC","Brain/Neurons","E9.5_11.5_Tang","E9.5-11.5",6,7,27,0,0,28,27
+"951","951_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",0,4,0,0,0,28,27
+"952","952_E9.5_11.5_Tang","EC","Epithelium","E9.5_11.5_Tang","E9.5-11.5",17,4,0,18,0,28,27
+"953","953_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",6,4,0,8,10,28,27
+"954","954_E9.5_11.5_Tang","HC","Blood","E9.5_11.5_Tang","E9.5-11.5",0,0,0,0,0,28,27
+"955","955_E9.5_11.5_Tang","NC","Brain/Neurons","E9.5_11.5_Tang","E9.5-11.5",6,7,24,48,0,28,27
+"956","956_E9.5_11.5_Tang","NC","Brain/Neurons","E9.5_11.5_Tang","E9.5-11.5",6,7,27,50,0,28,27
+"957","957_E9.5_11.5_Tang","EC","Epithelium","E9.5_11.5_Tang","E9.5-11.5",17,4,0,49,10,28,27
+"958","958_E9.5_11.5_Tang","EC","Epithelium","E9.5_11.5_Tang","E9.5-11.5",6,7,0,0,0,28,27
+"959","959_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",17,4,0,0,0,28,27
+"960","960_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",17,5,0,0,0,28,27
+"961","961_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",17,3,0,16,10,28,27
+"962","962_E9.5_11.5_Tang","EC","Epithelium","E9.5_11.5_Tang","E9.5-11.5",6,7,0,44,10,28,27
+"963","963_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",0,4,0,19,10,28,27
+"964","964_E9.5_11.5_Tang","NC","Brain/Neurons","E9.5_11.5_Tang","E9.5-11.5",6,2,24,0,0,28,27
+"965","965_E9.5_11.5_Tang","EC","Epithelium","E9.5_11.5_Tang","E9.5-11.5",7,12,0,0,0,28,27
+"966","966_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",6,4,0,0,10,28,27
+"967","967_E9.5_11.5_Tang","HC","Blood","E9.5_11.5_Tang","E9.5-11.5",0,0,0,0,0,28,27
+"968","968_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",17,3,0,0,0,28,27
+"969","969_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",6,7,0,0,0,28,27
+"970","970_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",6,7,0,0,0,28,27
+"971","971_E9.5_11.5_Tang","HC","Blood","E9.5_11.5_Tang","E9.5-11.5",0,0,0,0,0,28,27
+"972","972_E9.5_11.5_Tang","MC","Mesoderm","E9.5_11.5_Tang","E9.5-11.5",17,4,0,49,10,28,27
+"973","973_FACS 18m","microglial cell","Blood","FACS 18m","18m",0,0,0,0,0,0,0
+"974","974_FACS 18m","endothelial cell","Endothelial","FACS 18m","18m",0,0,28,0,0,0,28
+"975","975_FACS 18m","endothelial cell of coronary artery","Endothelial","FACS 18m","18m",19,18,28,24,0,29,28
+"976","976_FACS 18m","mesenchymal stem cell of adipose","Mesenchymal","FACS 18m","18m",10,13,0,0,0,29,29
+"977","977_FACS 18m","microglial cell","Blood","FACS 18m","18m",0,0,0,0,0,0,0
+"978","978_FACS 18m","naive B cell","Blood","FACS 18m","18m",0,0,0,0,0,0,30
+"979","979_FACS 18m","microglial cell","Blood","FACS 18m","18m",0,0,0,0,0,0,0
+"980","980_FACS 18m","bronchial smooth muscle cell","Muscle","FACS 18m","18m",0,16,12,24,0,29,28
+"981","981_FACS 18m","fibroblast of cardiac tissue","Mesenchymal","FACS 18m","18m",0,0,0,0,0,30,29
+"982","982_FACS 18m","mature alpha-beta T cell","Blood","FACS 18m","18m",0,0,0,0,0,29,31
+"983","983_FACS 18m","DN4 thymocyte","Blood","FACS 18m","18m",0,0,0,0,0,29,31
+"984","984_FACS 18m","B cell","Blood","FACS 18m","18m",0,0,0,0,0,31,30
+"985","985_FACS 18m","bulge keratinocyte","Keratinocyte","FACS 18m","18m",0,0,7,51,0,29,29
+"986","986_FACS 18m","skeletal muscle satellite cell","Muscle","FACS 18m","18m",0,0,0,0,0,32,32
+"987","987_FACS 18m","microglial cell","Blood","FACS 18m","18m",0,0,0,0,0,0,0
+"988","988_FACS 18m","granulocyte","Blood","FACS 18m","18m",0,0,0,0,0,0,0
+"989","989_FACS 18m","enterocyte of epithelium of large intestine","Epithelium","FACS 18m","18m",0,0,0,34,0,0,20
+"990","990_FACS 18m","basal cell of epidermis","Epithelium","FACS 18m","18m",0,0,29,52,0,33,14
+"991","991_FACS 18m","naive B cell","Blood","FACS 18m","18m",0,0,0,0,0,34,33
+"992","992_FACS 18m","basal cell of epidermis","Epithelium","FACS 18m","18m",0,0,7,0,0,33,33
+"993","993_FACS 18m","intestinal crypt stem cell","Epithelium","FACS 18m","18m",0,0,0,0,0,6,34
+"994","994_FACS 18m","B cell","Blood","FACS 18m","18m",0,0,0,0,0,32,30
+"995","995_FACS 18m","hematopoietic stem cell","Blood","FACS 18m","18m",0,0,19,0,0,15,35
+"996","996_FACS 18m","oligodendrocyte","Brain/Neurons","FACS 18m","18m",0,0,0,0,0,0,36
+"997","997_FACS 18m","myeloid dendritic cell","Blood","FACS 18m","18m",0,0,0,0,0,35,33
+"998","998_FACS 18m","large intestine goblet cell","Epithelium","FACS 18m","18m",0,0,0,0,0,33,14
+"999","999_FACS 18m","promonocyte","Blood","FACS 18m","18m",0,0,0,0,0,35,37
+"1000","1000_FACS 18m","mesenchymal stem cell","Mesenchymal","FACS 18m","18m",0,0,0,0,0,32,38
+"1001","1001_FACS 18m","epithelial cell of large intestine","Epithelium","FACS 18m","18m",20,12,20,35,0,36,39
+"1002","1002_FACS 18m","bladder urothelial cell","Epithelium","FACS 18m","18m",0,0,7,0,0,33,40
+"1003","1003_FACS 18m","monocyte","Blood","FACS 18m","18m",0,0,0,0,0,35,28
+"1004","1004_FACS 18m","thymocyte","Blood","FACS 18m","18m",0,0,0,0,0,36,41
+"1005","1005_FACS 18m","precursor B cell","Blood","FACS 18m","18m",0,0,0,0,0,37,33
+"1006","1006_FACS 18m","epithelial cell of large intestine","Epithelium","FACS 18m","18m",0,0,0,0,0,36,42
+"1007","1007_FACS 18m","mesenchymal stem cell of adipose","Mesenchymal","FACS 18m","18m",0,0,6,0,0,29,43
+"1008","1008_FACS 18m","granulocyte","Blood","FACS 18m","18m",0,0,0,0,0,0,44
+"1009","1009_FACS 18m","basal cell","Epithelium","FACS 18m","18m",0,0,7,0,0,32,38
+"1010","1010_FACS 18m","pancreatic B cell","Epithelium","FACS 18m","18m",28,12,0,0,0,20,45
+"1011","1011_FACS 18m","granulocytopoietic cell","Blood","FACS 18m","18m",0,0,0,0,0,30,23
+"1012","1012_FACS 18m","astrocyte","Brain/Neurons","FACS 18m","18m",27,15,16,0,0,38,14
+"1013","1013_FACS 18m","hepatocyte","Epithelium","FACS 18m","18m",0,0,0,0,0,0,33
+"1014","1014_FACS 18m","endothelial cell of hepatic sinusoid","Endothelial","FACS 18m","18m",25,5,12,38,0,29,28
+"1015","1015_FACS 18m","kidney collecting duct epithelial cell","Epithelium","FACS 18m","18m",0,0,0,0,0,0,46
+"1016","1016_FACS 18m","DN4 thymocyte","Blood","FACS 18m","18m",0,0,0,0,0,33,33
+"1017","1017_FACS 18m","myeloid cell","Blood","FACS 18m","18m",0,0,0,0,0,0,0
+"1018","1018_FACS 18m","brain pericyte","Blood","FACS 18m","18m",0,0,26,0,0,39,39
+"1019","1019_FACS 18m","bladder cell","Organ_specific","FACS 18m","18m",0,0,0,0,0,32,38
+"1020","1020_FACS 18m","Kupffer cell","Blood","FACS 18m","18m",0,0,0,0,0,0,29
+"1021","1021_FACS 18m","atrial myocyte","Blood","FACS 18m","18m",14,13,6,0,0,37,14
+"1022","1022_FACS 18m","NK cell","Blood","FACS 18m","18m",0,0,0,0,0,39,31
+"1023","1023_FACS 18m","thymocyte","Blood","FACS 18m","18m",27,14,20,50,14,38,35
+"1024","1024_FACS 18m","keratinocyte","Keratinocyte","FACS 18m","18m",0,0,2,52,0,33,14
+"1025","1025_FACS 18m","mesenchymal stem cell of adipose","Mesenchymal","FACS 18m","18m",0,0,0,0,0,32,33
+"1026","1026_FACS 18m","pancreatic acinar cell","Epithelium","FACS 18m","18m",23,15,0,0,0,40,0
+"1027","1027_FACS 18m","hematopoietic stem cell","Blood","FACS 18m","18m",0,0,19,0,0,15,35
+"1028","1028_FACS 18m","fibroblast of lung","Mesenchymal","FACS 18m","18m",0,0,0,0,0,0,38
+"1029","1029_FACS 18m","macrophage","Blood","FACS 18m","18m",0,0,0,0,0,37,37
+"1030","1030_FACS 18m","endocardial cell","Endothelial","FACS 18m","18m",10,10,12,47,0,29,29
+"1031","1031_FACS 18m","macrophage","Blood","FACS 18m","18m",0,0,0,0,0,37,33
+"1032","1032_FACS 18m","naive B cell","Blood","FACS 18m","18m",0,0,0,0,0,31,30
+"1033","1033_FACS 18m","granulocyte monocyte progenitor cell","Blood","FACS 18m","18m",0,0,19,0,0,15,35
+"1034","1034_FACS 18m","keratinocyte","Keratinocyte","FACS 18m","18m",0,0,2,51,0,39,14
+"1035","1035_FACS 18m","neuroepithelial cell","Epithelium","FACS 18m","18m",0,0,0,0,0,0,0
+"1036","1036_FACS 18m","thymocyte","Blood","FACS 18m","18m",0,0,23,0,0,15,34
+"1037","1037_FACS 18m","luminal epithelial cell of mammary gland","Epithelium","FACS 18m","18m",0,0,0,53,0,32,40
+"1038","1038_FACS 18m","basal epithelial cell of tracheobronchial tree","Epithelium","FACS 18m","18m",16,12,6,0,0,25,14
+"1039","1039_FACS 18m","bronchial smooth muscle cell","Muscle","FACS 18m","18m",26,16,3,0,0,0,40
+"1040","1040_FACS 18m","kidney collecting duct principal cell","Epithelium","FACS 18m","18m",0,0,0,0,0,22,39
+"1041","1041_FACS 18m","pancreatic A cell","Epithelium","FACS 18m","18m",28,12,0,0,0,20,45
+"1042","1042_FACS 18m","respiratory basal cell","Epithelium","FACS 18m","18m",20,12,29,0,0,30,40
+"1043","1043_FACS 18m","oligodendrocyte precursor cell","Brain/Neurons","FACS 18m","18m",0,0,4,0,0,38,34
+"1044","1044_FACS 18m","endothelial cell","Endothelial","FACS 18m","18m",14,13,0,0,0,17,14
+"1045","1045_FACS 18m","epithelial cell of proximal tubule","Epithelium","FACS 18m","18m",0,0,0,0,0,0,46
+"1046","1046_FACS 18m","pancreatic ductal cell","Epithelium","FACS 18m","18m",0,12,0,0,0,30,14
+"1047","1047_FACS 18m","valve cell","Organ_specific","FACS 18m","18m",0,0,26,0,0,30,39
+"1048","1048_FACS 18m","basal cell","Epithelium","FACS 18m","18m",0,0,0,0,0,32,40
+"1049","1049_FACS 18m","hepatocyte","Epithelium","FACS 18m","18m",0,0,0,0,0,0,0
+"1050","1050_FACS 18m","mature alpha-beta T cell","Blood","FACS 18m","18m",0,0,0,0,0,34,31
+"1051","1051_FACS 24m","mesenchymal stem cell of adipose","Mesenchymal","FACS 24m","24m",0,0,0,0,0,29,38
+"1052","1052_FACS 24m","endothelial cell of coronary artery","Endothelial","FACS 24m","24m",0,18,28,24,0,29,28
+"1053","1053_FACS 24m","microglial cell","Blood","FACS 24m","24m",0,0,0,0,0,0,0
+"1054","1054_FACS 24m","B cell","Blood","FACS 24m","24m",0,0,0,0,0,29,30
+"1055","1055_FACS 24m","skeletal muscle satellite cell","Muscle","FACS 24m","24m",0,0,0,0,0,32,32
+"1056","1056_FACS 24m","hematopoietic stem cell","Blood","FACS 24m","24m",0,0,0,0,0,37,34
+"1057","1057_FACS 24m","microglial cell","Blood","FACS 24m","24m",0,0,0,0,0,0,0
+"1058","1058_FACS 24m","DN4 thymocyte","Blood","FACS 24m","24m",0,0,0,0,0,29,31
+"1059","1059_FACS 24m","naive B cell","Blood","FACS 24m","24m",0,0,0,0,0,34,33
+"1060","1060_FACS 24m","basal cell of epidermis","Epithelium","FACS 24m","24m",0,0,29,0,0,33,14
+"1061","1061_FACS 24m","microglial cell","Blood","FACS 24m","24m",0,0,0,0,0,0,0
+"1062","1062_FACS 24m","fibroblast of cardiac tissue","Mesenchymal","FACS 24m","24m",0,0,0,0,0,39,29
+"1063","1063_FACS 24m","promonocyte","Blood","FACS 24m","24m",0,0,0,0,0,35,37
+"1064","1064_FACS 24m","microglial cell","Blood","FACS 24m","24m",0,0,0,0,0,0,0
+"1065","1065_FACS 24m","bronchial smooth muscle cell","Muscle","FACS 24m","24m",0,18,12,0,0,0,29
+"1066","1066_FACS 24m","naive B cell","Blood","FACS 24m","24m",0,0,0,0,0,31,30
+"1067","1067_FACS 24m","microglial cell","Blood","FACS 24m","24m",0,0,0,0,0,0,0
+"1068","1068_FACS 24m","T cell","Blood","FACS 24m","24m",0,0,0,0,0,29,31
+"1069","1069_FACS 24m","granulocyte","Blood","FACS 24m","24m",0,0,0,0,0,0,0
+"1070","1070_FACS 24m","mesenchymal stem cell","Mesenchymal","FACS 24m","24m",0,0,0,0,0,0,32
+"1071","1071_FACS 24m","bulge keratinocyte","Keratinocyte","FACS 24m","24m",0,0,7,51,1,0,29
+"1072","1072_FACS 24m","precursor B cell","Blood","FACS 24m","24m",0,0,0,0,0,34,33
+"1073","1073_FACS 24m","DN4 thymocyte","Blood","FACS 24m","24m",0,0,0,0,0,29,29
+"1074","1074_FACS 24m","intestinal crypt stem cell","Epithelium","FACS 24m","24m",0,0,0,0,0,11,34
+"1075","1075_FACS 24m","myeloid dendritic cell","Blood","FACS 24m","24m",0,0,0,0,0,35,33
+"1076","1076_FACS 24m","keratinocyte","Keratinocyte","FACS 24m","24m",0,0,2,52,0,33,35
+"1077","1077_FACS 24m","bladder urothelial cell","Epithelium","FACS 24m","24m",0,0,0,0,0,33,40
+"1078","1078_FACS 24m","granulocyte","Blood","FACS 24m","24m",0,0,0,0,0,0,23
+"1079","1079_FACS 24m","large intestine goblet cell","Epithelium","FACS 24m","24m",0,0,0,0,0,33,14
+"1080","1080_FACS 24m","naive B cell","Blood","FACS 24m","24m",0,0,0,0,0,29,29
+"1081","1081_FACS 24m","basal epithelial cell of tracheobronchial tree","Epithelium","FACS 24m","24m",27,13,20,50,19,38,14
+"1082","1082_FACS 24m","pancreatic B cell","Blood","FACS 24m","24m",27,12,0,0,0,36,24
+"1083","1083_FACS 24m","enterocyte of epithelium of large intestine","Epithelium","FACS 24m","24m",0,0,0,0,0,0,20
+"1084","1084_FACS 24m","monocyte","Blood","FACS 24m","24m",0,0,0,0,0,35,33
+"1085","1085_FACS 24m","monocyte","Blood","FACS 24m","24m",0,0,0,0,0,35,28
+"1086","1086_FACS 24m","basal cell of epidermis","Epithelium","FACS 24m","24m",0,0,29,0,0,39,33
+"1087","1087_FACS 24m","neuron","Brain/Neurons","FACS 24m","24m",27,15,20,54,25,38,14
+"1088","1088_FACS 24m","epithelial cell of large intestine","Epithelium","FACS 24m","24m",22,12,0,0,0,36,42
+"1089","1089_FACS 24m","hepatocyte","Epithelium","FACS 24m","24m",0,0,0,0,0,0,14
+"1090","1090_FACS 24m","endothelial cell","Endothelial","FACS 24m","24m",0,0,28,0,0,0,47
+"1091","1091_FACS 24m","granulocyte","Blood","FACS 24m","24m",0,0,0,0,0,0,0
+"1092","1092_FACS 24m","epithelial cell of proximal tubule","Epithelium","FACS 24m","24m",0,0,0,0,0,0,46
+"1093","1093_FACS 24m","macrophage","Blood","FACS 24m","24m",0,0,0,0,0,35,33
+"1094","1094_FACS 24m","thymocyte","Blood","FACS 24m","24m",0,0,0,0,0,6,34
+"1095","1095_FACS 24m","monocyte","Blood","FACS 24m","24m",0,0,0,0,0,35,29
+"1096","1096_FACS 24m","hematopoietic stem cell","Blood","FACS 24m","24m",0,0,0,0,0,6,34
+"1097","1097_FACS 24m","mesenchymal stem cell of adipose","Blood","FACS 24m","24m",0,0,0,0,0,29,43
+"1098","1098_FACS 24m","pancreatic A cell","Epithelium","FACS 24m","24m",28,12,0,0,0,36,45
+"1099","1099_FACS 24m","fibroblast of lung","Mesenchymal","FACS 24m","24m",0,0,0,0,0,29,29
+"1100","1100_FACS 24m","pancreatic acinar cell","Epithelium","FACS 24m","24m",23,15,0,0,0,40,0
+"1101","1101_FACS 24m","valve cell","Organ_specific","FACS 24m","24m",0,0,26,0,0,29,43
+"1102","1102_FACS 24m","ventricular myocyte","Blood","FACS 24m","24m",0,13,0,0,0,0,14
+"1103","1103_FACS 24m","large intestine goblet cell","Epithelium","FACS 24m","24m",22,0,0,0,0,0,43
+"1104","1104_FACS 24m","endocardial cell","Endothelial","FACS 24m","24m",0,0,0,0,0,29,29
+"1105","1105_FACS 24m","fenestrated cell","Endothelial","FACS 24m","24m",0,0,12,0,0,29,28
+"1106","1106_FACS 24m","bronchial smooth muscle cell","Muscle","FACS 24m","24m",18,11,12,23,0,37,14
+"1107","1107_FACS 24m","NK cell","Blood","FACS 24m","24m",0,0,0,0,0,29,31
+"1108","1108_FACS 24m","myeloid cell","Blood","FACS 24m","24m",0,0,0,0,0,38,36
+"1109","1109_FACS 24m","endothelial cell","Endothelial","FACS 24m","24m",19,18,28,0,0,0,28
+"1110","1110_FACS 24m","epidermal cell","Epithelium","FACS 24m","24m",0,0,30,51,0,39,33
+"1111","1111_FACS 24m","oligodendrocyte","Brain/Neurons","FACS 24m","24m",0,0,0,0,0,0,36
+"1112","1112_FACS 24m","megakaryocyte-erythroid progenitor cell","Blood","FACS 24m","24m",0,0,0,0,0,37,36
+"1113","1113_FACS 24m","thymocyte","Blood","FACS 24m","24m",0,0,0,0,0,9,34
+"1114","1114_FACS 24m","kidney collecting duct principal cell","Epithelium","FACS 24m","24m",0,0,0,0,0,34,39
+"1115","1115_FACS 24m","mesenchymal stem cell of adipose","Mesenchymal","FACS 24m","24m",0,0,0,0,0,0,47
+"1116","1116_FACS 24m","hepatocyte","Epithelium","FACS 24m","24m",0,0,0,0,0,0,35
+"1117","1117_FACS 24m","keratinocyte","Keratinocyte","FACS 24m","24m",0,0,2,51,0,39,14
+"1118","1118_FACS 24m","bronchial smooth muscle cell","Muscle","FACS 24m","24m",0,0,0,0,0,0,33
+"1119","1119_FACS 24m","endothelial cell of hepatic sinusoid","Endothelial","FACS 24m","24m",10,11,0,38,0,0,28
+"1120","1120_FACS 24m","pancreatic ductal cell","Epithelium","FACS 24m","24m",0,0,0,0,0,0,33
+"1121","1121_FACS 24m","hematopoietic stem cell","Blood","FACS 24m","24m",0,0,0,0,0,2,34
+"1122","1122_FACS 24m","mature alpha-beta T cell","Blood","FACS 24m","24m",0,0,0,0,0,31,31
+"1123","1123_FACS 24m","type II pneumocyte","Epithelium","FACS 24m","24m",15,3,0,0,0,7,20
+"1124","1124_FACS 24m","epithelial cell of thymus","Epithelium","FACS 24m","24m",0,0,0,0,0,0,48
+"1125","1125_FACS 3m","B cell","Blood","FACS 3m","3m",0,0,0,0,0,29,30
+"1126","1126_FACS 3m","mesenchymal stem cell of adipose","Mesenchymal","FACS 3m","3m",10,13,0,0,0,29,43
+"1127","1127_FACS 3m","microglial cell","Blood","FACS 3m","3m",0,0,0,0,0,0,0
+"1128","1128_FACS 3m","endothelial cell","Endothelial","FACS 3m","3m",19,11,28,24,0,29,28
+"1129","1129_FACS 3m","oligodendrocyte","Brain/Neurons","FACS 3m","3m",0,0,0,0,0,0,42
+"1130","1130_FACS 3m","basal cell","Epithelium","FACS 3m","3m",0,0,0,53,0,6,40
+"1131","1131_FACS 3m","fibroblast","Mesenchymal","FACS 3m","3m",0,0,0,0,0,0,29
+"1132","1132_FACS 3m","immature T cell","Blood","FACS 3m","3m",0,0,0,0,0,36,37
+"1133","1133_FACS 3m","microglial cell","Blood","FACS 3m","3m",0,0,0,0,0,0,0
+"1134","1134_FACS 3m","skeletal muscle satellite cell","Muscle","FACS 3m","3m",0,0,0,0,0,32,32
+"1135","1135_FACS 3m","microglial cell","Blood","FACS 3m","3m",21,0,0,0,0,0,0
+"1136","1136_FACS 3m","mesenchymal stem cell","Mesenchymal","FACS 3m","3m",0,0,0,0,0,32,38
+"1137","1137_FACS 3m","fibroblast","Connective","FACS 3m","3m",0,0,0,0,0,0,29
+"1138","1138_FACS 3m","Slamf1-negative multipotent progenitor cell","Blood","FACS 3m","3m",0,0,0,0,0,15,35
+"1139","1139_FACS 3m","epithelial cell of large intestine","Epithelium","FACS 3m","3m",22,13,0,35,4,36,42
+"1140","1140_FACS 3m","keratinocyte stem cell","Keratinocyte","FACS 3m","3m",0,13,7,51,10,30,43
+"1141","1141_FACS 3m","precursor B cell","Blood","FACS 3m","3m",0,0,0,0,0,37,37
+"1142","1142_FACS 3m","mesenchymal stem cell of adipose","Mesenchymal","FACS 3m","3m",10,13,6,0,0,29,43
+"1143","1143_FACS 3m","enterocyte of epithelium of large intestine","Epithelium","FACS 3m","3m",22,13,0,34,0,0,20
+"1144","1144_FACS 3m","basal cell of epidermis","Epithelium","FACS 3m","3m",0,12,29,52,0,20,35
+"1145","1145_FACS 3m","large intestine goblet cell","Epithelium","FACS 3m","3m",23,12,0,0,0,33,14
+"1146","1146_FACS 3m","granulocyte","Blood","FACS 3m","3m",0,0,0,0,0,0,0
+"1147","1147_FACS 3m","endothelial cell","Endothelial","FACS 3m","3m",19,18,28,0,0,29,28
+"1148","1148_FACS 3m","bladder cell","Organ_specific","FACS 3m","3m",10,10,0,0,0,32,43
+"1149","1149_FACS 3m","microglial cell","Blood","FACS 3m","3m",0,0,0,0,0,0,0
+"1150","1150_FACS 3m","bladder urothelial cell","Epithelium","FACS 3m","3m",8,9,7,20,0,33,14
+"1151","1151_FACS 3m","epithelial cell of large intestine","Epithelium","FACS 3m","3m",22,13,0,0,0,6,35
+"1152","1152_FACS 3m","basal cell of epidermis","Epithelium","FACS 3m","3m",20,13,29,51,0,33,14
+"1153","1153_FACS 3m","endothelial cell","Endothelial","FACS 3m","3m",19,18,28,0,0,29,28
+"1154","1154_FACS 3m","immature T cell","Blood","FACS 3m","3m",0,0,0,0,0,37,41
+"1155","1155_FACS 3m","monocyte","Blood","FACS 3m","3m",0,0,0,0,0,35,37
+"1156","1156_FACS 3m","keratinocyte stem cell","Keratinocyte","FACS 3m","3m",0,12,30,51,15,39,43
+"1157","1157_FACS 3m","leukocyte","Blood","FACS 3m","3m",0,0,0,0,0,29,28
+"1158","1158_FACS 3m","mesenchymal cell","Mesenchymal","FACS 3m","3m",10,9,0,0,29,30,43
+"1159","1159_FACS 3m","lung endothelial cell","Endothelial","FACS 3m","3m",26,16,12,24,0,0,28
+"1160","1160_FACS 3m","myeloid cell","Blood","FACS 3m","3m",0,0,0,0,0,35,33
+"1161","1161_FACS 3m","pancreatic A cell","Epithelium","FACS 3m","3m",28,12,0,0,0,20,45
+"1162","1162_FACS 3m","granulocyte","Blood","FACS 3m","3m",0,0,14,0,0,10,23
+"1163","1163_FACS 3m","type B pancreatic cell","Epithelium","FACS 3m","3m",28,12,0,0,0,20,45
+"1164","1164_FACS 3m","astrocyte","Brain/Neurons","FACS 3m","3m",0,15,14,0,11,0,43
+"1165","1165_FACS 3m","Slamf1-negative multipotent progenitor cell","Blood","FACS 3m","3m",0,0,0,0,0,15,35
+"1166","1166_FACS 3m","luminal epithelial cell of mammary gland","Epithelium","FACS 3m","3m",0,0,0,53,0,33,40
+"1167","1167_FACS 3m","leukocyte","Blood","FACS 3m","3m",0,0,0,0,0,35,29
+"1168","1168_FACS 3m","T cell","Blood","FACS 3m","3m",0,0,23,0,0,29,37
+"1169","1169_FACS 3m","epithelial cell of large intestine","Epithelium","FACS 3m","3m",22,0,0,0,0,6,35
+"1170","1170_FACS 3m","myeloid cell","Blood","FACS 3m","3m",0,0,0,0,0,35,37
+"1171","1171_FACS 3m","epithelial cell of large intestine","Epithelium","FACS 3m","3m",22,13,20,35,19,36,42
+"1172","1172_FACS 3m","natural killer cell","Blood","FACS 3m","3m",0,0,0,0,0,29,37
+"1173","1173_FACS 3m","keratinocyte","Keratinocyte","FACS 3m","3m",0,12,2,52,0,20,35
+"1174","1174_FACS 3m","late pro-B cell","Blood","FACS 3m","3m",0,0,0,0,0,1,35
+"1175","1175_FACS 3m","brain pericyte","Mesenchymal","FACS 3m","3m",0,12,26,0,0,30,39
+"1176","1176_FACS 3m","kidney collecting duct epithelial cell","Epithelium","FACS 3m","3m",20,13,29,0,19,25,39
+"1177","1177_FACS 3m","luminal epithelial cell of mammary gland","Epithelium","FACS 3m","3m",0,9,0,0,0,30,14
+"1178","1178_FACS 3m","large intestine goblet cell","Epithelium","FACS 3m","3m",23,0,0,0,0,29,43
+"1179","1179_FACS 3m","Mesenchymal cell","Mesenchymal","FACS 3m","3m",10,13,0,0,0,29,38
+"1180","1180_FACS 3m","basal cell of epidermis","Epithelium","FACS 3m","3m",16,4,7,52,0,20,35
+"1181","1181_FACS 3m","epidermal cell","Epithelium","FACS 3m","3m",0,13,2,51,0,33,14
+"1182","1182_FACS 3m","neuron","Brain/Neurons","FACS 3m","3m",23,13,0,54,0,38,14
+"1183","1183_FACS 3m","oligodendrocyte precursor cell","Brain/Neurons","FACS 3m","3m",0,0,4,37,0,38,14
+"1184","1184_FACS 3m","myofibroblast cell","Mesenchymal","FACS 3m","3m",8,13,26,0,0,29,43
+"1185","1185_FACS 3m","endothelial cell","Endothelial","FACS 3m","3m",18,11,12,47,0,29,28
+"1186","1186_FACS 3m","immature B cell","Blood","FACS 3m","3m",0,0,0,0,0,20,33
+"1187","1187_FACS 3m","hepatocyte","Epithelium","FACS 3m","3m",0,0,0,0,0,0,35
+"1188","1188_FACS 3m","macrophage","Blood","FACS 3m","3m",0,0,0,0,0,33,37
+"1189","1189_FACS 3m","pancreatic ductal cell","Epithelium","FACS 3m","3m",20,12,0,0,0,30,14
+"1190","1190_FACS 3m","endothelial cell of hepatic sinusoid","Endothelial","FACS 3m","3m",25,5,12,0,0,0,28
+"1191","1191_FACS 3m","epithelial cell of proximal tubule","Epithelium","FACS 3m","3m",0,0,0,0,0,0,46
+"1192","1192_FACS 3m","enterocyte of epithelium of large intestine","Epithelium","FACS 3m","3m",0,0,0,0,0,0,15
+"1193","1193_FACS 3m","endocardial cell","Endothelial","FACS 3m","3m",9,9,30,27,0,0,29
+"1194","1194_FACS 3m","pancreatic acinar cell","Epithelium","FACS 3m","3m",0,0,0,0,0,40,0
+"1195","1195_FACS 3m","lung endothelial cell","Endothelial","FACS 3m","3m",10,11,30,47,12,29,28
+"1196","1196_FACS 3m","immature T cell","Blood","FACS 3m","3m",0,0,0,0,0,1,35
+"1197","1197_FACS 3m","lung endothelial cell","Endothelial","FACS 3m","3m",26,18,30,47,0,0,29
+"1198","1198_FACS 3m","fat","Organ_specific","FACS 3m","3m",0,0,0,0,0,29,30
+"1199","1199_FACS 3m","pancreatic D cell","Epithelium","FACS 3m","3m",20,12,0,0,0,20,45
+"1200","1200_FACS 3m","keratinocyte","Keratinocyte","FACS 3m","3m",16,4,2,51,0,34,35
+"1201","1201_FACS 3m","cardiac muscle cell","Muscle","FACS 3m","3m",0,12,0,0,0,0,14
+"1202","1202_FACS 3m","Slamf1-negative multipotent progenitor cell","Blood","FACS 3m","3m",0,0,23,0,0,15,35
+"1203","1203_FACS 3m","hepatocyte","Epithelium","FACS 3m","3m",0,0,0,0,0,0,35
+"1204","1204_FACS 3m","neuron","Brain/Neurons","FACS 3m","3m",14,13,4,0,25,17,14
+"1205","1205_FACS 3m","epithelial cell of lung","Epithelium","FACS 3m","3m",0,12,6,0,0,30,6
+"1206","1206_FACS 3m","fibroblast","Mesenchymal","FACS 3m","3m",14,12,0,0,0,7,43
