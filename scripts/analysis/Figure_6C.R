@@ -128,5 +128,5 @@ pathwayConfusion <- function(motif_labels = data.frame(),
 
 # Plot the interpathway correlations
 pathwayConfusion(all_cell_type %>% select(tgfb, bmpr, notch, wnt, ubi, rna), 
-                 filename = paste0(output_dir, "Figure_6D.pdf", sep=""), 
+                 filename = paste0(output_dir, "Figure_6C.pdf", sep=""), 
                  save = T)
