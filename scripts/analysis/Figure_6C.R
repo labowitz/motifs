@@ -130,3 +130,6 @@ pathwayConfusion <- function(motif_labels = data.frame(),
 pathwayConfusion(all_cell_type %>% select(tgfb, bmpr, notch, wnt, ubi, rna), 
                  filename = paste0(output_dir, "Figure_6C.pdf", sep=""), 
                  save = T)
+
+# Save the profiles
+all_cell_type %>% write.csv("scripts/figures/Supplementary File 5.csv")
