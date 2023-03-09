@@ -7,6 +7,7 @@ options(dplyr.summarise.inform = FALSE)
 ## Seurat object to import
 master_seurat <- readRDS("./data/processed_data/master_seurat.RDS") # Most recent Seurat object
 annotations <- createAnnotations("./data/processed_data/integrated_meta_data.csv")
+all_pathways = read.csv("./data/raw_data/pathbank/pathway_df.csv", row.names = 1)
 
 ## Colors to import
 colors_1206 <- readRDS("./data/processed_data/colors_1206.RDS") # List with labels and corresponding colors
@@ -24,13 +25,13 @@ ui <- fluidPage(
            textInput(
              inputId = "pathway_name",
              label = "Enter pathway name, no spaces please—use underscores!", 
-             value = "Bmp_Tgfb"),
+             value = 'Tgf-beta family receptors'),
            helpText("Enter the pathway name and gene list."),
            selectizeInput(
              inputId = "geneList",
              label = "Enter gene names",
              choices = row.names(master_seurat),
-             selected = all_pathways[all_pathways$pathway=="Bmp_Tgfb",]$gene,
+             selected = all_pathways[all_pathways$pathway=='Tgf-beta family receptors',]$gene,
              multiple = TRUE,
              width = "100%",
              options = list(
@@ -117,9 +118,10 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
-  v <- reactiveValues(all_pathways = readRDS("./data/processed_data/all_pathways.RDS"), # List of all pathways
-                      pathway_genes = genesPathway(pathway_name = "Bmp_Tgfb",
-                                                   pathway_df = readRDS("./data/processed_data/all_pathways.RDS")),
+  v <- reactiveValues(all_pathways = read.csv("./data/raw_data/pathbank/pathway_df.csv", row.names = 1), # List of all pathways
+                      pathway_genes = genesPathway(pathway_name = 'Tgf-beta family receptors',
+                                                   pathway_df = read.csv("./data/raw_data/pathbank/pathway_df.csv"),
+                                                   seurat_obj=master_seurat),
                       silh_plt = readRDS("./data/processed_data/tgfb_silh_plt.RDS"),
                       silh_z = readRDS("./data/processed_data/tgfb_silh_z.RDS")[[1]],
                       opt_k = readRDS("./data/processed_data/tgfb_silh_z.RDS")[[2]],

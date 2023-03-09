@@ -51,7 +51,7 @@ pathway.genes<-function(pathway ="bmp"){
 }
 #optional:
 
-tabula.path ="./data/raw_data/tabula_muris_facs/"
+tabula.path ="./data/raw_data/sc_data/tms_FACS/"
 
 FACS_files = list.files(paste(tabula.path,"/FACS" ,sep=""), full.names = TRUE)
 
@@ -72,7 +72,7 @@ raw.data <- do.call(cbind, raw.data.list)
   cell_order_FACS <- order(colnames(raw.data))
   raw.data = raw.data[,cell_order_FACS]
 
-meta.data <- read.csv(paste(tabula.path,"metadata_FACS.csv",sep=""))
+meta.data <- read.csv(paste(tabula.path,"/metadata_FACS.csv",sep=""))
 #we extract information from the colnames (ID of individual cells)
 
 # meta.data includes the information for all plates
@@ -132,24 +132,24 @@ raw.data  = raw.data[,high.count.cells]
   total.reads = Matrix::colSums(raw.data)
 
 
- # bmp.all = pathway.genes(pathway = "bmp")
- # bmp.indexes=match(bmp.all,rownames(raw.data))
+  bmp.all = pathway.genes(pathway = "bmp")
+  bmp.indexes=match(bmp.all,rownames(raw.data))
 
- # raw.data <-raw.data[bmp.indexes,]
-
-
-  #counts.cells = Matrix::colSums(raw.data)
- # raw.data = raw.data[,counts.cells>length(bmp.all)*2] #keep cells that have at least this N of counts
+  raw.data <-raw.data[bmp.indexes,]
 
 
-#  raw.logical = raw.data>0
-#  genes.at.least.one = Matrix::colSums(raw.logical)
-#  raw.data= raw.data[,genes.at.least.one>=3] #ten percent of genes in the pathway (31 genes)
+  counts.cells = Matrix::colSums(raw.data)
+  raw.data = raw.data[,counts.cells>length(bmp.all)*2] #keep cells that have at least this N of counts
+
+
+  raw.logical = raw.data>0
+  genes.at.least.one = Matrix::colSums(raw.logical)
+  raw.data= raw.data[,genes.at.least.one>=3] #ten percent of genes in the pathway (31 genes)
 
 
   #explore the raw.data  :
   #would be good to filter based on CV but we can't do that yet...TO DO
-#  cv.bmp <-apply(raw.data,1,sd)/apply(raw.data,1,mean)
+  cv.bmp <-apply(raw.data,1,sd)/apply(raw.data,1,mean)
 
 #take from meta.data only cells that remain in the matrix
 cell.meta.filter = cell.meta.data[colnames(raw.data), ]

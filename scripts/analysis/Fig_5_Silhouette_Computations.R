@@ -53,6 +53,7 @@ mclapply(unique(pathway_df$pathway), # List of pathways
          pathway_df,
          min_expr=min_expr,
          seurat_obj = seurat_obj,
+         n_bootstraps = 100,
          max_k = max_k,
          output_dir = output_dir,
          mc.cores = 8)
