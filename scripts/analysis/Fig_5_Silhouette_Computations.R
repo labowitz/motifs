@@ -13,7 +13,8 @@ runSilhBoot <- function(pathway_name = "",
   print( paste( "Running ..", pathway_name , " " , Sys.time() ))
   
   pathway_genes = genesPathway(pathway_name = pathway_name,
-                               pathway_df = pathway_df)
+                               pathway_df = pathway_df,
+                               seurat_obj = master_seurat)
   
   # if it founds an error, it won't break but it will save the pathway as NA
   # we can then read the outputs and re-run the NA with a lower number of maxk 

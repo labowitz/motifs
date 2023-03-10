@@ -7,11 +7,12 @@ filename = "tgfb_trial" # how name is appended to files for pathway
 output_dir = paste("./scripts/analysis/outputs/", filename, "_analysis/", filename, sep = "")
 fig_dir = "./scripts/figures/"
 
-pathway_df = readRDS("./data/processed_data/all_pathways.RDS")
+pathway_df = read.csv('./data/raw_data/pathbank/pathway_df.csv', row.names = 1)
 
-pathway_name =  "Bmp_Tgfb" # tgfb pathway name
+pathway_name =  'Tgf-beta family receptors' # tgfb pathway name
 pathway_genes = genesPathway(pathway_name = pathway_name,
-                             pathway_df = pathway_df)
+                             pathway_df = pathway_df,
+                             seurat_obj = master_seurat)
 
 min_genes_pathway = 2 # tgfb min. number of genes expressed
 min_expr_threshold = 0.2 # tgfb minimum expression threshold for gene to be on

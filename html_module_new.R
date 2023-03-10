@@ -125,7 +125,7 @@ getGenesList <- function(pathway_df = data.frame(),
 ## Function to return the genes in a pathway stores in "all_pathways" object
 genesPathway <- function(pathway_name = 'Notch',
                          pathway_df = data.frame(),
-                         seurat_obj = master_seurat
+                         seurat_obj = c()
 ){
   
   pathway_genes = getGenesList(pathway_name = pathway_name,

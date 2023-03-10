@@ -75,7 +75,7 @@ superheat(x_mat,
 dev.off()
 
 ct_rows = master_seurat@meta.data %>% filter(grepl("Forelimb", dataset) & grepl("Epithelial 2", cell_ontology_class)) %>% rownames()
-df <- normalizedDevel(this_pathway = genesPathway("Bmp_Tgfb"), master_seurat = master_seurat)
+df <- normalizedDevel(this_pathway = genesPathway("Tgf-beta family receptors", pathway_df=pathway_df,seurat_obj=master_seurat), master_seurat = master_seurat)
 df <- df %>% filter(cell_id %in% ct_rows) %>% select(tgfb_genes)
 
 df <- data.frame(counts = colMeans(df), names = colMeans(df) %>% names())

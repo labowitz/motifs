@@ -6,6 +6,7 @@ options(dplyr.summarise.inform = FALSE)
 
 ## Seurat object to import
 master_seurat <- readRDS("./data/processed_data/master_seurat.RDS") # Most recent Seurat object
+master_seurat@meta.data$Tissue[master_seurat@meta.data$Tissue=="intestine"] = "dev. intestine"
 annotations <- createAnnotations("./data/processed_data/integrated_meta_data.csv")
 all_pathways = read.csv("./data/raw_data/pathbank/pathway_df.csv", row.names = 1)
 

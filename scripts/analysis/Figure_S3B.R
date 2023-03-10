@@ -5,7 +5,8 @@ fig_dir = "./scripts/figures/"
 
 pathway_name <- "Tgf-beta family receptors" # tgfb pathway name
 pathway_genes <- genesPathway(pathway_name = pathway_name,
-                              pathway_df = pathway_df)
+                              pathway_df = pathway_df,
+                              seurat_obj = master_seurat)
 
 ## Generate the dataframe with the normalized gene counts of profiles with pathway ON
 sat_val = 0.99
