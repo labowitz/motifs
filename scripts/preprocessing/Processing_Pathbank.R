@@ -1,6 +1,6 @@
 source("./scripts/analysis/imports_new.R")
 
-all_csv <- read.csv("data/raw_data/pathbank/pathbank_all_proteins.csv")
+all_csv <- read.csv("./data/raw_data/pathbank/pathbank_all_proteins.csv")
 
 pathway_filter <- all_csv %>% 
   filter(Species == "Mus musculus") %>%
@@ -19,7 +19,7 @@ all_csv <- all_csv %>%
 
 colnames(all_csv) <- c("pathway", "gene")
 
-our_pathways <- read.csv("data/raw_data/pathbank/our_pathways.csv",
+our_pathways <- read.csv("./data/raw_data/pathbank/our_pathways.csv",
                          row.names = 1)
 
 pathway_df <- rbind(all_csv, our_pathways)
@@ -32,4 +32,4 @@ pathway_df$pathway[pathway_df$pathway=='Eph_l'] <- 'Ephrins'
 pathway_df$pathway[pathway_df$pathway=='Wnt'] <- 'Frizzled and Lrp5 6 receptors for Wnt B Catenin Signaling'
 pathway_df$pathway[pathway_df$pathway=='Fgfr'] <- 'FGF signaling'
 
-write.csv(pathway_df, "data/raw_data/pathbank/pathway_df.csv")
+write.csv(pathway_df, "./data/raw_data/pathbank/pathway_df.csv")

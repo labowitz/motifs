@@ -7,7 +7,7 @@ pca_proj <- readRDS("./data/processed_data/pca_proj.RDS") # PCA projection from 
 hvg_genes <- readRDS("./data/processed_data/hvg_genes.RDS") # list of HVGs (shouldn't be used)
 
 ## Set of files to import 
-pathway_df <- read.csv("data/raw_data/pathbank/pathway_df.csv", row.names = 1)
+pathway_df <- read.csv("./data/raw_data/pathbank/pathway_df.csv", row.names = 1)
 
 ## Colors to import
 colors_1206 <- readRDS("./data/processed_data/colors_1206.RDS") # List with labels and corresponding colors

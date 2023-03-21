@@ -1,18 +1,9 @@
 library(shiny)
 library(Cairo)
 
-source("./html_module_new.R")
+source("./html_imports.R")
+
 options(dplyr.summarise.inform = FALSE)
-
-## Seurat object to import
-master_seurat <- readRDS("./data/processed_data/master_seurat.RDS") # Most recent Seurat object
-master_seurat@meta.data$Tissue[master_seurat@meta.data$Tissue=="intestine"] = "dev. intestine"
-annotations <- createAnnotations("./data/processed_data/integrated_meta_data.csv")
-all_pathways = read.csv("./data/raw_data/pathbank/pathway_df.csv", row.names = 1)
-
-## Colors to import
-colors_1206 <- readRDS("./data/processed_data/colors_1206.RDS") # List with labels and corresponding colors
-glasbey <- readRDS("./data/processed_data/glasbey.RDS") # List of glasbey colors for categorical labels
 
 ui <- fluidPage(
   
@@ -25,14 +16,14 @@ ui <- fluidPage(
            helpText("Enter pathway name."),
            textInput(
              inputId = "pathway_name",
-             label = "Enter pathway name, no spaces please—use underscores!", 
+             label = "Enter pathway name.", 
              value = 'Tgf-beta family receptors'),
            helpText("Enter the pathway name and gene list."),
            selectizeInput(
              inputId = "geneList",
              label = "Enter gene names",
              choices = row.names(master_seurat),
-             selected = all_pathways[all_pathways$pathway=='Tgf-beta family receptors',]$gene,
+             selected = pathway_df[pathway_df$pathway=='Tgf-beta family receptors',]$gene,
              multiple = TRUE,
              width = "100%",
              options = list(
@@ -119,9 +110,9 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
-  v <- reactiveValues(all_pathways = read.csv("./data/raw_data/pathbank/pathway_df.csv", row.names = 1), # List of all pathways
+  v <- reactiveValues(pathway_df = pathway_df, # List of all pathways
                       pathway_genes = genesPathway(pathway_name = 'Tgf-beta family receptors',
-                                                   pathway_df = read.csv("./data/raw_data/pathbank/pathway_df.csv"),
+                                                   pathway_df = pathway_df,
                                                    seurat_obj=master_seurat),
                       silh_plt = readRDS("./data/processed_data/tgfb_silh_plt.RDS"),
                       silh_z = readRDS("./data/processed_data/tgfb_silh_z.RDS")[[1]],
@@ -132,37 +123,34 @@ server <- function(input, output, session) {
   observeEvent(
     input$ready,
     {
-      v$all_pathways <- addGenes(pathway_df = v$all_pathways,
-                                 pathway_genes = input$geneList, 
-                                 pathway_name = input$pathway_name
+      v$pathway_df <- addGenes(pathway_df = v$pathway_df,
+                               pathway_genes = input$geneList, 
+                               pathway_name = input$pathway_name
       )
       
       v$pathway_genes <- genesPathway(pathway_name = input$pathway_name,
-                                      pathway_df = v$all_pathways
+                                      pathway_df = v$pathway_df,
+                                      seurat_obj = master_seurat
       )
       
       v$silh_plt = silhouettePlot(pathway_genes = v$pathway_genes, 
-                                  pathway_name = input$pathway_name,
                                   min_genes_on = input$min_genes_pathway, 
                                   min_expr = input$min_expr_threshold, 
-                                  n_bootstraps = 10,
+                                  n_bootstraps = 100,
                                   seurat_obj = master_seurat
       )
       
       v$silh_z = silhouette_zscore(v$silh_plt,
-                                   min_expr = input$min_expr_threshold,
-                                   pathway_name = input$pathway_name)[[1]]
+                                   min_expr = input$min_expr_threshold)[[1]]
       
       v$opt_k = perc_k_finder(silhouette_zscore(v$silh_plt,
-                              min_expr = input$min_expr_threshold,
-                              pathway_name = input$pathway_name)[[2]],
+                              min_expr = input$min_expr_threshold)[[2]],
                               percentile = 0.9)
       
       v$control_res = fullControlPathway(pathway_genes = v$pathway_genes,
                                          k_final = v$opt_k,
                                          seurat_obj = master_seurat, # seurat object
-                                         null_list = hvg_genes, #list of highly variable genes 
-                                         n_samples = 10, 
+                                         n_samples = 100, 
                                          filter_manual = T,
                                          min_genes_on = input$min_genes_pathway, 
                                          min_expr = input$min_expr_threshold, 

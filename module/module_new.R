@@ -128,12 +128,12 @@ genesPathway <- function(pathway_name = 'Notch',
   
   pathway_genes = pathway_genes[which(pathway_genes %in% row.names(seurat_obj))]
   
-  return(pathway_genes)
+  return(unique(pathway_genes))
 }
 
 ## Retrieve the log-norm gene expression values and the annotations
 makeMainDataFrame <- function(pathway_genes = c(), 
-                              seurat_obj = master_seurat
+                              seurat_obj = c()
 ){
   
   pathway_matrix <- FetchData(seurat_obj, 
@@ -181,7 +181,7 @@ randomizeColumns <- function(df = data.frame(),    # data.frame of gene expressi
 }
 
 ## Returns MinMax normalized counts along with metadata at specified saturating quantile.
-normalizedDevel <- function(seurat_obj = master_seurat,    # Which Seurat object to use
+normalizedDevel <- function(seurat_obj = c(),    # Which Seurat object to use
                             pathway_genes = c(),           # List of pathway genes
                             sat_val = 0.99,                # Saturating quantile
                             fill_zero_rows = F             # If a gene has all 0's, fill with very small number
@@ -229,13 +229,12 @@ normalizedDevel <- function(seurat_obj = master_seurat,    # Which Seurat object
 }
 
 ## quickPipeline processes the counts from an object with a specified optimal number of clusters
-quickPipeline <- function(seurat_obj = master_seurat,        # Seurat object
+quickPipeline <- function(seurat_obj = c(),        # Seurat object
                           pathway_genes = c(),               # Pathway name to draw from all_pathways object
                           k_final = 25,                      # k value for clusters
                           min_genes_on = 1,                  # Min. number of genes for pathway to be "ON"
                           min_expr = 0.2,                    # Min. expression cutoff for gene to be "ON"
-                          sat_val = 0.99,
-                          glasbey_use = T
+                          sat_val = 0.99
 ){
   
   # Get the MinMax scaled and normalized data and annotations
@@ -244,10 +243,10 @@ quickPipeline <- function(seurat_obj = master_seurat,        # Seurat object
                                 sat_val = sat_val,
                                 fill_zero_rows = F
   )
-
+  
   # Compute the number of genes "ON" in the pathway
   data_frame$genes_on = rowSums(data_frame[, pathway_genes] > min_expr)
-
+  
   # Filter out cell types with lower than desired expression
   data_frame %>% dplyr::filter(genes_on > min_genes_on) -> data_frame
   
@@ -282,7 +281,7 @@ quickPipeline <- function(seurat_obj = master_seurat,        # Seurat object
   
   # Colors for pathway classes --- +1 (white) for non-expressing cell types
   colors_1206$class_label <- makeQualitativePal(n = k_final, 
-                                                glasbey_use = glasbey_use, 
+                                                glasbey_use = T, 
                                                 skip = 1) # skip white color
   
   names(colors_1206$class_label) <- data_frame$class_label %>% unique()
@@ -369,7 +368,7 @@ clusterSilhouette <- function(df = data.frame(),   # data.frame in wide format w
 
 ## Bootstraps silhouette scores from from global expression profiles
 silhPathwayBootstrap <- function(pathway_genes = c(),       # Pathway name
-                                 seurat_obj = master_seurat,# Seurat object
+                                 seurat_obj = c(),# Seurat object
                                  k_max = 100,               # Maximum values of k_cutoffs to compute the silhouette score for
                                  clust_method = "ward.D2",  # Clustering clust_method
                                  sat_val = 0.99,            # Saturating quantile
@@ -446,7 +445,7 @@ silhPathwayBootstrap <- function(pathway_genes = c(),       # Pathway name
 
 ## Compute pathway gene and randomized silhouette scores and plots them together
 silhouettePlot <- function(pathway_genes = c(),       # Specify pathway genes
-                           seurat_obj = master_seurat,
+                           seurat_obj = c(),
                            min_genes_on = 2,          # Min. number of genes for pathway to be "ON"
                            min_expr = 0.25,           # Min. expression cutoff for gene to be "ON"
                            n_bootstraps=10,           # Number of bootstrap replicates
@@ -646,8 +645,7 @@ globalClustering <- function(df_devel = data.frame(),   # data.frame in wide for
   row.names(df_devel) <- df_devel$cell_id
   
   # Set class_label colors
-  colors_1206$class_label = makeQualitativePal(length(df_devel$class_label %>% 
-                                                        unique))
+  colors_1206$class_label = makeQualitativePal(length(df_devel$class_label %>% unique))
   names(colors_1206$class_label) <- df_devel$class_label %>% unique
   
   # Get the Embedding
@@ -1089,7 +1087,7 @@ rankDiversity <- function(pathway_genes =c(),
                           manual_embedding = c(),
                           dist_metric = 'euclidean',
                           make_plot = T,
-                          seurat_obj=master_seurat
+                          seurat_obj=c()
 ){
   
   # takes the pathway name as input:
@@ -1260,7 +1258,7 @@ rank_diversity <- function(pathway_genes =c(),
                            manual_embedding = c(),
                            dist_metric = 'euclidean',
                            make_plot = T,
-                           seurat_obj=master_seurat
+                           seurat_obj=c()
 ){
   
   # takes the pathway name as input:
@@ -1373,7 +1371,7 @@ motif_heatmap <- function(control_res=data.frame(),
 
 ## Computes the global transcriptome distance using a specified embedding and plots pathway class labels on global dendrogram
 global_dendr <- function(control_res = list(),                         # Main results object
-                         seurat_obj = master_seurat,                             # Seurat object
+                         seurat_obj = c(),                             # Seurat object
                          hvg_genes = c(),                              # List of genes to create the global dendrogram
                          dist_metric ='cosine',                        # Clustering distance in global space. applies for expression and PCA spaces
                          clust_method = "ward.d2",                     # Hierarchical clustering method
@@ -1386,7 +1384,7 @@ global_dendr <- function(control_res = list(),                         # Main re
   profiles_df = control_res$profiles
   row.names(profiles_df) <- profiles_df$cell_id
   
-  meta_full <- master_seurat@meta.data %>% 
+  meta_full <- seurat_obj@meta.data %>% 
     dplyr::select(cell_ontology_class,
                   Cell_class, 
                   dataset, 
@@ -1404,7 +1402,7 @@ global_dendr <- function(control_res = list(),                         # Main re
   if(!use_pca){
     # Use highly variable genes
     hvg_df = makeMainDataFrame(hvg_genes, 
-                               master_seurat = seurat_obj)
+                               seurat_obj = seurat_obj)
     hvg_genes = hvg_genes[hvg_genes %in% colnames(hvg_df)]
     
     # Filter only for expressing cell types in this pathway
@@ -1460,7 +1458,7 @@ global_dendr <- function(control_res = list(),                         # Main re
 }
 
 global_umap <- function(control_res = list(),                         # Main results object
-                        seurat_obj = master_seurat,                   # Seurat object
+                        seurat_obj = c(),                   # Seurat object
                         hvg_genes = c(),                              # List of genes to create the global dendrogram
                         dist_metric ='cosine',                        # Clustering distance in global space. applies for expression and PCA spaces
                         clust_method = "ward.d2",                     # Hierarchical clustering method
@@ -1471,7 +1469,7 @@ global_umap <- function(control_res = list(),                         # Main res
   profiles_df = control_res$profiles
   row.names(profiles_df) <- profiles_df$cell_id
   
-  meta_full <- master_seurat@meta.data %>% 
+  meta_full <- seurat_obj@meta.data %>% 
     dplyr::select(cell_ontology_class,
                   Cell_class, 
                   dataset,
@@ -1489,7 +1487,7 @@ global_umap <- function(control_res = list(),                         # Main res
   if(!use_pca){
     # Use highly variable genes
     hvg_df = makeMainDataFrame(hvg_genes, 
-                               master_seurat = seurat_obj)
+                               seurat_obj = seurat_obj)
     hvg_genes = hvg_genes[hvg_genes %in% colnames(hvg_df)]
     
     # Filter only for expressing cell types in this pathway
@@ -1549,7 +1547,7 @@ make_title <- function(col = "black",
 
 motifs_umap <- function(control_res = list(),                         # Main results object
                         pathway_genes = pathway_genes,
-                        seurat_obj = master_seurat,                   # Seurat object
+                        seurat_obj = c(),                   # Seurat object
                         hvg_genes = c(),                              # List of genes to create the global dendrogram
                         dist_metric ='cosine',                        # Clustering distance in global space. applies for expression and PCA spaces
                         clust_method = "ward.d2",                     # Hierarchical clustering method
@@ -1565,7 +1563,7 @@ motifs_umap <- function(control_res = list(),                         # Main res
   profiles_df = control_res$profiles
   row.names(profiles_df) <- profiles_df$cell_id
   
-  meta_full <- master_seurat@meta.data %>% 
+  meta_full <- seurat_obj@meta.data %>% 
     dplyr::select(cell_ontology_class,
                   Cell_class,
                   dataset,
@@ -1583,7 +1581,7 @@ motifs_umap <- function(control_res = list(),                         # Main res
   if(!use_pca){
     # Use highly variable genes
     hvg_df = makeMainDataFrame(hvg_genes, 
-                               master_seurat = seurat_obj)
+                               seurat_obj = seurat_obj)
     hvg_genes = hvg_genes[hvg_genes %in% colnames(hvg_df)]
     
     # Filter only for expressing cell types in this pathway
@@ -1696,7 +1694,7 @@ motifs_umap <- function(control_res = list(),                         # Main res
 }
 
 
-ecdfPlot <- function(seurat_obj = master_seurat,
+ecdfPlot <- function(seurat_obj = c(),
                      pathway_genes = c(),
                      thresh_list = c(0.05, 0.1, 0.2, 0.3, 0.4, 0.5),
                      sat_val = 0.99
@@ -1780,7 +1778,7 @@ ecdfPlot <- function(seurat_obj = master_seurat,
          cex=1.5)
 }
 
-coexpHeatmap <- function(seurat_obj = master_seurat,
+coexpHeatmap <- function(seurat_obj = c(),
                          pathway_genes = c(),
                          min_genes_on = 2,
                          min_expr = 0.2,
@@ -1839,7 +1837,7 @@ coexpHeatmap <- function(seurat_obj = master_seurat,
   return(plt)
 }
 
-geneCounts <- function(seurat_obj = master_seurat,
+geneCounts <- function(seurat_obj = c(),
                        pathway_genes = c(),
                        min_genes_on = 2,
                        min_expr = 0.2,

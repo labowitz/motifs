@@ -1,3 +1,8 @@
+library(Seurat)
+library(stringr)
+
+# Matrix of size 27998 x 92649
+
 data_dir <- "data/raw_data/sc_data/gastrulation/"
 sample_files <- list.files(path=data_dir, 
                            pattern = "GSE")

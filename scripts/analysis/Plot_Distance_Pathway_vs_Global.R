@@ -1,10 +1,9 @@
 source("./scripts/analysis/imports_new.R")
 
-pathway_df = readRDS("./data/processed_data/all_pathways.RDS")
-
-pathway_name =  "Bmp_Tgfb" # tgfb pathway name
+pathway_name =  "Tgf-beta family receptors" # tgfb pathway name
 pathway_genes = genesPathway(pathway_name = pathway_name,
-                             pathway_df = pathway_df)
+                             pathway_df = pathway_df,
+                             seurat_obj = master_seurat)
 
 min_genes_pathway = 2 # tgfb min. number of genes expressed
 min_expr_threshold = 0.2 # tgfb minimum expression threshold for gene to be on
@@ -47,7 +46,7 @@ p <- ggplot(merged_df, aes(pathway_dist, global_dist)) +
   geom_point(alpha = 0.01) + 
   ggtitle("Pathway vs. Global Distance") + 
   xlab("Pathway Distance (cosine similarity on gene exp.)") + 
-  ylab("Global Distance computed on 20 PCs (euclidean similarity)")
+  ylab("Global Distance (euclidean distance on 20 PCs)")
 
 ggsave("euclidean_global.pdf")
 
@@ -69,6 +68,6 @@ p <- ggplot(merged_df, aes(pathway_dist, global_dist)) +
   geom_point(alpha = 0.01) + 
   ggtitle("Pathway vs. Global Distance") + 
   xlab("Pathway Distance (cosine similarity on gene exp.)") + 
-  ylab("Global Distance computed on 20 PCs (cosine similarity)")
+  ylab("Global Distance (cosine similarity on 20 PCs)")
 
 ggsave("cosine_global.pdf")

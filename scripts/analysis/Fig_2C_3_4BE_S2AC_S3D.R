@@ -35,7 +35,7 @@ dev.off()
 silh_plt = silhouettePlot(pathway_genes = pathway_genes, 
                           min_genes_on = min_genes_on, 
                           min_expr = min_expr, 
-                          n_bootstraps = 5,
+                          n_bootstraps = 100,
                           seurat_obj = master_seurat)
 
 silh_z_plt <- silhouette_zscore(silh_result = silh_plt,

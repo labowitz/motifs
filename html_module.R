@@ -6,6 +6,7 @@ library(Seurat)
 library(pheatmap)
 library(stylo)
 library(tidyr)
+library(tibble)
 library(ggsignif)
 library(grid)
 library(parallel)
@@ -17,22 +18,8 @@ library(stringr)
 library(RColorBrewer)
 library(zoo)
 library(pracma)
-library(DIZtools)
 
-## Seurat object to import
-master_seurat <- readRDS("./data/processed_data/master_seurat.RDS") # Most recent Seurat object
-pca_proj <- readRDS("./data/processed_data/pca_proj.RDS") # PCA projection from 1928 HVGs
-hvg_genes <- readRDS("./data/processed_data/hvg_genes.RDS") # list of HVGs (shouldn't be used)
-
-## Set of files to import 
-param_list <- readRDS("./data/processed_data/param_list.RDS") # List of pathway parameters
-all_pathways <- readRDS("./data/processed_data/all_pathways.RDS") # List of all pathways
-
-## Colors to import
-colors_1206 <- readRDS("./data/processed_data/colors_1206.RDS") # List with labels and corresponding colors
-glasbey <- readRDS("./data/processed_data/glasbey.RDS") # List of glasbey colors for categorical labels
-
-black_pal <- function(n){
+blackPal <- function(n){
   colfunc <- colorRampPalette(c("white", "black"))
   return(colfunc(n))
 }
@@ -49,12 +36,7 @@ makeQualitativePal <- function(n,               # Number of unique colors in pal
     names(col_vector)<- NULL
     
   }else{
-    qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
-    col_vector = unlist(mapply(brewer.pal, 
-                               qual_col_pals$maxcolors, 
-                               rownames(qual_col_pals))
-    ) # only 70 qualitative colors
-    
+    col_vector = append(c("white"), lg_pal)
   }
   
   if(n <= length(col_vector)){
@@ -89,7 +71,7 @@ createSeurat <- function(file_path # path to the csv file
 }
 
 # Makes a list out of the metadata_annotations stored in a csv
-create_annotations <- function(file_path # csv with metadata_annotations
+createAnnotations <- function(file_path # csv with metadata_annotations
 ){
   annotations = read.csv(file_path)
   annotations_list = list()
@@ -105,7 +87,7 @@ create_annotations <- function(file_path # csv with metadata_annotations
 
 appendMetaData <- function(master_seurat, 
                            metadata_annotations
-                           ){
+){
   
   AddMetaData(master_seurat, metadata_annotations, col.names=NULL)
   
@@ -114,9 +96,13 @@ appendMetaData <- function(master_seurat,
 
 addGenes <- function(pathway_df = data.frame(),
                      pathway_name = "Notch",
-                     pathway_genes = c()) {
+                     pathway_genes = c()
+){
   
-  df <- data.frame(pathway = rep(pathway_name, length(pathway_genes)), gene = pathway_genes)
+  df <- data.frame(pathway = rep(pathway_name, 
+                                 length(pathway_genes)), 
+                   gene = pathway_genes)
+  
   pathway_df <- rbind(pathway_df, df)
   
   return(pathway_df)
@@ -124,7 +110,7 @@ addGenes <- function(pathway_df = data.frame(),
 
 getGenesList <- function(pathway_df = data.frame(),
                          pathway_name = "Notch"
-                         ){
+){
   if (!(pathway_name %in% pathway_df$pathway)) {
     stop("We don't know this pathway! Add the genes in this pathway to our list using the `addGenes` function!")
   }
@@ -134,19 +120,20 @@ getGenesList <- function(pathway_df = data.frame(),
 ## Function to return the genes in a pathway stores in "all_pathways" object
 genesPathway <- function(pathway_name = 'Notch',
                          pathway_df = data.frame(),
-                         seurat_obj = master_seurat
+                         seurat_obj = c()
 ){
   
   pathway_genes = getGenesList(pathway_name = pathway_name,
-                              pathway_df = pathway_df)
+                               pathway_df = pathway_df)
+  
   pathway_genes = pathway_genes[which(pathway_genes %in% row.names(seurat_obj))]
   
-  return(pathway_genes)
+  return(unique(pathway_genes))
 }
 
 ## Retrieve the log-norm gene expression values and the annotations
-makeMainDataFrame <- function(pathway_genes = c(), 
-                              seurat_obj = master_seurat
+makeMainDataFrame <- function(pathway_genes = c(),
+                              seurat_obj = c()
 ){
   
   pathway_matrix <- FetchData(seurat_obj, 
@@ -183,8 +170,8 @@ minMaxNorm <- function(x){
 }
 
 ## Permute the rows for each column of data.frame
-randomize_columns <- function(df = data.frame(),           # data.frame of gene expression values (rows are cells, columns are genes)
-                              pathway_genes = c()  # Pathway genes list
+randomizeColumns <- function(df = data.frame(),    # data.frame of gene expression values (rows are cells, columns are genes)
+                             pathway_genes = c()  # Pathway genes list
 ){
   
   for(i in 1:length(pathway_genes))
@@ -194,7 +181,7 @@ randomize_columns <- function(df = data.frame(),           # data.frame of gene 
 }
 
 ## Returns MinMax normalized counts along with metadata at specified saturating quantile.
-normalizedDevel <- function(seurat_obj = master_seurat,    # Which Seurat object to use
+normalizedDevel <- function(seurat_obj = c(),    # Which Seurat object to use
                             pathway_genes = c(),           # List of pathway genes
                             sat_val = 0.99,                # Saturating quantile
                             fill_zero_rows = F             # If a gene has all 0's, fill with very small number
@@ -242,7 +229,7 @@ normalizedDevel <- function(seurat_obj = master_seurat,    # Which Seurat object
 }
 
 ## quickPipeline processes the counts from an object with a specified optimal number of clusters
-quickPipeline <- function(seurat_obj = master_seurat,        # Seurat object
+quickPipeline <- function(seurat_obj = c(),        # Seurat object
                           pathway_genes = c(),               # Pathway name to draw from all_pathways object
                           k_final = 25,                      # k value for clusters
                           min_genes_on = 1,                  # Min. number of genes for pathway to be "ON"
@@ -323,23 +310,26 @@ makeBootstrap_df <- function(s_boots){
   # rbind, so each column represents k value
   boot_mat  = do.call(rbind, s_boots)
   
-  boot_df = data.frame(m = apply(boot_mat, 2, mean), s = apply(boot_mat, 2, sd)) # Mean over columns
+  boot_df = data.frame(m = apply(boot_mat, 2, mean), 
+                       s = apply(boot_mat, 2, sd)) # Mean over columns
   boot_df$k = 1:dim(boot_df)[1]
   
   return(boot_df)
 }
 
 ## Function that computes silhouette scores for a given number of clusters
-cluster_silhouette <- function(df = data.frame(), # data.frame in wide format with genes and class labels
-                               pathway_genes = c(),# pathway genes
-                               dist = 'euclidean',
-                               return_singles = F # directly return the mean silhouette score
+clusterSilhouette <- function(df = data.frame(),   # data.frame in wide format with genes and class labels
+                              pathway_genes = c(),# pathway genes
+                              dist = 'euclidean',
+                              return_singles = F  # directly return the mean silhouette score
 ){
   
   # Assumes that the data.frame contains the pathway profiles in wide format
   # The input data.frame must contain global_cluster AND class_label
   ## class_label must be numeric friendly
-  df %>% dplyr::select(c(all_of(pathway_genes), global_cluster, class_label)) -> df_mat
+  df %>% dplyr::select(c(all_of(pathway_genes), 
+                         global_cluster, 
+                         class_label)) -> df_mat
   
   # Silhouette requires numeric cluster labels
   labs <- df_mat$class_label %>% as.numeric()
@@ -360,8 +350,11 @@ cluster_silhouette <- function(df = data.frame(), # data.frame in wide format wi
   
   s_df_mean <- s_df %>% dplyr::group_by(class_label) %>%
     dplyr::summarise(ms = mean(silh)) %>%
-    arrange(desc(ms)) %>% as.data.frame() %>%
-    left_join(df %>% dplyr::group_by(class_label) %>% count, by="class_label")
+    arrange(desc(ms)) %>% 
+    as.data.frame() %>%
+    left_join(df %>% 
+                dplyr::group_by(class_label) %>% 
+                count, by="class_label")
   
   if(!return_singles){
     return(s_df_mean)
@@ -374,12 +367,12 @@ cluster_silhouette <- function(df = data.frame(), # data.frame in wide format wi
 }
 
 ## Bootstraps silhouette scores from from global expression profiles
-silhPathwayBootstrap <- function(pathway_genes = c(),                         # Pathway name
-                                 seurat_obj = master_seurat,          # Seurat object
+silhPathwayBootstrap <- function(pathway_genes = c(),       # Pathway name
+                                 seurat_obj = c(),# Seurat object
                                  k_max = 100,               # Maximum values of k_cutoffs to compute the silhouette score for
-                                 clust_method = "ward.D2", # Clustering clust_method
+                                 clust_method = "ward.D2",  # Clustering clust_method
                                  sat_val = 0.99,            # Saturating quantile
-                                 dist_metric = 'cosine', # Distance metric
+                                 dist_metric = 'cosine',    # Distance metric
                                  pct_boots = 0.9,           # Fraction of cells we want to sample from dataset
                                  n_boots = 100,             # Number of bootstraps to run
                                  control_silh = F           # Whether this is a bootstrapping for clusters or a negative control that randomzes the data
@@ -398,17 +391,16 @@ silhPathwayBootstrap <- function(pathway_genes = c(),                         # 
       # Running bootstraps on the pathway genes
       # Filter out cell types that are not expressing.
       # but sample the list of cell types before to create a bootstrap distribution
-      
-      data_frame_main -> data_frame
+      data_frame <- data_frame_main[sample(index(data_frame_main), length(index(data_frame_main))*pct_boots),]
       row.names(data_frame) <- data_frame$global_cluster
       
     }else{
       # Control bootstrap: re-shuffle the data to get a lower bound on silhouette score
       # by destroying gene-gene correlations but keeping the distribution of each gene.
       # Before, we still need to filter for the cell types to include
-
+      
       # Randomize expression within those cells! We don't want gene expression values from cell types not originally included
-      data_frame = randomize_columns(data_frame_main, pathway_genes)
+      data_frame = randomizeColumns(data_frame_main, pathway_genes)
       
     }
     
@@ -436,9 +428,9 @@ silhPathwayBootstrap <- function(pathway_genes = c(),                         # 
       
       master_clustered = data_frame # data.frame with data and motif labels
       
-      s1 <- cluster_silhouette(df = master_clustered,
-                               pathway_genes = pathway_genes, # Pathway genes
-                               dist = dist_metric # original clustering
+      s1 <- clusterSilhouette(df = master_clustered,
+                              pathway_genes = pathway_genes, # Pathway genes
+                              dist = dist_metric # original clustering
       )
       
       # Compute silhouette score to return
@@ -453,7 +445,7 @@ silhPathwayBootstrap <- function(pathway_genes = c(),                         # 
 
 ## Compute pathway gene and randomized silhouette scores and plots them together
 silhouettePlot <- function(pathway_genes = c(),       # Specify pathway genes
-                           seurat_obj = master_seurat,
+                           seurat_obj = c(),
                            min_genes_on = 2,          # Min. number of genes for pathway to be "ON"
                            min_expr = 0.25,           # Min. expression cutoff for gene to be "ON"
                            n_bootstraps=10,           # Number of bootstrap replicates
@@ -507,6 +499,21 @@ silhouettePlot <- function(pathway_genes = c(),       # Specify pathway genes
   
   # Returns plot and both data frames
   return(list(g, boot_df, boot_df_control, s_boots))
+}
+
+# Finds the z-score for specified criterion.
+perc_k_finder <- function(z_score = c(),
+                          percentile = 0.9
+){
+  idx_max_z = which.max(z_score)
+  max_z = max(z_score, na.rm=T)
+  
+  vals = rev(z_score[idx_max_z:length(z_score)])
+  
+  ret_idx = which.min(abs(vals-(max_z * percentile)))
+  
+  return(length(vals) - ret_idx + idx_max_z)
+  
 }
 
 ## Computes and plots Z-score based on bootstrapped pathway and randomized expression values
@@ -569,7 +576,8 @@ silhouette_zscore <- function(silh_result,                        # Result from 
                   y = z), 
               color = rgb(54, 55, 149, max = 255), 
               linewidth = 1) +
-    geom_vline(xintercept = which.max(z_score), 
+    geom_vline(xintercept = perc_k_finder(z_score,
+                                          percentile = 0.9), 
                linetype = "dashed") + 
     theme_pubr(base_size = 16) +
     ylab("Z-score") + 
@@ -585,7 +593,7 @@ silhouette_zscore <- function(silh_result,                        # Result from 
                  heights = c(1, -0.175, 0.5)
   )
   
-  return(list(g, which.max(z_score)))
+  return(list(g, z_score))
 }
 
 ## Rename
@@ -597,13 +605,13 @@ clusteringSilhouette <- function(df = data.frame(),         # data.frame in wide
   # Compute the silhouette score for k cluster labels
   if(dist_metric == 'cosine'){
     d = silhouette(df$class_label %>% as.numeric, 
-                   dist = dist.cosine(df[, pathway_genes] %>% as.matrix)
-    )
+                   dist = dist.cosine(df[, pathway_genes] %>% 
+                                        as.matrix))
     
   }else{
     d = silhouette(df$class_label %>% as.numeric, 
-                   dist = dist(df[, pathway_genes] %>% as.matrix)
-    )
+                   dist = dist(df[, pathway_genes] %>% 
+                                 as.matrix))
     
   }
   
@@ -908,11 +916,9 @@ controlDiversity <- function(null_dist = c(),
   
 }
 
-
 fullControlPathway <- function(pathway_genes = c(),      # List of pathway genes
                                k_final = c(),            # k value for clusters
                                seurat_obj = c(),         # Seurat object
-                               null_list = c(),          # List of genes for control, HVGs to generate random data
                                n_samples = 100,
                                filter_manual = F,
                                min_expr = 0.2,           # Min. expression cutoff for gene to be "ON"
@@ -953,23 +959,6 @@ fullControlPathway <- function(pathway_genes = c(),      # List of pathway genes
     manual_cell_types = c()
   }
   
-  # Add the filter using filter_manual_cells parameter
-  control_df = controlDiversity(null_dist = null_list,
-                                pathway_genes = pathway_genes,
-                                k_final = k_final,
-                                seurat_obj = seurat_obj,
-                                n_rand = n_samples,
-                                filter_manual_cells = manual_cell_types,
-                                n_pcs = n_pcs,
-                                manual_embedding = manual_embedding,
-                                dist_metric = dist_metric,
-                                min_expr = min_expr,     # Min. expression cutoff for gene to be "ON"
-                                min_genes_on = min_genes_on)
-  
-  # Split negative control results: pathway (random genes), transcriptome (global diversity)
-  control_df_path = control_df %>% dplyr::filter(type == 'pathway')
-  control_df_global = control_df %>% dplyr::filter(type == 'transcriptome')
-  
   # 4. Positive control: re-distribute pathway profiles in randomly selected cell types.
   # returns diversity scores only for the fake pathway (no global calculation)
   pos_control = positiveControl(df_devel=res_list$data_frame,
@@ -983,36 +972,31 @@ fullControlPathway <- function(pathway_genes = c(),      # List of pathway genes
   pos_control = do.call(rbind, pos_control)
   
   
-  df_diversity = rbind(data.frame(d = control_df_path$diversity, 
-                                  type = 'null dist'), #random sets
-                       data.frame(d = control_df_global$diversity, 
-                                  type = 'transcriptome dist'), #global dendrogram using same cells from random sets
-                       data.frame(d = stats_list$pathway$diversity, 
-                                  type = 'pathway'), # actual pathway
-                       data.frame(d = stats_list$global$diversity, 
-                                  type = 'transcriptome'), # global dendrogram using the same cells than the real pathway
-                       data.frame(d = pos_control$diversity, 
-                                  type = 'pos control')) #randomized pathway profiles across cell types
+  df_diversity = rbind(
+    data.frame(d = stats_list$pathway$diversity, 
+               type = 'pathway'), # actual pathway
+    data.frame(d = stats_list$global$diversity, 
+               type = 'transcriptome'), # global dendrogram using the same cells than the real pathway
+    data.frame(d = pos_control$diversity, 
+               type = 'pos control')) #randomized pathway profiles across cell types
   
-  df_recurrence = rbind(data.frame(d = control_df_path$diversity * control_df_path$n, 
-                                   type = 'null dist'),
-                        data.frame(d = control_df_global$diversity * control_df_global$n, 
-                                   type = 'transcriptome dist'),
-                        data.frame(d = stats_list$pathway$diversity * stats_list$pathway$n, 
-                                   type = 'pathway'),
-                        data.frame(d = stats_list$global$diversity * stats_list$global$n, 
-                                   type = 'transcriptome'),
-                        data.frame(d = pos_control$diversity * pos_control$n, 
-                                   type ='pos control'))
+  df_recurrence = rbind(
+    data.frame(d = stats_list$pathway$diversity * stats_list$pathway$n, 
+               type = 'pathway'),
+    data.frame(d = stats_list$global$diversity * stats_list$global$n, 
+               type = 'transcriptome'),
+    data.frame(d = pos_control$diversity * pos_control$n, 
+               type ='pos control'))
   
   # We can also return the main data.frame, with class_label, diversity and rank for each profile
-  clustered_data <- res_list$data_frame %>% left_join(stats_list$pathway %>%
-                                                        rename(class_label = label) %>%
-                                                        dplyr::select(rank, 
-                                                                      diversity, 
-                                                                      class_label, 
-                                                                      n), 
-                                                      by = 'class_label')
+  clustered_data <- res_list$data_frame %>% 
+    left_join(stats_list$pathway %>%
+                rename(class_label = label) %>%
+                dplyr::select(rank, 
+                              diversity, 
+                              class_label, 
+                              n), 
+              by = 'class_label')
   
   return(list(diversity = df_diversity, 
               recurrence = df_recurrence, 
@@ -1093,85 +1077,40 @@ diversityPlot <- function(stats_list = list(), # Pathway and global diversity st
              color="black")
   
   return(g)
-}## Plotting function for ranked diversity values
-diversityPlot <- function(stats_list = list(), # Pathway and global diversity statistics from running fullControlPathway
-                          title_main = 'Notch' # Pathway name for plot title
-){
-  # Extract pathway and global diversity values sorted by rank
-  path_stats = stats_list$pathway
-  global_stats = stats_list$global
-  upper_quantile = 0.75
-  
-  g <- path_stats %>% ggplot(aes(x = rank, y = diversity)) + 
-    geom_point() +
-    geom_hline(yintercept = quantile(global_stats$diversity, 
-                                     upper_quantile), 
-               linetype = "dashed", 
-               color = "lightgray", 
-               linewidth = 1) +
-    geom_hline(yintercept = quantile(global_stats$diversity, 
-                                     1 - upper_quantile), 
-               linetype = "dashed", 
-               color = "lightgray", 
-               linewidth = 1) +
-    ylab("Cell type diversity (PCA)") + 
-    theme_pubr(base_size = 16) +
-    xlab("Pathway profile") + 
-    ggtitle(title_main) +
-    annotate(geom = "text", 
-             x = 4, 
-             y = quantile(global_stats$diversity, 
-                          upper_quantile) + 2, 
-             label = "Expected",
-             size=16/.pt,
-             color="black")
-  
-  return(g)
 }
 
-motif_heatmap <- function(control_res=data.frame(),
-                          pathway_genes=c(),
-                          diverse_quantile=0.90
+## Actually compute the diversity values of the specified number of profiles and plot them
+rankDiversity <- function(pathway_genes =c(),
+                          k_final = 20,
+                          min_expr = 0.2,
+                          min_genes_on = 2,
+                          manual_embedding = c(),
+                          dist_metric = 'euclidean',
+                          make_plot = T,
+                          seurat_obj=c()
 ){
-  ## Plot the most diverse profiles, aka the motifs
-  # 1. Select all profiles 
-  diverse_df <- control_res$profiles
-  # 2. tidy data.frame to average gene expression within a pathway profile 
-  diverse_df %>% pivot_longer(cols = pathway_genes, 
-                              names_to = 'gene', 
-                              values_to = 'expression') %>% 
-    select(cell_id, cell_ontology_class, Tissue, Cell_class, gene, expression, class_label, rank, diversity, n) -> diverse_tidy 
   
-  diverse_tidy %>% group_by(class_label,gene) %>% summarise(mean_expr = mean(expression), 
-                                                            rank = mean(rank),diversity = mean(diversity), 
-                                                            cell_types = mean(n)) -> diverse_tidy
+  # takes the pathway name as input:
+  # all parameters come from upstream functions
+  res_list = quickPipeline(pathway_genes = pathway_genes,
+                           seurat_obj = seurat_obj,
+                           k_final = k_final, 
+                           min_genes_on = min_genes_on, 
+                           min_expr = min_expr)
   
-  # 3. wide format 
-  diverse_tidy %>% pivot_wider(id_cols = c(class_label,rank, diversity, cell_types), names_from=gene,values_from=mean_expr) %>% tibble::column_to_rownames('class_label')-> diverse_mat
+  # Get the diversity values
+  stats_list = globalClustering(df_devel = res_list$data_frame,
+                                seurat_obj = seurat_obj,
+                                k_final = k_final,
+                                manual_embedding = manual_embedding,
+                                dist_metric = dist_metric,
+                                pathway_genes = pathway_genes)
   
-  # 4. We do the filtering here either for motifs or for non-diverse profiles 
-  control_res$diversity %>% 
-    dplyr::filter(type=='transcriptome') %>% # choose the null model 
-    pull(d) %>% quantile(0.90) -> diverse_quantile
-  
-  diverse_mat %>% dplyr::filter(diversity>diverse_quantile) -> diverse_mat 
-  
-  motif_heatmap <- superheat(diverse_mat[,pathway_genes],
-                             pretty.order.rows = T,
-                             heat.pal = black_pal(10),
-                             bottom.label.text.angle = 90, 
-                             yr = sqrt(diverse_mat$cell_types),
-                             yr.plot.type='bar',
-                             yr.axis.name = "N cell types",
-                             row.title = "Pathway motifs",
-                             column.title = "Pathway genes",
-                             bottom.label.size = 0.3,
-                             grid.hline.col = "white",
-                             grid.hline.size = 2, 
-                             
-  )
-  
-  return(motif_heatmap)
+  if(make_plot){
+    return(diversityPlot(stats_list, pathway_genes))
+  }else{
+    return(stats_list)
+  }
 }
 
 motif_ct_heatmap <- function(control_res=data.frame(),
@@ -1235,173 +1174,48 @@ motif_ct_heatmap <- function(control_res=data.frame(),
   return(plt)
 }
 
-## Computes the global transcriptome distance using a specified embedding and plots pathway class labels on global dendrogram
-global_dendr <- function(control_res = list(),                         # Main results object
-                         seurat_obj = master_seurat,                             # Seurat object
-                         hvg_genes = c(),                              # List of genes to create the global dendrogram
-                         dist_metric ='cosine',                        # Clustering distance in global space. applies for expression and PCA spaces
-                         clust_method = "ward.d2",                     # Hierarchical clustering method
-                         use_pca = F,                                  # Whether to use PCA coordinates instead of gene expression for global dendrogram
-                         n_pcs = 1:100                                 # If use_pca, then n_pcs to use
+## ECDF plotting function
+ecdf_diversity <- function(control_res = list(),
+                           plot_null = F
 ){
   
-  # Get the pathway states of the cells which have the pathway "ON"
-  profiles_df = control_res$profiles
-  row.names(profiles_df) <- profiles_df$cell_id
-  
-  meta_full <- master_seurat@meta.data %>% 
-    dplyr::select(cell_ontology_class,
-                  Cell_class, 
-                  dataset, 
-                  age)
-  
-  meta_full$cell_id <- row.names(meta_full)
-  
-  # Merge the pathway states with the whole dataset
-  meta_full$class_label = 0 # assign cells with pathway "OFF" a class_label = 0
-  meta_full[row.names(profiles_df), ]$class_label <- profiles_df$class_label
-  
-  profiles_df <- meta_full
-  
-  # Compute the global distance in the specified Embedding space
-  if(!use_pca){
-    # Use highly variable genes
-    hvg_df = makeMainDataFrame(hvg_genes, 
-                               master_seurat = seurat_obj)
-    hvg_genes = hvg_genes[hvg_genes %in% colnames(hvg_df)]
+  if(!plot_null){
+    df = control_res$diversity %>% 
+      dplyr::filter(type %in% c('pathway',
+                                'transcriptome',
+                                'pos control'))
     
-    # Filter only for expressing cell types in this pathway
-    hvg_df %>% dplyr::filter(cell_id %in% profiles_df$cell_id) -> hvg_df
-    row.names(hvg_df) <- hvg_df$cell_id
-    
-    # Scale the gene expression values so mean is zero
-    x = hvg_df[, hvg_genes]
-    x_scaled = scale(x) # standardScaler
-    row.names(x_scaled) <- hvg_df$cell_id
+    lines_palette = c("#00AFBB", "#000000", "#a8a8a8") # color order: pathway, transcriptome, random
     
   }else{
-    # Get the values in PCA space
-    x_scaled = Embeddings(seurat_obj, reduction='pca')
-    x_scaled = x_scaled[profiles_df$cell_id, n_pcs] # already set row names as cell id
+    df = control_res$diversity %>% 
+      dplyr::filter(type %in% c('pathway',
+                                'transcriptome',
+                                'pos control',
+                                'null dist'))
+    lines_palette = c("#00AFBB", "#000000", "#a8a8a8",'#6f7e96') # color order: pathway, transcriptome, random
     
   }
+  quantile_line = quantile(df %>% 
+                             dplyr::filter(type=='transcriptome') %>% 
+                             pull(d), 
+                           0.9)
   
-  # Compute distance in the global transcriptome space
-  if(dist_metric == 'cosine') clust_dist_metric = dist.cosine(x_scaled) else clust_dist_metric = dist(x_scaled)
+  df  %>% ggplot(aes(x = d, 
+                     col = type)) + 
+    stat_ecdf() + 
+    ggtitle("ECDF of Profile Dispersions") +
+    scale_x_continuous(trans = 'sqrt') + 
+    theme_pubr(base_size = 10) +
+    scale_color_manual(values = lines_palette) +
+    ylab('Fraction of clusters') + 
+    xlab('Cell state dispersion') +
+    geom_hline(yintercept = 0.95,
+               linetype="dashed", 
+               color = "lightgray", 
+               linewidth = 1) -> ecdf_plot
   
-  k_motifs = length(profiles_df$class_label %>% unique) # number of pathway states
-  
-  # Colors for pathway classes --- +1 (white) for non-expressing cell types
-  colors_1206$class_label <- makeQualitativePal(k_motifs, 
-                                                glasbey_use = T, 
-                                                skip = 1) # skip white color
-  
-  # Rename colors with pathway states -- including 0 for non-expressing cell types
-  names(colors_1206$class_label) <- 0:(k_motifs -1)
-  
-  profiles_df$class_label = profiles_df$class_label %>% as.character()
-  # Make heatmap
-  heatmap_plot <- pheatmap(x_scaled,
-                           annotation_row = profiles_df %>% 
-                             dplyr::select(Cell_class, 
-                                           age, 
-                                           class_label, 
-                                           dataset),
-                           annotation_colors = colors_1206,
-                           show_colnames = F,
-                           show_rownames = F,
-                           clustering_method = clust_method,
-                           clustering_distance_rows = clust_dist_metric,
-                           treeheight_col = 0,
-                           cutree_rows = 12,
-                           fontsize = 10,
-                           color = magma(100)
-  )
-  
-  # Return the values used to compute global distance as well as pathway gene expression values and class labels
-  return(list(plt = heatmap_plot, profiles_df = profiles_df))
-}
-
-global_umap <- function(control_res = list(),                         # Main results object
-                        seurat_obj = master_seurat,                   # Seurat object
-                        hvg_genes = c(),                              # List of genes to create the global dendrogram
-                        dist_metric ='cosine',                        # Clustering distance in global space. applies for expression and PCA spaces
-                        clust_method = "ward.d2",                     # Hierarchical clustering method
-                        use_pca = F,                                  # Whether to use PCA coordinates instead of gene expression for global dendrogram
-                        n_pcs = 1:100
-){
-  # Get the pathway states of the cells which have the pathway "ON"
-  profiles_df = control_res$profiles
-  row.names(profiles_df) <- profiles_df$cell_id
-  
-  meta_full <- master_seurat@meta.data %>% 
-    dplyr::select(cell_ontology_class,
-                  Cell_class, 
-                  dataset,
-                  age)
-  
-  meta_full$cell_id <- row.names(meta_full)
-  
-  # Merge the pathway states with the whole dataset
-  meta_full$class_label = 0 # assign cells with pathway "OFF" a class_label = 0
-  meta_full[row.names(profiles_df), ]$class_label <- profiles_df$class_label
-  
-  profiles_df <- meta_full
-  
-  # Compute the global distance in the specified Embedding space
-  if(!use_pca){
-    # Use highly variable genes
-    hvg_df = makeMainDataFrame(hvg_genes, 
-                               master_seurat = seurat_obj)
-    hvg_genes = hvg_genes[hvg_genes %in% colnames(hvg_df)]
-    
-    # Filter only for expressing cell types in this pathway
-    hvg_df %>% dplyr::filter(cell_id %in% 
-                               profiles_df$cell_id) -> hvg_df
-    row.names(hvg_df) <- hvg_df$cell_id
-    
-    # Scale the gene expression values so mean is zero
-    x = hvg_df[, hvg_genes]
-    x_scaled = scale(x) # standardScaler
-    row.names(x_scaled) <- hvg_df$cell_id
-    
-  }else{
-    # Get the values in PCA space
-    x_scaled = Embeddings(seurat_obj, reduction='pca')
-    x_scaled = x_scaled[profiles_df$cell_id, n_pcs] # already set row names as cell id
-    
-  }
-  
-  # Compute distance in the global transcriptome space
-  if(dist_metric == 'cosine') clust_dist_metric = dist.cosine(x_scaled) else clust_dist_metric = dist(x_scaled)
-  
-  k_motifs = length(profiles_df$class_label %>% unique) # number of pathway states
-  
-  # Colors for pathway classes --- +1 (white) for non-expressing cell types
-  colors_1206$class_label <- makeQualitativePal(k_motifs, 
-                                                glasbey_use = T, 
-                                                skip = 0) # skip white color
-  
-  # Rename colors with pathway states -- including 0 for non-expressing cell types
-  names(colors_1206$class_label) <- 0:(k_motifs -1)
-  
-  profiles_df$class_label = profiles_df$class_label  %>% as.character()
-  
-  plt <- DimPlot(seurat_obj, 
-                 reduction = "umap", 
-                 cells.highlight = profiles_df %>% 
-                   filter(class_label != "0") %>%
-                   rownames(), 
-                 cols.highlight = alpha("black", 0.5), 
-                 col = alpha("grey", 0.5)) + 
-    theme_void() + 
-    theme(legend.position = "none",
-          panel.border = element_rect(colour = "black", 
-                                      fill=NA, 
-                                      linewidth = 0.5)) +
-    ggtitle("Global UMAP: Pathway ON")
-  
-  return(plt)
+  return(ecdf_plot)
 }
 
 diversity_plot <- function(stats_list = list() # Pathway and global diversity statistics from running fullControlPathway
@@ -1444,7 +1258,7 @@ rank_diversity <- function(pathway_genes =c(),
                            manual_embedding = c(),
                            dist_metric = 'euclidean',
                            make_plot = T,
-                           seurat_obj=master_seurat
+                           seurat_obj=c()
 ){
   
   # takes the pathway name as input:
@@ -1470,4 +1284,456 @@ rank_diversity <- function(pathway_genes =c(),
   }
 }
 
+diverseFilt <- function(control_res=data.frame(),
+                        pathway_genes=c(),
+                        diverse_quantile=0.90,
+                        type="motif" # motif or private
+){
+  diverse_df <- control_res$profiles
+  # 2. tidy data.frame to average gene expression within a pathway profile 
+  diverse_df %>% pivot_longer(cols = all_of(pathway_genes), 
+                              names_to = 'gene', 
+                              values_to = 'expression') %>% 
+    dplyr::select(cell_id, 
+                  cell_ontology_class, 
+                  Tissue, 
+                  Cell_class, 
+                  gene, 
+                  expression, 
+                  class_label, 
+                  rank, 
+                  diversity, 
+                  n
+    ) -> diverse_tidy 
+  
+  diverse_tidy %>% 
+    group_by(class_label,gene) %>% 
+    summarise(mean_expr = mean(expression), 
+              rank = mean(rank),
+              diversity = mean(diversity), 
+              cell_types = mean(n)
+    ) -> diverse_tidy
+  
+  # 3. wide format 
+  diverse_tidy %>% 
+    pivot_wider(id_cols = c(class_label,
+                            rank, 
+                            diversity, 
+                            cell_types), 
+                names_from=gene,
+                values_from=mean_expr) %>% 
+    tibble::column_to_rownames('class_label')-> diverse_mat
+  
+  # 4. We do the filtering here either for motifs or for non-diverse profiles 
+  control_res$diversity %>% 
+    dplyr::filter(type=='transcriptome') %>% # choose the null model 
+    pull(d) %>% 
+    quantile(diverse_quantile) -> diverse_quantile
+  
+  if (type == "motif"){
+    diverse_mat %>% dplyr::filter(diversity>diverse_quantile) -> diverse_mat 
+  }
+  else{
+    diverse_mat %>% dplyr::filter(diversity<diverse_quantile) -> diverse_mat 
+    
+  }
+  
+  return(list(diverse_mat = diverse_mat, diverse_df = diverse_df))
+}
 
+motif_heatmap <- function(control_res=data.frame(),
+                          pathway_genes=c(),
+                          diverse_quantile=0.90,
+                          type="motif"
+){
+  div_res <- diverseFilt(control_res = control_res,
+                         pathway_genes = pathway_genes,
+                         diverse_quantile = diverse_quantile,
+                         type=type
+  )
+  motif_heat <- superheat(div_res$diverse_mat[,pathway_genes],
+                          pretty.order.rows = T,
+                          heat.pal = blackPal(10),
+                          bottom.label.text.angle = 90, 
+                          yr = sqrt(div_res$diverse_mat$cell_types),
+                          yr.plot.type='bar',
+                          yr.axis.name = "sqrt(No.\n cell types)",
+                          row.title = "Pathway motifs",
+                          column.title = "Pathway genes",
+                          bottom.label.size = 0.3,
+                          grid.hline.col = "white",
+                          grid.hline.size = 2
+  )
+  
+  return(motif_heat)
+}
+
+
+## Computes the global transcriptome distance using a specified embedding and plots pathway class labels on global dendrogram
+global_dendr <- function(control_res = list(),                         # Main results object
+                         seurat_obj = c(),                             # Seurat object
+                         hvg_genes = c(),                              # List of genes to create the global dendrogram
+                         dist_metric ='cosine',                        # Clustering distance in global space. applies for expression and PCA spaces
+                         clust_method = "ward.d2",                     # Hierarchical clustering method
+                         use_pca = F,                                  # Whether to use PCA coordinates instead of gene expression for global dendrogram
+                         n_pcs = 1:100,                                # If use_pca, then n_pcs to use
+                         glasbey_use = T
+){
+  
+  # Get the pathway states of the cells which have the pathway "ON"
+  profiles_df = control_res$profiles
+  row.names(profiles_df) <- profiles_df$cell_id
+  
+  meta_full <- seurat_obj@meta.data %>% 
+    dplyr::select(cell_ontology_class,
+                  Cell_class, 
+                  dataset, 
+                  age)
+  
+  meta_full$cell_id <- row.names(meta_full)
+  
+  # Merge the pathway states with the whole dataset
+  meta_full$class_label = 0 # assign cells with pathway "OFF" a class_label = 0
+  meta_full[row.names(profiles_df), ]$class_label <- profiles_df$class_label
+  
+  profiles_df <- meta_full
+  
+  # Compute the global distance in the specified Embedding space
+  if(!use_pca){
+    # Use highly variable genes
+    hvg_df = makeMainDataFrame(hvg_genes, 
+                               seurat_obj = seurat_obj)
+    hvg_genes = hvg_genes[hvg_genes %in% colnames(hvg_df)]
+    
+    # Filter only for expressing cell types in this pathway
+    hvg_df %>% dplyr::filter(cell_id %in% profiles_df$cell_id) -> hvg_df
+    row.names(hvg_df) <- hvg_df$cell_id
+    
+    # Scale the gene expression values so mean is zero
+    x = hvg_df[, hvg_genes]
+    x_scaled = scale(x) # standardScaler
+    row.names(x_scaled) <- hvg_df$cell_id
+    
+  }else{
+    # Get the values in PCA space
+    x_scaled = Embeddings(seurat_obj, reduction='pca')
+    x_scaled = x_scaled[profiles_df$cell_id, n_pcs] # already set row names as cell id
+    
+  }
+  
+  # Compute distance in the global transcriptome space
+  if(dist_metric == 'cosine') clust_dist_metric = dist.cosine(x_scaled) else clust_dist_metric = dist(x_scaled)
+  
+  k_motifs = length(profiles_df$class_label %>% unique) # number of pathway states
+  
+  # Colors for pathway classes --- +1 (white) for non-expressing cell types
+  colors_1206$class_label <- makeQualitativePal(k_motifs, 
+                                                glasbey_use = glasbey_use, 
+                                                skip = 1) # skip white color
+  
+  # Rename colors with pathway states -- including 0 for non-expressing cell types
+  names(colors_1206$class_label) <- 0:(k_motifs -1)
+  
+  profiles_df$class_label = profiles_df$class_label %>% as.character()
+  # Make heatmap
+  heatmap_plot <- pheatmap(x_scaled,
+                           annotation_row = profiles_df %>% 
+                             dplyr::select(Cell_class, 
+                                           age, 
+                                           class_label, 
+                                           dataset),
+                           annotation_colors = colors_1206,
+                           show_colnames = F,
+                           show_rownames = F,
+                           clustering_method = clust_method,
+                           clustering_distance_rows = clust_dist_metric,
+                           treeheight_col = 0,
+                           cutree_rows = 12,
+                           fontsize = 10,
+                           color = magma(100)
+  )
+  
+  # Return the values used to compute global distance as well as pathway gene expression values and class labels
+  return(list(plt = heatmap_plot, profiles_df = profiles_df))
+}
+
+global_umap <- function(control_res = list(),                         # Main results object
+                        seurat_obj = c(),                   # Seurat object
+                        hvg_genes = c(),                              # List of genes to create the global dendrogram
+                        dist_metric ='cosine',                        # Clustering distance in global space. applies for expression and PCA spaces
+                        clust_method = "ward.d2",                     # Hierarchical clustering method
+                        use_pca = F,                                  # Whether to use PCA coordinates instead of gene expression for global dendrogram
+                        n_pcs = 1:100
+){
+  # Get the pathway states of the cells which have the pathway "ON"
+  profiles_df = control_res$profiles
+  row.names(profiles_df) <- profiles_df$cell_id
+  
+  meta_full <- seurat_obj@meta.data %>% 
+    dplyr::select(cell_ontology_class,
+                  Cell_class, 
+                  dataset,
+                  age)
+  
+  meta_full$cell_id <- row.names(meta_full)
+  
+  # Merge the pathway states with the whole dataset
+  meta_full$class_label = 0 # assign cells with pathway "OFF" a class_label = 0
+  meta_full[row.names(profiles_df), ]$class_label <- profiles_df$class_label
+  
+  profiles_df <- meta_full
+  
+  # Compute the global distance in the specified Embedding space
+  if(!use_pca){
+    # Use highly variable genes
+    hvg_df = makeMainDataFrame(hvg_genes, 
+                               seurat_obj = seurat_obj)
+    hvg_genes = hvg_genes[hvg_genes %in% colnames(hvg_df)]
+    
+    # Filter only for expressing cell types in this pathway
+    hvg_df %>% dplyr::filter(cell_id %in% 
+                               profiles_df$cell_id) -> hvg_df
+    row.names(hvg_df) <- hvg_df$cell_id
+    
+    # Scale the gene expression values so mean is zero
+    x = hvg_df[, hvg_genes]
+    x_scaled = scale(x) # standardScaler
+    row.names(x_scaled) <- hvg_df$cell_id
+    
+  }else{
+    # Get the values in PCA space
+    x_scaled = Embeddings(seurat_obj, reduction='pca')
+    x_scaled = x_scaled[profiles_df$cell_id, n_pcs] # already set row names as cell id
+    
+  }
+  
+  # Compute distance in the global transcriptome space
+  if(dist_metric == 'cosine') clust_dist_metric = dist.cosine(x_scaled) else clust_dist_metric = dist(x_scaled)
+  
+  profiles_df$class_label = profiles_df$class_label  %>% as.character()
+  
+  plt <- DimPlot(seurat_obj, 
+                 reduction = "umap", 
+                 cells.highlight = profiles_df %>% 
+                   filter(class_label != "0") %>%
+                   rownames(), 
+                 cols.highlight = alpha("black", 0.5), 
+                 col = alpha("grey", 0.5)) + 
+    theme_void() + 
+    theme(legend.position = "none",
+          panel.border = element_rect(colour = "black", 
+                                      fill=NA, 
+                                      linewidth = 0.5)) +
+    ggtitle("Global UMAP: Pathway ON")
+  
+  return(plt)
+}
+
+make_title <- function(col = "black", 
+                       label = "", 
+                       text_size = 24)
+{
+  Point <- grid::pointsGrob(x = 0.895, 
+                            y = 0.96, 
+                            pch = 21, 
+                            gp = gpar(fill=col, cex=1, stroke=1))
+  Text <-  grid::textGrob(x = 0.6, 
+                          y = 0.88, 
+                          just = "left", 
+                          label, 
+                          gp = gpar(fontsize=text_size))
+  Title <- grid::grobTree(Text, Point)
+}
+
+ecdfPlot <- function(seurat_obj = c(),
+                     pathway_genes = c(),
+                     thresh_list = c(0.05, 0.1, 0.2, 0.3, 0.4, 0.5),
+                     sat_val = 0.99
+){
+  
+  data_frame <- normalizedDevel(seurat_obj = seurat_obj,
+                                pathway_genes = pathway_genes,
+                                sat_val = sat_val,
+                                fill_zero_rows = F
+  )
+  
+  count_df <- data.frame(x = zeros(length(rownames(data_frame)), 
+                                   length(thresh_list)), 
+                         row.names = rownames(data_frame))
+  colnames(count_df) <- thresh_list
+  
+  for (i in thresh_list){
+    count_df[[i]] <- ((data_frame %>% 
+                         dplyr::select(pathway_genes)) >= i) %>% 
+      rowSums()
+  }
+  
+  count_df <- count_df %>% gather(key = "prob", 
+                                  value = "value")
+  
+  ecdf_df <- data.frame(x = zeros((length(pathway_genes) + 1)*length(thresh_list),
+                                  3))
+  
+  colnames(ecdf_df) <- c("prob", "value", "ecdf")
+  ecdf_df$prob <- rep(thresh_list, 
+                      each = length(pathway_genes) + 1)
+  ecdf_df$value <- rep(0:length(pathway_genes), 
+                       length(thresh_list))
+  
+  for (i in thresh_list){
+    subset = count_df[count_df$prob == i, "value"]
+    ecdf_df[ecdf_df$prob == i, "ecdf"] = ecdf(subset)(0:length(pathway_genes))
+  }
+  
+  xrange <- c(0, length(pathway_genes))
+  yrange <- c(0.0, 1.0)
+  
+  colors <- c("#e6f5c9", "#2078b4", "#e5c494", "#beb9da", "#6a3d9a", "#fef2ae")
+  
+  par(mar=c(5,6,4,1)+.1, cex.axis = 1.5)
+  
+  plot(xrange, yrange, 
+       type = "n", 
+       xlab="Number of receptors", 
+       ylab="ECDF",
+       main = "Number of receptors expressed across cell types",
+       cex.lab=1.5, 
+       cex.main=1.5, 
+       cex.sub=1.5)
+  axis(side=2, at=c(0:length(pathway_genes)), 
+       labels = 0:length(pathway_genes))
+  
+  for (i in 1:length(unique(ecdf_df$prob))){
+    xvals <- ecdf_df$value[ecdf_df$prob == unique(ecdf_df$prob)[i]]
+    yvals <- ecdf_df$ecdf[ecdf_df$prob == unique(ecdf_df$prob)[i]]
+    colvals <- colors[i]
+    
+    lines(xvals[order(xvals)], 
+          yvals[order(xvals)], 
+          col = colvals, 
+          lwd = 4)
+    points(xvals[order(xvals)], 
+           yvals[order(xvals)], 
+           col = colvals, 
+           pch = 1, 
+           cex = 1.5, 
+           lwd = 4)
+  }
+  
+  legend("bottomright", 
+         inset=.02, 
+         title="Min exp",
+         thresh_list, 
+         fill=colors, 
+         horiz=FALSE, 
+         cex=1.5)
+}
+
+coexpHeatmap <- function(seurat_obj = c(),
+                         pathway_genes = c(),
+                         min_genes_on = 2,
+                         min_expr = 0.2,
+                         sat_val = 0.99
+){
+  ## Get normalized counts
+  data_frame <- normalizedDevel(seurat_obj = seurat_obj,
+                                pathway_genes = pathway_genes,
+                                sat_val = sat_val,
+                                fill_zero_rows = F
+  )
+  
+  coexp_df <- data.frame(data = matrix(data=NA, 
+                                       nrow = length(pathway_genes), 
+                                       ncol = length(pathway_genes)), 
+                         row.names = pathway_genes)
+  colnames(coexp_df) <- pathway_genes
+  
+  for (i in pathway_genes){
+    for (j in pathway_genes){
+      coexp_df[i,j] = data_frame %>% 
+        filter(get(i) > min_expr & get(j) > min_expr) %>% 
+        count()
+    }
+  }
+  
+  coexp_df %>% 
+    rownames_to_column("gene1") %>% 
+    gather("gene2", values, -gene1) -> coexp_df
+  
+  
+  coexp_df %>% filter(row_number() <= which(gene1 == gene2)) -> coexp_df
+  
+  plt <- ggplot(coexp_df, 
+                aes(gene1,gene2,fill=values)) + 
+    geom_tile(color="grey") + 
+    scale_y_discrete(position = "right", 
+                     limits=rev(pathway_genes)) +
+    scale_x_discrete(limits=pathway_genes,
+                     position = "top") + 
+    scale_fill_gradient(low="white", high="black") + 
+    guides(fill=guide_colorbar("No. cell types")) +
+    theme(panel.border = element_blank(),
+          panel.grid = element_blank(),
+          panel.background = element_blank()) +
+    theme(axis.ticks = element_blank(), 
+          axis.text.x = element_text(angle=45, 
+                                     vjust = 0, 
+                                     hjust = 0), 
+          axis.title=element_blank(),
+          legend.text = element_text(size = 10), 
+          legend.title = element_text(size = 10),
+          plot.title = element_text(size=20)) + 
+    ggtitle("Gene Co-Expression Above Threshold")
+  
+  return(plt)
+}
+
+geneCounts <- function(seurat_obj = c(),
+                       pathway_genes = c(),
+                       min_genes_on = 2,
+                       min_expr = 0.2,
+                       sat_val = 0.99
+){
+  
+  ## Get normalized counts
+  data_frame <- normalizedDevel(seurat_obj = seurat_obj,
+                                pathway_genes = pathway_genes,
+                                sat_val = sat_val,
+                                fill_zero_rows = F
+  )
+  
+  counts_df <- (data_frame %>% 
+                  dplyr::select(all_of(pathway_genes)) > min_expr) %>% 
+    colSums()
+  counts_df <- data.frame(counts = counts_df)
+  
+  p <- ggplot(data = counts_df, 
+              aes(x = reorder(rownames(counts_df), 
+                              counts),
+                  y = counts)) + 
+    geom_hline(yintercept = 0, colour = "grey", linetype = "dashed") + 
+    geom_hline(yintercept = 200, colour = "grey", linetype = "dashed") + 
+    geom_hline(yintercept = 400, colour = "grey", linetype = "dashed") +
+    geom_hline(yintercept = 600, colour = "grey", linetype = "dashed") + 
+    geom_hline(yintercept = 800, colour = "grey", linetype = "dashed") + 
+    geom_hline(yintercept = 1000, colour = "grey", linetype = "dashed") + 
+    scale_y_continuous(breaks = seq(0, 1000, 200), 
+                       labels = c("0", "200", "400", "600", "800", "1000"))+
+    geom_bar(stat="identity", 
+             fill = "#DB784D") +
+    labs(x = "gene", 
+         y = "Number of cell types") + 
+    theme(axis.title.x = element_text(size = 20, margin = margin(t = 25)),
+          axis.text.x = element_text(angle = 90, size = 18, vjust = 0.5, margin = margin(t = -10)), 
+          axis.ticks.x = element_blank(),
+          axis.title.y = element_text(size = 20, margin = margin(r = 25)),
+          axis.text.y = element_text(size = 18),
+          axis.ticks.y = element_blank(),
+          panel.border = element_blank(), 
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(), 
+          panel.background = element_blank())
+  
+  return(p)
+  
+}
