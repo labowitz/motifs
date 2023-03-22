@@ -53,7 +53,7 @@ pathway.genes<-function(pathway ="bmp"){
 
 tabula.path ="./data/raw_data/sc_data/tms_FACS/"
 
-FACS_files = list.files(paste(tabula.path,"/FACS" ,sep=""), full.names = TRUE)
+FACS_files = list.files(paste(tabula.path,"FACS" ,sep=""), full.names = TRUE)
 
 raw.data.list = list()
 for (file in FACS_files){
