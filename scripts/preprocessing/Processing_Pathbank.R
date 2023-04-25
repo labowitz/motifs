@@ -1,10 +1,11 @@
-source("./scripts/analysis/imports_new.R")
+library(dplyr)
 
 all_csv <- read.csv("./data/raw_data/pathbank/pathbank_all_proteins.csv")
 
 pathway_filter <- all_csv %>% 
   filter(Species == "Mus musculus") %>%
   filter((Pathway.Subject == "Protein") | 
+           (Pathway.Subject == "Metabolic") | # Optional
            (Pathway.Subject == "Signaling")) %>%
   group_by(Pathway.Name) %>%
   count() %>%

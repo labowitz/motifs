@@ -1,6 +1,5 @@
 library(forcats)
-source("./scripts/analysis/imports_new.R")
-output_dir <- "./scripts/figures/"
+source("./scripts/analysis/imports.R")
 
 # Prepare df
 df <- master_seurat@meta.data %>% 
@@ -50,4 +49,4 @@ p <- ggplot(df,
   scale_fill_manual(values=colors_1206$Cell_class) + 
   theme_bw()
 
-ggsave(paste0(output_dir, "Figure_2A.pdf", sep=""))
+ggsave(paste0(fig_dir, "Figure_2A.pdf", sep=""))

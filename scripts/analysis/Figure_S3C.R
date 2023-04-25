@@ -1,7 +1,5 @@
 ## Directories for the files
-source("./scripts/analysis/imports_new.R")
-fig_dir = "./scripts/figures/"
-pathway_df = readRDS("./data/processed_data/all_pathways.RDS")
+source("./scripts/analysis/imports.R")
 
 pathway_name =  "Tgf-beta family receptors" # tgfb pathway name
 pathway_genes = genesPathway(pathway_name = pathway_name,
@@ -17,7 +15,6 @@ diverse_quantile = 0.9
 control_res  = fullControlPathway(pathway_genes = pathway_genes,
                                   k_final = optimal_k_pathway,
                                   seurat_obj = master_seurat, # seurat object
-                                  null_list = hvg_genes, #list of highly variable genes 
                                   n_samples = 100, 
                                   filter_manual = T,
                                   min_genes_on = min_genes_pathway, 

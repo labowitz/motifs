@@ -1,10 +1,10 @@
+# Directories for the files
+source("./scripts/analysis/imports.R")
+
 # Libraries for this analysis
 library(infotheo)
 library(aricode)
 library(RColorBrewer)
-
-# Directories for the files
-source("./scripts/analysis/imports_new.R")
 
 data_dir = "scripts/figures/peak_analysis/silhouette_res/silh_rds/"
 output_dir = "./scripts/figures/"

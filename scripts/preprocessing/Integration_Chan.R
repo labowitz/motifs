@@ -3,12 +3,11 @@ library(stringr)
 
 # Matrix of size 27998 x 92649
 
-data_dir <- "data/raw_data/sc_data/gastrulation/"
+data_dir <- "./data/raw_data/sc_data/gastrulation/"
 sample_files <- list.files(path=data_dir, 
                            pattern = "GSE")
 meta_files <- list.files(path=data_dir, 
                            pattern = "metadata")
-
 
 # format is in 10x readable folders 
 matrix_list = list() 

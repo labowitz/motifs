@@ -1,5 +1,4 @@
-source("./scripts/analysis/imports_new.R")
-output_dir <- "./scripts/figures/"
+source("./scripts/analysis/imports.R")
 
 ## Figure 2B bottom
 

@@ -1,6 +1,5 @@
-source("./scripts/analysis/imports_new.R")
+source("./scripts/analysis/imports.R")
 library(ggplotify)
-master_seurat@meta.data$Tissue[master_seurat@meta.data$Tissue == "intestine"] <- "dev. intestine"
 
 silh_res_dir = "scripts/figures/peak_analysis/silhouette_res/silh_rds/"
 
@@ -96,8 +95,7 @@ generatePlots <- function(seurat_obj = c(),
                             pathway_genes = pathway_genes,
                             k_final = optimal_k_pathway, 
                             min_genes_on = min_genes_pathway, 
-                            min_expr = min_expr_threshold,
-                            glasbey_use = F
+                            min_expr = min_expr_threshold
   )
   ## Computing the optimal silhouette score
   silh_result = readRDS(paste(silh_res_dir,
@@ -256,7 +254,6 @@ generatePlots <- function(seurat_obj = c(),
 }
 
 seurat_obj = master_seurat
-pathway_name = "RNA-splicing by SR protein family"
 min_genes_pathway = 2
 min_expr_threshold = 0.3
 diverse_quantile = 0.9

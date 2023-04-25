@@ -1,7 +1,5 @@
+source("./scripts/analysis/imports.R")
 library(corrplot)
-source("./scripts/analysis/imports_new.R")
-
-fig_dir = "./scripts/figures/"
 
 pathway_name <- "Tgf-beta family receptors" # tgfb pathway name
 pathway_genes <- genesPathway(pathway_name = pathway_name,
@@ -46,7 +44,7 @@ pdf(file = paste0(fig_dir,
                   "Figure_S3B_all.pdf", 
                   sep=""), 
     useDingbats=FALSE)
-corrplot(as.matrix(M_corr), type = "upper")
+print(corrplot(as.matrix(M_corr), type = "upper"))
 dev.off()
 
 ## Correlation plot for motif profiles
@@ -65,7 +63,7 @@ rownames(M_corr) = pathway_genes
 pdf(file = paste0(fig_dir, 
                   "Figure_S3B_motif.pdf", sep=""), 
     useDingbats=FALSE)
-corrplot(as.matrix(M_corr), type = "upper")
+print(corrplot(as.matrix(M_corr), type = "upper"))
 dev.off()
 
 ## Correlation plot for private profiles
@@ -85,5 +83,5 @@ pdf(file = paste0(fig_dir,
                   "Figure_S3B_private.pdf", 
                   sep=""), 
     useDingbats=FALSE)
-corrplot(as.matrix(M_corr), type = "upper")
+print(corrplot(as.matrix(M_corr), type = "upper"))
 dev.off()

@@ -133,7 +133,7 @@ peak_width_scores <- function(use_percentile = 0.95, # threshold for considering
 ){
   
   pathway_list = lapply(silh_files, 
-                        FUN = function(x) strsplit(x, "_silh_plt.RDS")[[1]]) %>% unlist()
+                        FUN = function(x) strsplit(x, "_silh_plt_ale.RDS")[[1]]) %>% unlist()
   
   # prepare the data frame for pathways with output 
   df_kvals = data.frame(name = pathway_list, 
@@ -143,7 +143,9 @@ peak_width_scores <- function(use_percentile = 0.95, # threshold for considering
   # Read output from all pathwways and run the pipeline using 
   # the optimal number of clusters found above 
   for (i in 1:length(silh_files)){
-    
+    print(paste(silh_res_dir, 
+                silh_files[[i]], 
+                sep=""))
     silh_result = readRDS(paste(silh_res_dir, 
                                 silh_files[[i]], 
                                 sep=""))
@@ -237,7 +239,6 @@ computeDispersions <- function(use_min_k = F, # whether to choose the optimal k 
     control_res  = fullControlPathway(pathway_genes = pathway_genes,
                                       k_final = optimal_k_pathway,
                                       seurat_obj = master_seurat, # seurat object
-                                      null_list = hvg_genes, #list of highly variable genes 
                                       n_samples = 100, 
                                       filter_manual = T,
                                       min_genes_on = min_genes_pathway, 

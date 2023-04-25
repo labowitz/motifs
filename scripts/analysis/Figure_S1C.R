@@ -1,5 +1,4 @@
 source("./scripts/analysis/imports.R")
-output_dir <- "./scripts/figures/"
 
 sce <- readRDS("./data/processed_data/forelimb.RDS")
 
@@ -64,7 +63,7 @@ text_ann[p_mat>=-log10(0.001)] = '**'
 x_mat = p_mat
 x_mat[x_mat==0] = NA
 
-pdf(paste(output_dir, "Figure_2_figure_supplement_1C_right.pdf", sep = ""))
+pdf(paste(fig_dir, "Figure_S1C_right.pdf", sep = ""))
 superheat(x_mat, 
           scale = F, 
           X.text = text_ann ,
@@ -75,25 +74,25 @@ superheat(x_mat,
 dev.off()
 
 ct_rows = master_seurat@meta.data %>% filter(grepl("Forelimb", dataset) & grepl("Epithelial 2", cell_ontology_class)) %>% rownames()
-df <- normalizedDevel(this_pathway = genesPathway("Tgf-beta family receptors", pathway_df=pathway_df,seurat_obj=master_seurat), master_seurat = master_seurat)
+df <- normalizedDevel(seurat_obj = master_seurat,pathway_genes = tgfb_genes)
 df <- df %>% filter(cell_id %in% ct_rows) %>% select(tgfb_genes)
 
 df <- data.frame(counts = colMeans(df), names = colMeans(df) %>% names())
 p<-ggplot(data=df, aes(x = names, y = counts)) +
   geom_bar(stat="identity")
 
-p <- p + labs(x = "gene", y = "Norm. Counts") + ggtitle("Epithelial 2") + 
+p <- p + 
+  labs(x = "gene", y = "Normalized Expression") + 
+  ggtitle("Epithelial 2") + 
   theme(axis.title.x = element_text(size = 18, margin = margin(t = 25)),
-               axis.text.x = element_text(angle = 90, size = 18, vjust = 0.5, margin = margin(t = -10)), 
-               axis.ticks.x = element_blank(),
-               axis.title.y = element_text(size = 18, margin = margin(r = 25)),
-               axis.text.y = element_text(size = 18),
-               axis.ticks.y = element_blank(),
-               panel.border = element_blank(), 
-               panel.grid.major = element_blank(),
-               panel.grid.minor = element_blank(), 
-               panel.background = element_blank(),
-               plot.title = element_text(size = 20)
-        )
+        axis.text.x = element_text(angle = 90, size = 18, vjust = 0.5, margin = margin(t = -10)), 
+        axis.title.y = element_text(size = 18, margin = margin(r = 25)),
+        axis.text.y = element_text(size = 18),
+        panel.border = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(), 
+        panel.background = element_blank(),
+        plot.title = element_text(size = 20)
+  )
 
-ggsave(paste(output_dir, "Figure_2_figure_supplement_1C_left.pdf", sep = ""))
+ggsave(paste(fig_dir, "Figure_S1C_left.pdf", sep = ""))
