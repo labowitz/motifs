@@ -6,7 +6,7 @@ silh_res_dir = "./scripts/figures/peak_analysis/silhouette_res/silh_rds/"
 dispersion_dir = "./scripts/figures/peak_analysis/dispersion/"
 
 # Import data -- lists of genes 
-pathway_df <- read.table("./data/raw_data/allPathways_listGenes_dec2021.tsv", 
+pathway_df <- read.table("./data/raw_data/pathbank/pathway_df_linux_format.tsv", 
                          header = T, 
                          sep = "\t")
 # Correct pathway names
@@ -21,7 +21,7 @@ pathway_df <- rbind(pathway_df, data.frame(pathway = 'Eph receptors and ligands'
                                            gene = pathway_df %>% 
                                              dplyr::filter(grepl(pattern = 'Eph', pathway)) %>% 
                                              dplyr::pull(gene)))
-# fix the names of some pathways 
+# fix the names of some pathways for Linux formatting
 pathway_df$pathway <- pathway_df$pathway %>% str_replace('/', ' ')
 pathway_df$pathway <- pathway_df$pathway %>% str_replace('\\(', ' ')
 pathway_df$pathway <- pathway_df$pathway %>% str_replace('\\)', ' ')
@@ -82,14 +82,15 @@ dispersion_stats <- parseDispersion(pathway_list_dispersion = pathway_list_dispe
                                     dispersion_dir = dispersion_dir)
 
 # 3. Master data.frame 
-res = plot_dispersion_distribution(dispersion_stats ,
+res = plot_dispersion_distribution(dispersion_stats,
                                    labels_idx = c(9,10,12,13,14,1,3), 
                                    min_silh = 0.3,
                                    min_n_cluster = 2,  
                                    df_kvals = df_kvals, 
                                    use_mean = F,
                                    include_metabolic = F, 
-                                   use_palette = 'Paired')
+                                   use_palette = 'Paired',
+                                   silh_files = saved_files)
 
 res[[1]] + 
   theme(text = element_text(size = 20)) +

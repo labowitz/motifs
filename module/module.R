@@ -375,14 +375,17 @@ silhPathwayBootstrap <- function(pathway_genes = c(),       # Pathway name
                                  dist_metric = 'cosine',    # Distance metric
                                  pct_boots = 0.9,           # Fraction of cells we want to sample from dataset
                                  n_boots = 100,             # Number of bootstraps to run
-                                 control_silh = F           # Whether this is a bootstrapping for clusters or a negative control that randomzes the data
+                                 control_silh = F,          # Whether this is a bootstrapping for clusters or a negative control that randomzes the data
+                                 min_expr = 0.2,
+                                 min_genes_on = 2
 ){
   
-  data_frame_main <- normalizedDevel(pathway_genes = pathway_genes,
-                                     sat_val = sat_val,
-                                     seurat_obj = seurat_obj, 
-                                     fill_zero_rows = T
-  )
+  data_frame_main <- quickPipeline(seurat_obj = master_seurat,
+                            pathway_genes = pathway_genes,
+                            k_final = 2, 
+                            min_genes_on = min_genes_on, 
+                            min_expr = min_expr
+  )$data_frame
   
   boot_list = list() # Bootstrap values list
   for(b in 1:n_boots){
@@ -463,7 +466,9 @@ silhouettePlot <- function(pathway_genes = c(),       # Specify pathway genes
                                  clust_method = clust_method,
                                  control_silh = F,
                                  n_boots = n_bootstraps,
-                                 pct_boots = pct_boots
+                                 pct_boots = pct_boots,
+                                 min_expr = min_expr,
+                                 min_genes_on = min_genes_on
   )
   
   boot_df = makeBootstrap_df(s_boots)
@@ -476,7 +481,9 @@ silhouettePlot <- function(pathway_genes = c(),       # Specify pathway genes
                                  clust_method = clust_method,
                                  control_silh = T,
                                  n_boots = n_bootstraps,
-                                 pct_boots = pct_boots
+                                 pct_boots = pct_boots,
+                                 min_expr = min_expr,
+                                 min_genes_on = min_genes_on
   )
   
   boot_df_control = makeBootstrap_df(s_boots)
@@ -521,7 +528,7 @@ silhouette_zscore <- function(silh_result,                        # Result from 
                               min_expr = 0.2,                     # Min. expression cutoff for gene to be "ON"
                               x_offset = 1,                       # X-axis of k (number of clusters) begins plotting at x_offset + 1
                               min.y = 0.1,                        # Min. cut-off on y-axis of the silhouette score plot
-                              max.y = 0.7,                         # Max. cut-off on y-axis of the silhouette score plot
+                              max.y = 0.7,                        # Max. cut-off on y-axis of the silhouette score plot
                               k_max = 100
 ){
   # Obtain results from running the silhouettePlot function

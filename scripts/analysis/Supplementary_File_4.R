@@ -4,7 +4,7 @@ library(ggplotify)
 silh_res_dir = "scripts/figures/peak_analysis/silhouette_res/silh_rds/"
 
 # Import data -- lists of genes 
-pathway_df <- read.table("./data/raw_data/allPathways_listGenes_dec2021.tsv", 
+pathway_df <- read.table("./data/raw_data/pathbank/pathway_df_linux_format.tsv", 
                          header = T, 
                          sep = "\t")
 # Correct pathway names

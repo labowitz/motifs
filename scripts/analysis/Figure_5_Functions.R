@@ -22,7 +22,7 @@ process_silh <- function(save_file = F,
                          min_expr = 0.2){
   
   pathway_list = lapply(silh_files, 
-                        FUN = function(x) strsplit(x, "_silh_plt.RDS")[[1]]) %>% unlist()
+                        FUN = function(x) strsplit(x, "_silh_plt_ale.RDS")[[1]]) %>% unlist()
   
   # prepare the data frame for pathways with output 
   df_kvals = data.frame(name = pathway_list, 
@@ -133,7 +133,8 @@ peak_width_scores <- function(use_percentile = 0.95, # threshold for considering
 ){
   
   pathway_list = lapply(silh_files, 
-                        FUN = function(x) strsplit(x, "_silh_plt_ale.RDS")[[1]]) %>% unlist()
+                        FUN = function(x) strsplit(x, "_silh_plt_ale.RDS")[[1]]) %>% 
+                        unlist()
   
   # prepare the data frame for pathways with output 
   df_kvals = data.frame(name = pathway_list, 
@@ -143,9 +144,7 @@ peak_width_scores <- function(use_percentile = 0.95, # threshold for considering
   # Read output from all pathwways and run the pipeline using 
   # the optimal number of clusters found above 
   for (i in 1:length(silh_files)){
-    print(paste(silh_res_dir, 
-                silh_files[[i]], 
-                sep=""))
+
     silh_result = readRDS(paste(silh_res_dir, 
                                 silh_files[[i]], 
                                 sep=""))
@@ -195,7 +194,7 @@ computeDispersions <- function(use_min_k = F, # whether to choose the optimal k 
 ){
   
   pathway_list = lapply(silh_files, 
-                        FUN = function(x) strsplit(x, "_silh_plt.RDS")[[1]]) %>% unlist()
+                        FUN = function(x) strsplit(x, "_silh_plt_ale.RDS")[[1]]) %>% unlist()
   
   # subset only pathways for which we don't have DISPERSION results already 
   if(!overwrite_files){
@@ -292,8 +291,13 @@ plot_dispersion_distribution <- function(dispersion_stats = data.frame(),
                                          df_kvals = data.frame(),           # data.frame with optimal number of clusters 
                                          use_mean = F,
                                          include_metabolic = F, 
-                                         use_palette  = 'Set2'
+                                         use_palette  = 'Set2',
+                                         silh_files = c()
 ){
+  
+  pathway_list = lapply(silh_files, 
+                        FUN = function(x) strsplit(x, "_silh_plt_ale.RDS")[[1]]) %>% unlist()
+  
   #min_silh = 0.1 # only consider clusters with positive silhouette score -- otherwise we could bias the dispersion calculations to bad clusters 
   df_plot <- dispersion_stats %>% 
     dplyr::filter(mean_silh > min_silh, n > min_n_cluster) %>% 

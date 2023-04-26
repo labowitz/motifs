@@ -8,7 +8,7 @@ counts = pd.read_csv('../../data/processed_data/' + "integrated_counts.csv", ind
 # Import metadata csv
 meta = pd.read_csv('../../data/processed_data/' + "integrated_meta_data.csv", index_col = [0])
 # Import reference gene list
-all_pathways = pd.read_csv('../../data/raw_data/' + "allPathways_listGenes_dec2021.tsv", delimiter="\t")
+all_pathways = pd.read_csv('../../data/raw_data/pathbank/' + "pathway_df.csv", index_col=0)
 
 # Returns a clipped matrix given a list of max values (values to clip at) for each gene
 def quantile_saturation(x = [], integrated_gene_quantiles = []):

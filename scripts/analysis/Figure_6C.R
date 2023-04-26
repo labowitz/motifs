@@ -19,7 +19,7 @@ blues_pal <- function(n){
 tgfb_niv <- read.csv(paste(data_dir, 'Tgf-beta family receptors_profiles.csv', sep=""))
 bmpr_niv <- read.csv(paste(data_dir, "Bmp", "_profiles.csv", sep=""))
 notch_niv <- read.csv(paste(data_dir, 
-                   'Notch receptors, Dll ligands and Fringe proteins',
+                   'Notch receptors, Dll ligands, and Fringe proteins',
                    "_profiles.csv", sep=""))
 wnt_niv <- read.csv(paste(data_dir, "Frizzled and Lrp5 6 receptors for Wnt B Catenin Signaling", 
                  "_profiles.csv", sep=""))
@@ -81,11 +81,11 @@ pathwayConfusion <- function(motif_labels = data.frame(),
         mtx_pair_freq[toString(row), toString(col)] <- long_pair_freq[idx,"n"]
       }
       
-      pheatmap(mtx_pair_freq, 
-               cluster_rows = F, 
-               cluster_cols = F,
-               main = paste(name_i, " and ", name_j, sep = ""),
-               filename = paste("data/processed_data/interpathway_corr/rel_freq_", name_i, "_", name_j, ".pdf", sep = ""))
+      #pheatmap(mtx_pair_freq, 
+      #         cluster_rows = F, 
+      #         cluster_cols = F,
+      #         main = paste(name_i, " and ", name_j, sep = ""),
+      #         silent = T)
       
       # Mutual information 
       MI[i,j] = infotheo::mutinformation(motif_labels[,i], motif_labels[,j])
