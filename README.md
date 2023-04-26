@@ -19,21 +19,29 @@ All data files and code outputs (.pdf, .csv, .h5ad, .RDS, etc.) are available on
 
 ./scripts/preprocessing/: scripts to do preprocessing and integration of data in ./data/raw_data/ folder, with results stored in ./data/processed_data/
 ## Key data files 
+
 Path: ./data/processed_data/master_seurat.RDS 
+
 Description: R data file containing a Seurat object with transcriptomic profiles for all 1206 cell types
 
 Path: ./data/pathbank/pathway_df.csv
+
 Description: csv file containing the pathway names and their components from PathBank after filtering
 
 Path: ./data/raw_data/sc_data/
+
 Description: folder with the raw data files (counts and metadata files) for each single-cell dataset part of the integrated atlas
 
 ## Main scripts 
+
 Path: ./scripts/analysis/Figure_2C_3_4BCDE_S2ABC_S3D.R
+
 Description: main script to run the motif analysis on the TGF-beta receptor genes. Generated Figures 2C, 3, 4BCDE, S2ABC, and S3D, pertaining to all analyses on TGF-beta receptor genes.
 
 Path: ./module/module_new.R
+
 Description: low-level functions for motif analysis, which are imported into other scripts. 
+
 ## Downloading the data from Google Drive
 For large files, Google Drive compresses everything into multiple zip files. You can extract all zip files combined in Linux/Mac using the following: 
 ```
