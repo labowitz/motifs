@@ -36,9 +36,11 @@ Path: ./module/module_new.R
 Description: low-level functions for motif analysis, which are imported into other scripts. 
 ## Downloading the data from Google Drive
 For large files, Google Drive compresses everything into multiple zip files. You can extract all zip files combined in Linux/Mac using the following: 
-```# move all zip files into a new directory
+```
+# move all zip files into a new directory
 mkdir data
-unzip ‘*.zip’ -d data # will extract all zip files in the current directory```
+unzip ´*.zip´ -d data # will extract all zip files in the current directory
+```
 
 ## How to run the code 
 1. Set your file paths for data objects in ./scripts/analysis/imports.R 
