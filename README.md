@@ -7,11 +7,12 @@ All code is available on GitHub at https://github.com/nivkanrar/motifs.
 All data files and code outputs (.pdf, .csv, .h5ad, .RDS, etc.) are available on Google Drive https://drive.google.com/drive/folders/1tiJ0c8OAuk-Nh4IXGUILUVPLRvG2lKxQ?usp=sharing. 
 
 ## Folder structure 
-./data/processed_data: individual processed single-cell datasets along with the integrated object. Generic files for color palettes, genes lists, and pathways lists.
- 
-./data/raw_data/: includes un-processed single-cell datasets and metadata files. 
 
 ./module/: low-level functions 
+
+./data/raw_data/: includes un-processed single-cell datasets and metadata files. 
+
+./data/processed_data/: individual processed single-cell datasets along with the integrated object. Generic files for color palettes, genes lists, and pathways lists.
 
 ./scripts/analysis/: scripts to generate the main figures in the manuscript.
 
