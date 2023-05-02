@@ -62,3 +62,27 @@ unzip ´*.zip´ -d data # will extract all zip files in the current directory
 - This script will generate all the plots for TGF-β as they appear in the manuscript
 - This script shows a full example of the motif analysis for one pathway
 - We adapted the same pipeline to run multiple pathways in parallel
+
+## Installations
+We use code written in both R and Python for our project.
+### RStudio/R Code
+It’s easiest to run our R code using RStudio. To isolate the package versions used in this project, create an RStudio project in the main directory for this project, and always run the code in this RStudio project.
+R does not have a clear-cut way to share environments in a replicable way. We share the package versions we have installed in `./installed_packages.txt`. But due to package installation conflicts in R, it’s probably easiest to try a one-shot installation of the packages, which you can do by simply opening the `./module/module.R` script in RStudio and clicking on the prompt to install the unavailable packages.
+### Python Code
+We used the installations available on the Anaconda package manager for Python.
+Install Python 3.7 Anaconda Shell Installer
+Open terminal and follow the below steps.
+```
+conda create --name motifs -c conda-forge rpy2 (3.3.2)
+conda install -c conda-forge pandas numpy=1.18.5 scipy scikit-learn jupyter gsl tzlocal simplegeneric natsort h5py tqdm patsy llvmlite numba networkx joblib numexpr pytables seaborn statsmodels
+conda install -c conda-forge python-igraph leidenalg
+pip install anndata anndata2ri fa2 gprofiler-official scanpy
+R
+install.packages(c('devtools', 'gam', 'RColorBrewer', 'BiocManager', 'plotly'))
+update.packages(ask=F)
+q()
+conda install -c r r-xml
+R
+install.packages("data.table", type = "source", repos = "https://Rdatatable.gitlab.io/data.table")
+BiocManager::install(c("scran", "MAST", "slingshot", "ComplexHeatmap", "Seurat", "tradeSeq", "DEsingle"), version="3.10")
+```
