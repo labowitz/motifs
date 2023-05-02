@@ -1329,7 +1329,7 @@ diverseFilt <- function(control_res=data.frame(),
                             cell_types), 
                 names_from=gene,
                 values_from=mean_expr) %>% 
-    tibble::column_to_rownames('class_label')-> diverse_mat
+    tibble::column_to_rownames('class_label') -> diverse_mat
   
   # 4. We do the filtering here either for motifs or for non-diverse profiles 
   control_res$diversity %>% 

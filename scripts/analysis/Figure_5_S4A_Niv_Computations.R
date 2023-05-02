@@ -3,33 +3,7 @@ source("./scripts/analysis/Figure_5_Functions.R") # Script with Fig. 5 functions
 
 # Ran the silhoeutte score and dispersion computations earlier and stored here
 silh_res_dir = "./scripts/figures/peak_analysis/silhouette_res/silh_rds/"
-dispersion_dir = "./scripts/figures/peak_analysis/dispersion/"
-
-# Import data -- lists of genes 
-pathway_df <- read.table("./data/raw_data/pathbank/pathway_df_linux_format.tsv", 
-                         header = T, 
-                         sep = "\t")
-# Correct pathway names
-pathway_df$pathway[pathway_df$pathway=='Notch'] <- 'Notch receptors, Dll ligands and Fringe proteins'
-pathway_df$pathway[pathway_df$pathway=='Bmp_Tgfb'] <- 'Tgf-beta family receptors'
-pathway_df$pathway[pathway_df$pathway=='Srsf'] <- 'RNA-splicing by SR protein family'
-pathway_df$pathway[pathway_df$pathway=='Eph_r'] <- 'Eph A-B receptors'
-pathway_df$pathway[pathway_df$pathway=='Wnt'] <- 'Frizzled and Lrp5 6 receptors for Wnt B Catenin Signaling'
-pathway_df$pathway[pathway_df$pathway=='Fgfr'] <- 'FGF cell signaling proteins'
-# Add a combined version of Eph ligands + receptors 
-pathway_df <- rbind(pathway_df, data.frame(pathway = 'Eph receptors and ligands', 
-                                           gene = pathway_df %>% 
-                                             dplyr::filter(grepl(pattern = 'Eph', pathway)) %>% 
-                                             dplyr::pull(gene)))
-# fix the names of some pathways 
-pathway_df$pathway <- pathway_df$pathway %>% str_replace('/', ' ')
-pathway_df$pathway <- pathway_df$pathway %>% str_replace('\\(', ' ')
-pathway_df$pathway <- pathway_df$pathway %>% str_replace('\\)', ' ')
-pathway_df$pathway <- pathway_df$pathway %>% str_replace('–', '-')
-
-fig_5_df <- read.csv("scripts/figures/peak_analysis/silhouette_res/dispersion_states_figure5.csv")
-
-pathway_df <- pathway_df[pathway_df$pathway %in% fig_5_df$pathway_name,]
+dispersion_dir = "./scripts/figures/peak_analysis/dispersion/disp_rds/"
 
 min_genes_pathway = 2
 min_expr_threshold = 0.3
@@ -37,24 +11,8 @@ diverse_quantile = 0.9
 
 ## Save pathway data.frame
 saved_files <- paste(list.files(path=silh_res_dir,
-                                pattern = "_ale.RDS"), 
-                     sep ="") # ale is Alejandro's personal ID 
-
-# if the pathway finished and the file was saved correctly: 
-full_pathway_list <- pathway_df %>% 
-  group_by(pathway) %>% 
-  count %>% 
-  as.data.frame %>% 
-  dplyr::filter(n>7) %>% 
-  pull(pathway)
-
-saved_idx <- lapply(full_pathway_list, 
-                    FUN = function(x) sum(grepl(x, saved_files))) %>% 
-  unlist %>% 
-  as.logical
-
-# load only the pathways that actually finished 
-pathway_list_dispersion <- full_pathway_list[saved_idx]
+                                pattern = ".RDS"), 
+                     sep ="")
 
 df_kvals <- peak_width_scores(use_percentile = 0.95, 
                               smooth_window = 3, 

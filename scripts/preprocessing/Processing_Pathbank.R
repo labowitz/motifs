@@ -33,4 +33,7 @@ pathway_df$pathway[pathway_df$pathway=='Eph_l'] <- 'Ephrins'
 pathway_df$pathway[pathway_df$pathway=='Wnt'] <- 'Frizzled and Lrp5 6 receptors for Wnt B Catenin Signaling'
 pathway_df$pathway[pathway_df$pathway=='Fgfr'] <- 'FGF signaling'
 
+## Issues w/ saving filenames with "/" character
+pathway_df[pathway_df$pathway %>% str_detect("/"),"pathway"] <- pathway_df[pathway_df$pathway %>% str_detect("/"),"pathway"] %>% str_replace("/","-")
+
 write.csv(pathway_df, "./data/raw_data/pathbank/pathway_df.csv")
