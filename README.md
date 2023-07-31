@@ -1,5 +1,5 @@
 # motifs
-Repository for "Combinatorial expression motifs in signaling pathways" paper by Granados, et al. (2022).
+Repository for "Combinatorial expression motifs in signaling pathways" paper by Granados, Kanrar, Elowitz (2023).
 
 ## Data and code availability
 
