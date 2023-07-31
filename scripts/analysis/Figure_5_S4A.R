@@ -2,7 +2,7 @@ source("./scripts/analysis/imports.R")
 source("./scripts/analysis/Figure_5_Functions.R") # Script with Fig. 5 functions
 
 # Ran the silhoeutte score and dispersion computations earlier and stored here
-silh_res_dir = "./scripts/figures/peak_analysis/silhouette_res/silh_rds/"
+silh_res_dir = "./scripts/figures/peak_analysis/silhouette_res/silh_rds/alejo_res/"
 dispersion_dir = "./scripts/figures/peak_analysis/dispersion/"
 
 # Import data -- lists of genes 

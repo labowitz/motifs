@@ -7,7 +7,7 @@ library(aricode)
 library(RColorBrewer)
 
 data_dir = "scripts/figures/peak_analysis/silhouette_res/silh_rds/"
-output_dir = "./scripts/figures/"
+fig_dir = "./scripts/figures/"
 
 # Blues palette
 blues_pal <- function(n){
@@ -102,6 +102,8 @@ pathwayConfusion <- function(motif_labels = data.frame(),
   diag(resMI) <- 1
   resMI[lower.tri(resMI)] <- NA
   
+  diag(resMI) <- NA
+  
   row.names(resMI)<-colnames(motif_labels)
   colnames(resMI)<-colnames(motif_labels)
   if(!save){
@@ -128,8 +130,8 @@ pathwayConfusion <- function(motif_labels = data.frame(),
 
 # Plot the interpathway correlations
 pathwayConfusion(all_cell_type %>% select(tgfb, bmpr, notch, wnt, ubi, rna), 
-                 filename = paste0(output_dir, "Figure_6C.pdf", sep=""), 
+                 filename = paste0(fig_dir, "Figure_6C.pdf", sep=""), 
                  save = T)
 
 # Save the profiles
-all_cell_type %>% write.csv("scripts/figures/Supplementary File 5.csv")
+all_cell_type %>% write.csv(paste0(fig_dir, "Supplementary File 5.csv"))

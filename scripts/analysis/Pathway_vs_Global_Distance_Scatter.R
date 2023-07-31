@@ -1,14 +1,6 @@
 source("./scripts/analysis/imports.R")
 
-min_genes_pathway = 2 # tgfb min. number of genes expressed
-min_expr_threshold = 0.3 # tgfb minimum expression threshold for gene to be on
-optimal_k_pathway = 30 # doesn't matter for this!
-diverse_quantile = 0.9
-
-n_pcs = 1:30
-
 # Function to compute the cosine distance of two gene expression profiles
-
 computePathwayDist <- function(pipe_run){
   
   pathway_dist = dist.cosine(as.matrix(pipe_run$data_frame[,pathway_genes]))
@@ -46,7 +38,6 @@ plotPathwayGlobalDist <- function(pathway_genes = c(),
   
   scrambled_pathway_dist_df <- computePathwayDist(scrambled_pipe_run)
   colnames(scrambled_pathway_dist_df)[colnames(scrambled_pathway_dist_df) == 'pathway_dist'] <- 'random_dist'
-  
 
   # GLOBAL DISTANCE: euclidean or cosine distance in PCA space
   global_coords = Embeddings(seurat_obj, reduction='pca')
@@ -73,6 +64,14 @@ plotPathwayGlobalDist <- function(pathway_genes = c(),
 }
 
 pathway_name = "Tgf-beta family receptors"
+
+min_genes_pathway = 2 # tgfb min. number of genes expressed
+min_expr_threshold = 0.2 # tgfb minimum expression threshold for gene to be on
+optimal_k_pathway = 30 # doesn't matter for this!
+diverse_quantile = 0.9
+
+n_pcs = 1:30
+
 pathway_genes = genesPathway(pathway_name = pathway_name,
                              pathway_df = pathway_df,
                              seurat_obj = master_seurat)
@@ -80,4 +79,4 @@ pathway_genes = genesPathway(pathway_name = pathway_name,
 plotPathwayGlobalDist(pathway_genes = pathway_genes) -> df
 
 # Generates a list of dataframes with 100 scrambled estimates for null dist.
-df_list <- lapply(rep(pathway_name, 100), plotPathwayGlobalDist)
+df_list <- lapply(rep(list(pathway_genes), 100), plotPathwayGlobalDist)

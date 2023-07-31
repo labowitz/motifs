@@ -1,0 +1,182 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+getwd()
+source("./imports.R")
+library(MASS)
+```
+
+```{r}
+# Function to compute the cosine distance of two gene expression profiles
+computePathwayDist <- function(pipe_run){
+  
+  pathway_dist = dist.cosine(as.matrix(pipe_run$data_frame[,pathway_genes]))
+  
+  pathway_dist_df <- data.frame(t(combn(pipe_run$data_frame$cell_id,2)), 
+                                as.numeric(pathway_dist))
+  
+  colnames(pathway_dist_df) <- c("cell_id_1", "cell_id_2", "pathway_dist")
+  
+  return(pathway_dist_df)
+  
+}
+
+# Computes the pathway, global, and null dist. of profile distances in expressing cell types
+dfPathwayGlobalDist <- function(pathway_genes = c(),
+                                pathway_df = pathway_df,
+                                seurat_obj = master_seurat,
+                                k_final = optimal_k_pathway,
+                                min_genes_on = min_genes_pathway,
+                                min_expr = min_expr_threshold){
+  
+  pipe_run <- quickPipeline(seurat_obj = seurat_obj,
+                            pathway_genes = pathway_genes,
+                            k_final = optimal_k_pathway, 
+                            min_genes_on = min_genes_on, 
+                            min_expr = min_expr
+  )
+  
+  scrambled_pipe_run <- pipe_run
+  
+  scrambled_pipe_run$data_frame[,pathway_genes] <- randomizeColumns(df = pipe_run$data_frame[,pathway_genes],
+                                                                    pathway_genes = pathway_genes)
+  
+  real_pathway_dist_df <- computePathwayDist(pipe_run)
+  
+  scrambled_pathway_dist_df <- computePathwayDist(scrambled_pipe_run)
+  colnames(scrambled_pathway_dist_df)[colnames(scrambled_pathway_dist_df) == 'pathway_dist'] <- 'random_dist'
+  
+  # GLOBAL DISTANCE: euclidean or cosine distance in PCA space
+  global_coords = Embeddings(seurat_obj, reduction='pca')
+  global_coords = global_coords[pipe_run$data_frame$cell_id, n_pcs] # already set row names as cell id
+  
+  global_dist = dist(global_coords)
+  
+  global_dist_df <- data.frame(t(combn(rownames(global_coords),2)), 
+                               as.numeric(global_dist))
+  
+  colnames(global_dist_df) <- c("cell_id_1", "cell_id_2", "global_dist")
+
+  df <- merge(x = real_pathway_dist_df, 
+              y = scrambled_pathway_dist_df,
+              by.x = c("cell_id_1", 
+                       "cell_id_2"))
+  
+  df <- merge(x = df, 
+              y = global_dist_df, 
+              by.x = c("cell_id_1", 
+                       "cell_id_2"))
+  colnames(df) <- c("cell_id_1", "cell_id_2", "pathway_dist", "random_dist", "global_dist")
+  
+  df <- merge(df, 
+              pipe_run$data_frame %>% 
+                dplyr::select(c(cell_id, class_label)), 
+                by.x = "cell_id_1", 
+                by.y = "cell_id")
+  
+  colnames(df) <- c("cell_id_1", "cell_id_2", "pathway_dist", "random_dist", "global_dist", "class_label_id_1")
+  
+  df <- merge(df, 
+              pipe_run$data_frame %>% 
+                dplyr::select(c(cell_id, class_label)), 
+              by.x = "cell_id_2", 
+              by.y = "cell_id")
+  
+  colnames(df) <- c("cell_id_1", "cell_id_2", "pathway_dist", "random_dist", "global_dist", "class_label_id_1", "class_label_id_2")
+  
+  return(df)
+}
+
+```
+
+Parameters for the model
+```{r}
+min_genes_pathway = 2 # tgfb min. number of genes expressed
+min_expr_threshold = 0.3 # tgfb minimum expression threshold for gene to be on
+optimal_k_pathway = 30 # doesn't matter for this!
+diverse_quantile = 0.9
+n_pcs = 1:30
+
+pathway_name = "Notch receptors, Dll ligands, and Fringe proteins"
+
+pathway_genes = genesPathway(pathway_name = pathway_name,
+                             pathway_df = pathway_df,
+                             seurat_obj = master_seurat)
+
+dfPathwayGlobalDist(pathway_genes = pathway_genes) -> df
+
+head(df)
+```
+```{r}
+df %>% 
+      dplyr::filter(global_dist >40 & global_dist <90 ) %>%  
+      ggplot(aes(x = pathway_dist)) + 
+      geom_density() + 
+      geom_density(aes(x = random_dist), color = 'red')
+```
+
+```{r}
+# non disperse
+    df %>% 
+      dplyr::filter(global_dist <40 ) %>%  
+      ggplot(aes(x = pathway_dist)) + 
+      geom_density() + 
+      geom_density(aes(x = random_dist), color = 'red')
+```
+```{r}
+
+df %>% 
+      pivot_longer(cols = c("pathway_dist", "random_dist"), 
+                   names_to = "type", 
+                   values_to = "distance") -> adult_tidy
+
+
+# TEST: 2-D densities 
+    # 1. estimate 2-d prob density with MASS
+    dens1 <- MASS::kde2d(adult_tidy$global_dist[adult_tidy$type == "pathway_dist"], adult_tidy$distance[adult_tidy$type == "pathway_dist"], n = 100)
+    dens2 <- MASS::kde2d(adult_tidy$global_dist[adult_tidy$type == "random_dist"], adult_tidy$distance[adult_tidy$type == "random_dist"], n = 100)
+    
+    
+    # 2. plot individual distributions 
+    # create a tidy data frame from the density matrices
+    dens_df <- expand.grid(x = dens1$x, y = dens1$y)
+    dens_df$z <- as.vector(dens1$z)
+    
+    # create heatmap
+    ggplot(dens_df, aes(x = x, y = y, fill = z)) +
+      geom_tile() +    
+      theme_minimal()
+    
+    
+    # 3. Plot the difference 
+    
+    # Compute the difference in the 2D densities between the two distributions
+    diff_dens <- dens1$z - dens2$z
+    
+    # create a tidy data frame from the density matrices
+    dens_df <- expand.grid(x = dens1$x, y = dens1$y) # same axis for both
+    dens_df$z <- as.vector(diff_dens)
+    
+    # create heatmap
+    ggplot(dens_df, aes(x = x, y = y, fill = z)) +
+      geom_tile() +
+      scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = median(dens_df$z)) +
+      theme_minimal()
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

@@ -1,7 +1,7 @@
 source("./scripts/analysis/imports.R")
 source("./scripts/analysis/Figure_5_Functions.R") # Script with Fig. 5 functions
 
-# Ran the silhoeutte score and dispersion computations earlier and stored here
+# Ran the silhouette score and dispersion computations earlier and stored here
 silh_res_dir = "./scripts/figures/peak_analysis/silhouette_res/silh_rds/"
 dispersion_dir = "./scripts/figures/peak_analysis/dispersion/disp_rds/"
 
@@ -10,8 +10,7 @@ min_expr_threshold = 0.3
 diverse_quantile = 0.9
 
 ## Save pathway data.frame
-saved_files <- paste(list.files(path=silh_res_dir,
-                                pattern = ".RDS"), 
+saved_files <- paste(list.files(path=silh_res_dir)[endsWith(list.files(path=silh_res_dir), suffix = ".RDS")], 
                      sep ="")
 
 df_kvals <- peak_width_scores(use_percentile = 0.95, 
@@ -37,7 +36,7 @@ computeDispersions(df_kvals = df_kvals,
                    dispersion_dir = dispersion_dir,
                    silh_files = saved_files)
 
-dispersion_stats <- parseDispersion(pathway_list_dispersion = pathway_list_dispersion[2:length(pathway_list_dispersion)],
+dispersion_stats <- parseDispersion(pathway_list_dispersion = pathway_list,
                                     dispersion_dir = dispersion_dir)
 
 # 3. Master data.frame 
