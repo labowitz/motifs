@@ -3,7 +3,7 @@ Repository for "Combinatorial expression motifs in signaling pathways" paper by 
 
 ## Data and code availability
 
-All code is available on GitHub at https://github.com/nivkanrar/motifs.
+All code is available on GitHub at https://github.com/nkanrar/motifs.
 All data files and code outputs (.pdf, .csv, .h5ad, .RDS, etc.) are available on Google Drive https://drive.google.com/drive/folders/1tiJ0c8OAuk-Nh4IXGUILUVPLRvG2lKxQ?usp=sharing. 
 
 ## Folder structure 
