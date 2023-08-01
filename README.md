@@ -1,5 +1,5 @@
 # motifs
-Repository for "Combinatorial expression motifs in signaling pathways" paper by Granados, Kanrar, Elowitz (2023).
+This deposit contains the code and analysis for the manuscript, 'Combinatorial expression motifs in signaling pathways.' Data are available at the CaltechDATA repository https://. Please see the related publication for more details, and contact the corresponding authors for any questions.
 
 ## Data and code availability
 
