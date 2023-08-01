@@ -19,19 +19,3 @@ authors:
       - "California Institute of Technology (Caltech)"
     orcid: "0000-0002-1221-0967"
 version: "0.0.0"
-abstract: "This deposit contains the code and analysis for the manuscript, 'Combinatorial expression motifs in signaling pathways.' Data are available at the CaltechDATA repository https://. Please see the related publication for more details, and contact the corresponding authors for any questions."
-repository-code: "https://github.com/nkanrar/motifs"
-type: software
-keywords: 
-  - "signaling pathways"
-  - "combinatorial signaling"
-  - "promiscuous ligand-receptor interactions"
-  - "scRNA-seq"
-  - "motifs"
-date-released: "2023-08-01"
-doi: 10.1101/2022.08.21.504714
-related_identifiers:
-  - relation: "Is part of"
-    identifier: "10.1101/2022.08.21.504714"
-    scheme: "DOI"
-    resource-type: "Text / Journal article"
