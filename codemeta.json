@@ -1,0 +1,43 @@
+{
+  "@context": "https://doi.org/10.1101/2022.08.21.504714",
+  "@type": "SoftwareSourceCode",
+  "description": "This deposit contains the code and analysis for the manuscript, 'Combinatorial expression motifs in signaling pathways.' Data are available at the CaltechDATA repository https://. Please see the related publication for more details, and contact the corresponding authors for any questions.",
+  "name": "motifs",
+  "codeRepository": "https://github.com/nkanrar/motifs",
+  "issueTracker": "https://github.com/nkanrar/motifs/issues",
+  "version": "0.0.0",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Alejandro A.",
+      "familyName": "Granados",
+      "affiliation": "CZ Biohub",
+      "email": "alejandro.granados.c@gmail.com",
+      "@id": "https://orcid.org/0000-0002-6275-9800"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Nivedita",
+      "familyName": "Kanrar",
+      "affiliation": "Universitat Pompeu Fabra",
+      "email": "niveditakanrar@gmail.edu",
+      "@id": "https://orcid.org/0000-0003-0047-951X"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Michael",
+      "familyName": "Elowitz",
+      "affiliation": "California Institute of Technology",
+      "email": "melowitz@caltech.com",
+      "@id": "https://orcid.org/0000-0002-1221-0967"
+    },
+],
+  "developmentStatus": "active",
+  "keywords": [
+    "signaling pathways",
+    "combinatorial signaling",
+    "promiscuous ligand-receptor interactions",
+    "scRNA-seq",
+    "motifs"
+  ],
+}
