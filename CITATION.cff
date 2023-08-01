@@ -6,3 +6,16 @@ authors:
     affiliation: 
       - "CZ Biohub"
       - "California Institute of Technology (Caltech)"
+    orcid: "https://orid.org/0000-0002-6275-9800"
+  - family-names: Kanrar
+    given-names: Nivedita
+    affiliation: 
+      - "Pompeu Fabra University"
+      - "California Institute of Technology (Caltech)
+    orcid: "https://orid.org/0000-0003-0047-951X"
+  - family-names: Elowitz
+    given-names: Michael B.
+    affiliation: 
+      - "California Institute of Technology (Caltech)"
+    orcid: "https://orid.org/0000-0002-1221-0967"
+version: "0.0.0"
