@@ -29,9 +29,13 @@ keywords:
   - "scRNA-seq"
   - "motifs"
 date-released: "2023-08-01"
-doi: 10.1101/2022.08.21.504714
+doi: 10.22002/bgm15-18g17
 related_identifiers:
   - relation: "Is part of"
     identifier: "10.1101/2022.08.21.504714"
     scheme: "DOI"
     resource-type: "Text / Journal article"
+  - relation: "Compiles"
+    identifier: "10.22002/hf6zq-zmg82"
+    scheme: "DOI"
+    resource-type: "Dataset"
